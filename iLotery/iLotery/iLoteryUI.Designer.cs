@@ -67,6 +67,7 @@
             // 
             // CancelarButton
             // 
+            this.CancelarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelarButton.Location = new System.Drawing.Point(197, 185);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(75, 23);
@@ -119,6 +120,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceder";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
