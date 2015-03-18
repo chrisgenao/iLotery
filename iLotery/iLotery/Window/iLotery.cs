@@ -43,5 +43,11 @@ namespace iLotery.Window
         {
             MessageBox.Show("Programa Diseñado por Christopher Genao\n Contacto: 829-880-1457.");
         }
+
+        private void ticketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rTicket rTicket = new Registros.rTicket();
+            rTicket.Show();
+        }
     }
 }
