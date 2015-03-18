@@ -31,9 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iLotery));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serparator1ToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.realToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.nacionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.leidsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.lotekaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serparator1ToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.separator2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -45,13 +52,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.cuadreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.realToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nacionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leidsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lotekaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,20 +82,6 @@
             this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             // 
-            // usuarioToolStripMenuItem
-            // 
-            this.usuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuarioToolStripMenuItem.Image")));
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
-            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
-            // 
-            // serparator1ToolStripMenuItem
-            // 
-            this.serparator1ToolStripMenuItem.Name = "serparator1ToolStripMenuItem";
-            this.serparator1ToolStripMenuItem.Size = new System.Drawing.Size(153, 6);
-            // 
             // ticketToolStripMenuItem
             // 
             this.ticketToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -110,6 +96,63 @@
             this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
             this.ticketToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.ticketToolStripMenuItem.Text = "Ticket";
+            // 
+            // realToolStripMenuItem
+            // 
+            this.realToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("realToolStripMenuItem.Image")));
+            this.realToolStripMenuItem.Name = "realToolStripMenuItem";
+            this.realToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.realToolStripMenuItem.Text = "Real";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
+            // 
+            // nacionalToolStripMenuItem
+            // 
+            this.nacionalToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nacionalToolStripMenuItem.Image")));
+            this.nacionalToolStripMenuItem.Name = "nacionalToolStripMenuItem";
+            this.nacionalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nacionalToolStripMenuItem.Text = "Nacional";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(149, 6);
+            // 
+            // leidsaToolStripMenuItem
+            // 
+            this.leidsaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("leidsaToolStripMenuItem.Image")));
+            this.leidsaToolStripMenuItem.Name = "leidsaToolStripMenuItem";
+            this.leidsaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.leidsaToolStripMenuItem.Text = "Leidsa";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(149, 6);
+            // 
+            // lotekaToolStripMenuItem
+            // 
+            this.lotekaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("lotekaToolStripMenuItem.Image")));
+            this.lotekaToolStripMenuItem.Name = "lotekaToolStripMenuItem";
+            this.lotekaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lotekaToolStripMenuItem.Text = "Loteka";
+            // 
+            // serparator1ToolStripMenuItem
+            // 
+            this.serparator1ToolStripMenuItem.Name = "serparator1ToolStripMenuItem";
+            this.serparator1ToolStripMenuItem.Size = new System.Drawing.Size(153, 6);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuarioToolStripMenuItem.Image")));
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -186,49 +229,7 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // realToolStripMenuItem
-            // 
-            this.realToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("realToolStripMenuItem.Image")));
-            this.realToolStripMenuItem.Name = "realToolStripMenuItem";
-            this.realToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.realToolStripMenuItem.Text = "Real";
-            // 
-            // nacionalToolStripMenuItem
-            // 
-            this.nacionalToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nacionalToolStripMenuItem.Image")));
-            this.nacionalToolStripMenuItem.Name = "nacionalToolStripMenuItem";
-            this.nacionalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.nacionalToolStripMenuItem.Text = "Nacional";
-            // 
-            // leidsaToolStripMenuItem
-            // 
-            this.leidsaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("leidsaToolStripMenuItem.Image")));
-            this.leidsaToolStripMenuItem.Name = "leidsaToolStripMenuItem";
-            this.leidsaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.leidsaToolStripMenuItem.Text = "Leidsa";
-            // 
-            // lotekaToolStripMenuItem
-            // 
-            this.lotekaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("lotekaToolStripMenuItem.Image")));
-            this.lotekaToolStripMenuItem.Name = "lotekaToolStripMenuItem";
-            this.lotekaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lotekaToolStripMenuItem.Text = "Loteka";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(149, 6);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(149, 6);
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // iLotery
             // 
