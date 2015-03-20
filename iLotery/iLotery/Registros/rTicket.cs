@@ -33,10 +33,10 @@ namespace iLotery.Registros
             for (int i = 0; i <= LoteriaCheckList.SelectedItems.Count - 1; i++)
             {
                 TicketGridView.Rows.Add();
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[0].Value = LoteriaCheckList.SelectedItem.ToString();
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[1].Value = HoraTextBox.Text;
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[2].Value = JugadaTextBox.Text;
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[3].Value = MontoTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[0].Value = LoteriaCheckList.SelectedItem.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[1].Value = HoraTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[2].Value = JugadaTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[3].Value = MontoTextBox.Text;
             }
             
         }
@@ -78,6 +78,11 @@ namespace iLotery.Registros
         }
 
         private void TicketGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GuardarButton_Click(object sender, EventArgs e)
         {
 
         }

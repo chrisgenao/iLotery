@@ -46,13 +46,13 @@ namespace iLotery
                 if (UsuarioTextBox.Text == Usuario.Usuario && PasswordTextBox.Text == Usuario.Contra)
                 {
                       Window.iLotery il = new Window.iLotery();
-                    MessageBox.Show("Bienvenido a iLotery v1.0");
+                    MessageBox.Show("\tBienvenido a iLotery v1.0");
                    il.Show();
                       this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("\tUsuario o Contraseña incorrecta");
+                    MessageBox.Show("Usuario o Contraseña incorrecta");
                     UsuarioTextBox.Focus();
                 }
             }

@@ -47,9 +47,12 @@
             this.HoraTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Loteria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jugada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -98,6 +101,7 @@
             this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TicketGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Loteria,
+            this.Tanda,
             this.Fecha,
             this.Jugada,
             this.Monto});
@@ -109,7 +113,7 @@
             // 
             // JugadaTextBox
             // 
-            this.JugadaTextBox.Location = new System.Drawing.Point(223, 19);
+            this.JugadaTextBox.Location = new System.Drawing.Point(216, 15);
             this.JugadaTextBox.Name = "JugadaTextBox";
             this.JugadaTextBox.Size = new System.Drawing.Size(100, 20);
             this.JugadaTextBox.TabIndex = 11;
@@ -117,7 +121,7 @@
             // 
             // MontoTextBox
             // 
-            this.MontoTextBox.Location = new System.Drawing.Point(401, 19);
+            this.MontoTextBox.Location = new System.Drawing.Point(404, 15);
             this.MontoTextBox.Name = "MontoTextBox";
             this.MontoTextBox.Size = new System.Drawing.Size(100, 20);
             this.MontoTextBox.TabIndex = 12;
@@ -127,7 +131,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 22);
+            this.label1.Location = new System.Drawing.Point(158, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 13;
@@ -137,7 +141,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(349, 22);
+            this.label2.Location = new System.Drawing.Point(352, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 14;
@@ -163,7 +167,7 @@
             // 
             // AgregarTextBox
             // 
-            this.AgregarTextBox.Location = new System.Drawing.Point(517, 16);
+            this.AgregarTextBox.Location = new System.Drawing.Point(510, 12);
             this.AgregarTextBox.Name = "AgregarTextBox";
             this.AgregarTextBox.Size = new System.Drawing.Size(75, 23);
             this.AgregarTextBox.TabIndex = 17;
@@ -207,9 +211,12 @@
             this.GuardarButton.Text = "Guardar Partida";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.HoraTextBox);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.TicketGridView);
@@ -229,7 +236,7 @@
             // 
             // HoraTextBox
             // 
-            this.HoraTextBox.Location = new System.Drawing.Point(52, 19);
+            this.HoraTextBox.Location = new System.Drawing.Point(52, 453);
             this.HoraTextBox.Name = "HoraTextBox";
             this.HoraTextBox.ReadOnly = true;
             this.HoraTextBox.Size = new System.Drawing.Size(100, 20);
@@ -238,9 +245,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 22);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 456);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "Fecha:";
             // 
@@ -248,6 +256,11 @@
             // 
             this.Loteria.HeaderText = "Loteria";
             this.Loteria.Name = "Loteria";
+            // 
+            // Tanda
+            // 
+            this.Tanda.HeaderText = "Tanda";
+            this.Tanda.Name = "Tanda";
             // 
             // Fecha
             // 
@@ -264,6 +277,23 @@
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(52, 15);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(54, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Tanda:";
+            // 
             // rTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,6 +302,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rTicket";
             this.Text = "Registro de Ticket";
             this.Load += new System.EventHandler(this.rTicket_Load);
@@ -304,8 +336,11 @@
         private System.Windows.Forms.TextBox HoraTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Loteria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tanda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jugada;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
