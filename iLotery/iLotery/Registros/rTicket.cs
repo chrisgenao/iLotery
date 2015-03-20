@@ -25,7 +25,6 @@ namespace iLotery.Registros
             DateTime h;
             h = DateTime.Now;
             HoraTextBox.Text = h.ToString();
-            h.AddSeconds(1);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -34,11 +33,13 @@ namespace iLotery.Registros
             {
                 TicketGridView.Rows.Add();
                 TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[0].Value = LoteriaCheckList.SelectedItem.ToString();
-                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[1].Value = HoraTextBox.Text;
-                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[2].Value = JugadaTextBox.Text;
-                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[3].Value = MontoTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[1].Value = textBox1.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[2].Value = HoraTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[3].Value = JugadaTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[4].Value = MontoTextBox.Text;
             }
-            
+
+            Sum();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace iLotery.Registros
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            TicketGridView.Rows.RemoveAt(TicketGridView.Rows.Count - 1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,5 +87,11 @@ namespace iLotery.Registros
         {
 
         }
+        private void Sum()
+{
+
+        float xs = TicketGridView.Rows.Cast<DataGridViewRow>().Sum(x => Convert.ToSingle(x.Cells["Monto"].Value));
+            this.TotalTextBox.Text = xs.ToString("N2");
+}
     }
 }

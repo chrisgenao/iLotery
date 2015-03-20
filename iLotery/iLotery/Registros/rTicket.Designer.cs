@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rTicket));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LoteriaCheckList = new System.Windows.Forms.CheckedListBox();
             this.ImprimirButton = new System.Windows.Forms.Button();
@@ -46,13 +47,13 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.HoraTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Loteria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jugada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -252,6 +253,23 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Fecha:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(52, 15);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(54, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Tanda:";
+            // 
             // Loteria
             // 
             this.Loteria.HeaderText = "Loteria";
@@ -274,25 +292,11 @@
             // 
             // Monto
             // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(52, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 20);
-            this.textBox1.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Tanda:";
             // 
             // rTicket
             // 
@@ -335,12 +339,12 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.TextBox HoraTextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Loteria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tanda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jugada;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
