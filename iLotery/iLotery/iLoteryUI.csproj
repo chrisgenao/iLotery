@@ -79,6 +79,7 @@
     <Compile Include="Registros\rUsuario.Designer.cs">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios.cs" />
     <Compile Include="Window\iLotery.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,7 +86,14 @@ namespace iLotery.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            Boolean paso = false;
+            Tickets Ticket = new Tickets();
 
+            Ticket.IdTicket = Utilitarios.ToInt(IDTextBox.Text);
+            Ticket.Concepto = ConceptoTextBox.Text;
+            Ticket.Monto = Convert.ToSingle(MontoTextBox.Text);
+            Ticket.IdCuenta = Utilitarios.ToInt(BuscarPorcomboBox.SelectedValue.ToString());
+            Ticket.IdSubClas = Utilitarios.ToInt(BuscarPor2comboBox.SelectedValue.ToString());
         }
         private void Sum()
 {

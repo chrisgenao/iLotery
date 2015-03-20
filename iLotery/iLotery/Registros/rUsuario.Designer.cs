@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuario));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.IDTextBox = new System.Windows.Forms.TextBox();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
+            this.ApellidoTextBox = new System.Windows.Forms.TextBox();
+            this.UsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.PWTextBox = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,48 +42,48 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.VendedorCheckBox = new System.Windows.Forms.CheckBox();
+            this.ServidorCheckBox = new System.Windows.Forms.CheckBox();
             this.BorrarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.ImprimirButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // IDTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 20);
-            this.textBox1.TabIndex = 0;
+            this.IDTextBox.Location = new System.Drawing.Point(98, 12);
+            this.IDTextBox.Name = "IDTextBox";
+            this.IDTextBox.Size = new System.Drawing.Size(58, 20);
+            this.IDTextBox.TabIndex = 0;
             // 
-            // textBox2
+            // NombreTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 20);
-            this.textBox2.TabIndex = 1;
+            this.NombreTextBox.Location = new System.Drawing.Point(98, 38);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(142, 20);
+            this.NombreTextBox.TabIndex = 1;
             // 
-            // textBox3
+            // ApellidoTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
-            this.textBox3.TabIndex = 2;
+            this.ApellidoTextBox.Location = new System.Drawing.Point(98, 64);
+            this.ApellidoTextBox.Name = "ApellidoTextBox";
+            this.ApellidoTextBox.Size = new System.Drawing.Size(142, 20);
+            this.ApellidoTextBox.TabIndex = 2;
             // 
-            // textBox4
+            // UsuarioTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(98, 90);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.UsuarioTextBox.Location = new System.Drawing.Point(98, 90);
+            this.UsuarioTextBox.Name = "UsuarioTextBox";
+            this.UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.UsuarioTextBox.TabIndex = 3;
             // 
-            // textBox5
+            // PWTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(98, 116);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.PWTextBox.Location = new System.Drawing.Point(98, 116);
+            this.PWTextBox.Name = "PWTextBox";
+            this.PWTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PWTextBox.TabIndex = 4;
             // 
             // textBox6
             // 
@@ -155,25 +155,25 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Nivel:";
             // 
-            // checkBox1
+            // VendedorCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(98, 169);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 17);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "Vendedor";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.VendedorCheckBox.AutoSize = true;
+            this.VendedorCheckBox.Location = new System.Drawing.Point(98, 169);
+            this.VendedorCheckBox.Name = "VendedorCheckBox";
+            this.VendedorCheckBox.Size = new System.Drawing.Size(72, 17);
+            this.VendedorCheckBox.TabIndex = 13;
+            this.VendedorCheckBox.Text = "Vendedor";
+            this.VendedorCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // ServidorCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(184, 169);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(65, 17);
-            this.checkBox2.TabIndex = 14;
-            this.checkBox2.Text = "Servidor";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ServidorCheckBox.AutoSize = true;
+            this.ServidorCheckBox.Location = new System.Drawing.Point(184, 169);
+            this.ServidorCheckBox.Name = "ServidorCheckBox";
+            this.ServidorCheckBox.Size = new System.Drawing.Size(65, 17);
+            this.ServidorCheckBox.TabIndex = 14;
+            this.ServidorCheckBox.Text = "Servidor";
+            this.ServidorCheckBox.UseVisualStyleBackColor = true;
             // 
             // BorrarButton
             // 
@@ -198,6 +198,7 @@
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // ImprimirButton
             // 
@@ -230,8 +231,8 @@
             this.Controls.Add(this.BorrarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.ImprimirButton);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ServidorCheckBox);
+            this.Controls.Add(this.VendedorCheckBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -240,11 +241,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PWTextBox);
+            this.Controls.Add(this.UsuarioTextBox);
+            this.Controls.Add(this.ApellidoTextBox);
+            this.Controls.Add(this.NombreTextBox);
+            this.Controls.Add(this.IDTextBox);
             this.Name = "rUsuario";
             this.Text = "Registro de Usuarios";
             this.ResumeLayout(false);
@@ -254,11 +255,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox IDTextBox;
+        private System.Windows.Forms.TextBox NombreTextBox;
+        private System.Windows.Forms.TextBox ApellidoTextBox;
+        private System.Windows.Forms.TextBox UsuarioTextBox;
+        private System.Windows.Forms.TextBox PWTextBox;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -267,8 +268,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox VendedorCheckBox;
+        private System.Windows.Forms.CheckBox ServidorCheckBox;
         private System.Windows.Forms.Button BorrarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button ImprimirButton;
