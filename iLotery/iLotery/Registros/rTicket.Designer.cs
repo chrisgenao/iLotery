@@ -42,7 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.AgregarTextBox = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BorrarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.HoraTextBox = new System.Windows.Forms.TextBox();
@@ -54,6 +53,8 @@
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jugada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BorrarButton = new System.Windows.Forms.Button();
+            this.Limpiar2Button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -178,6 +179,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Limpiar2Button);
             this.groupBox2.Controls.Add(this.BorrarButton);
             this.groupBox2.Controls.Add(this.GuardarButton);
             this.groupBox2.Controls.Add(this.ImprimirButton);
@@ -187,19 +189,6 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Controladores";
-            // 
-            // BorrarButton
-            // 
-            this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
-            this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BorrarButton.Location = new System.Drawing.Point(168, 19);
-            this.BorrarButton.Name = "BorrarButton";
-            this.BorrarButton.Size = new System.Drawing.Size(75, 34);
-            this.BorrarButton.TabIndex = 21;
-            this.BorrarButton.Text = "Borrar Partida";
-            this.BorrarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BorrarButton.UseVisualStyleBackColor = true;
-            this.BorrarButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // GuardarButton
             // 
@@ -255,7 +244,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 15);
+            this.textBox1.Location = new System.Drawing.Point(59, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(54, 20);
             this.textBox1.TabIndex = 20;
@@ -298,6 +287,30 @@
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
             // 
+            // BorrarButton
+            // 
+            this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
+            this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BorrarButton.Location = new System.Drawing.Point(167, 19);
+            this.BorrarButton.Name = "BorrarButton";
+            this.BorrarButton.Size = new System.Drawing.Size(75, 34);
+            this.BorrarButton.TabIndex = 22;
+            this.BorrarButton.Text = "Borrar Partida";
+            this.BorrarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BorrarButton.UseVisualStyleBackColor = true;
+            // 
+            // Limpiar2Button
+            // 
+            this.Limpiar2Button.Image = ((System.Drawing.Image)(resources.GetObject("Limpiar2Button.Image")));
+            this.Limpiar2Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Limpiar2Button.Location = new System.Drawing.Point(167, 59);
+            this.Limpiar2Button.Name = "Limpiar2Button";
+            this.Limpiar2Button.Size = new System.Drawing.Size(75, 34);
+            this.Limpiar2Button.TabIndex = 23;
+            this.Limpiar2Button.Text = "Limpiar Pantalla";
+            this.Limpiar2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Limpiar2Button.UseVisualStyleBackColor = true;
+            // 
             // rTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,7 +348,6 @@
         private System.Windows.Forms.Button AgregarTextBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button BorrarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.TextBox HoraTextBox;
         private System.Windows.Forms.Label label4;
@@ -346,5 +358,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jugada;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.Button Limpiar2Button;
+        private System.Windows.Forms.Button BorrarButton;
     }
 }

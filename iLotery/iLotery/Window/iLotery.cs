@@ -41,7 +41,7 @@ namespace iLotery.Window
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Programa Diseñado por Christopher Genao\n Contacto: 829-880-1457.");
+            MessageBox.Show("Programa Diseñado por Christopher Genao.\n\t Contacto: 829-880-1457.");
         }
 
         private void ticketToolStripMenuItem_Click(object sender, EventArgs e)
