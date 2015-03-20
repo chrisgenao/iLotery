@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.UsuarioTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.AceptarButton = new System.Windows.Forms.Button();
@@ -57,22 +58,28 @@
             // 
             // AceptarButton
             // 
-            this.AceptarButton.Location = new System.Drawing.Point(116, 185);
+            this.AceptarButton.Image = ((System.Drawing.Image)(resources.GetObject("AceptarButton.Image")));
+            this.AceptarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AceptarButton.Location = new System.Drawing.Point(107, 171);
             this.AceptarButton.Name = "AceptarButton";
-            this.AceptarButton.Size = new System.Drawing.Size(75, 23);
+            this.AceptarButton.Size = new System.Drawing.Size(78, 37);
             this.AceptarButton.TabIndex = 2;
             this.AceptarButton.Text = "Acceder";
+            this.AceptarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AceptarButton.UseVisualStyleBackColor = true;
             this.AceptarButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // CancelarButton
             // 
             this.CancelarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelarButton.Location = new System.Drawing.Point(197, 185);
+            this.CancelarButton.Image = ((System.Drawing.Image)(resources.GetObject("CancelarButton.Image")));
+            this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CancelarButton.Location = new System.Drawing.Point(191, 171);
             this.CancelarButton.Name = "CancelarButton";
-            this.CancelarButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelarButton.Size = new System.Drawing.Size(81, 37);
             this.CancelarButton.TabIndex = 3;
             this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CancelarButton.UseVisualStyleBackColor = true;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 

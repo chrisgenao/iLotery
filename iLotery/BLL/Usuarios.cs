@@ -67,12 +67,12 @@ namespace BLL
             return Encontro;
         }
 
-         public Boolean BuscarUsuario(string UBuscado)
+         public Boolean BuscarUsuario(string UBuscado, string PwBuscada)
          {
              bool Encontro = false;
              DataTable dt = new DataTable();
 
-             dt = this.Listar("Contra", "IdUsuario = @" + UBuscado);
+             dt = this.Listar("Usuario, Contra", "Usuario = '" + UBuscado + "' and Contra = '" + PwBuscada + "'");
 
              if (dt.Rows.Count == 1)
              {

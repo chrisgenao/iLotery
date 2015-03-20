@@ -39,40 +39,23 @@ namespace iLotery
                 return;
             }
 
-
-            SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=iLoteryDb;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Usuarios where Usuario='" + UsuarioTextBox.Text + "' and Contra ='"+ PasswordTextBox.Text +"'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            if (UsuarioTextBox.Text.Trim().Length > 0 && PasswordTextBox.Text.Trim().Length > 0)
             {
-                Window.iLotery il = new Window.iLotery();
-                MessageBox.Show("Bienvenido a iLotery v1.0");
-                il.Show();
-                this.Hide();
+                Usuario.BuscarUsuario(UsuarioTextBox.Text, PasswordTextBox.Text);
 
+                if (UsuarioTextBox.Text == Usuario.Usuario && PasswordTextBox.Text == Usuario.Contra)
+                {
+                      Window.iLotery il = new Window.iLotery();
+                    MessageBox.Show("Bienvenido a iLotery v1.0");
+                   il.Show();
+                      this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("\tUsuario o Contraseña incorrecta");
+                    UsuarioTextBox.Focus();
+                }
             }
-            else
-            {
-                MessageBox.Show("Usuario o Contraseña incorrecta");
-                UsuarioTextBox.Focus();
-            }
-          
-                //    Boolean paso = false;            
-          //  Usuario.Usuario = UsuarioTextBox.Text;
-          //  Usuario.Contra = PasswordTextBox.Text;
-          //  
-          //  if (UsuarioTextBox.Text == Usuario.Usuario && PasswordTextBox.Text == Usuario.Contra)
-          //  {
-          //      Window.iLotery il = new Window.iLotery();
-          //      MessageBox.Show("Bienvenido a iLotery v1.0");
-          //      il.Show();
-          //      this.Hide();
-          //  }
-          //  else
-          //  {
-          //      MessageBox.Show("Usuario o Contraseña invalidos.");
-          //  }
         }
 
         private void CancelarButton_Click(object sender, EventArgs e)
