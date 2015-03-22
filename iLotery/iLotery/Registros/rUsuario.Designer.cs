@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuario));
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.ApellidoTextBox = new System.Windows.Forms.TextBox();
             this.UsuarioTextBox = new System.Windows.Forms.TextBox();
             this.PWTextBox = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.MailTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,12 +43,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.VendedorCheckBox = new System.Windows.Forms.CheckBox();
-            this.ServidorCheckBox = new System.Windows.Forms.CheckBox();
             this.BorrarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.ImprimirButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NivelComboBox = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
             this.SuspendLayout();
             // 
             // IDTextBox
@@ -85,12 +97,13 @@
             this.PWTextBox.Size = new System.Drawing.Size(100, 20);
             this.PWTextBox.TabIndex = 4;
             // 
-            // textBox6
+            // MailTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(98, 142);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 20);
-            this.textBox6.TabIndex = 5;
+            this.MailTextBox.Location = new System.Drawing.Point(98, 142);
+            this.MailTextBox.Name = "MailTextBox";
+            this.MailTextBox.Size = new System.Drawing.Size(174, 20);
+            this.MailTextBox.TabIndex = 5;
+            this.MailTextBox.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label1
             // 
@@ -155,26 +168,6 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Nivel:";
             // 
-            // VendedorCheckBox
-            // 
-            this.VendedorCheckBox.AutoSize = true;
-            this.VendedorCheckBox.Location = new System.Drawing.Point(98, 169);
-            this.VendedorCheckBox.Name = "VendedorCheckBox";
-            this.VendedorCheckBox.Size = new System.Drawing.Size(72, 17);
-            this.VendedorCheckBox.TabIndex = 13;
-            this.VendedorCheckBox.Text = "Vendedor";
-            this.VendedorCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ServidorCheckBox
-            // 
-            this.ServidorCheckBox.AutoSize = true;
-            this.ServidorCheckBox.Location = new System.Drawing.Point(184, 169);
-            this.ServidorCheckBox.Name = "ServidorCheckBox";
-            this.ServidorCheckBox.Size = new System.Drawing.Size(65, 17);
-            this.ServidorCheckBox.TabIndex = 14;
-            this.ServidorCheckBox.Text = "Servidor";
-            this.ServidorCheckBox.UseVisualStyleBackColor = true;
-            // 
             // BorrarButton
             // 
             this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
@@ -222,17 +215,51 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // NivelComboBox
+            // 
+            this.NivelComboBox.FormattingEnabled = true;
+            this.NivelComboBox.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.NivelComboBox.Location = new System.Drawing.Point(98, 167);
+            this.NivelComboBox.Name = "NivelComboBox";
+            this.NivelComboBox.Size = new System.Drawing.Size(39, 21);
+            this.NivelComboBox.TabIndex = 27;
+            // 
             // rUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(293, 261);
+            this.Controls.Add(this.NivelComboBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BorrarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.ImprimirButton);
-            this.Controls.Add(this.ServidorCheckBox);
-            this.Controls.Add(this.VendedorCheckBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -240,7 +267,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.MailTextBox);
             this.Controls.Add(this.PWTextBox);
             this.Controls.Add(this.UsuarioTextBox);
             this.Controls.Add(this.ApellidoTextBox);
@@ -248,6 +275,12 @@
             this.Controls.Add(this.IDTextBox);
             this.Name = "rUsuario";
             this.Text = "Registro de Usuarios";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +293,7 @@
         private System.Windows.Forms.TextBox ApellidoTextBox;
         private System.Windows.Forms.TextBox UsuarioTextBox;
         private System.Windows.Forms.TextBox PWTextBox;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox MailTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -268,11 +301,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox VendedorCheckBox;
-        private System.Windows.Forms.CheckBox ServidorCheckBox;
         private System.Windows.Forms.Button BorrarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button ImprimirButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ComboBox NivelComboBox;
     }
 }

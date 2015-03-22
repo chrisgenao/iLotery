@@ -34,6 +34,11 @@
             this.LoteriaCheckList = new System.Windows.Forms.CheckedListBox();
             this.ImprimirButton = new System.Windows.Forms.Button();
             this.TicketGridView = new System.Windows.Forms.DataGridView();
+            this.Loteria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jugada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JugadaTextBox = new System.Windows.Forms.TextBox();
             this.MontoTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,19 +47,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.AgregarTextBox = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Limpiar2Button = new System.Windows.Forms.Button();
+            this.BorrarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TandaTextBox = new System.Windows.Forms.TextBox();
             this.HoraTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Loteria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jugada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BorrarButton = new System.Windows.Forms.Button();
-            this.Limpiar2Button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -112,6 +112,34 @@
             this.TicketGridView.Size = new System.Drawing.Size(595, 386);
             this.TicketGridView.TabIndex = 10;
             this.TicketGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TicketGridView_CellContentClick);
+            // 
+            // Loteria
+            // 
+            this.Loteria.HeaderText = "Loteria";
+            this.Loteria.Name = "Loteria";
+            // 
+            // Tanda
+            // 
+            this.Tanda.HeaderText = "Tanda";
+            this.Tanda.Name = "Tanda";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Jugada
+            // 
+            this.Jugada.HeaderText = "Jugada";
+            this.Jugada.Name = "Jugada";
+            // 
+            // Monto
+            // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
             // 
             // JugadaTextBox
             // 
@@ -190,6 +218,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Controladores";
             // 
+            // Limpiar2Button
+            // 
+            this.Limpiar2Button.Image = ((System.Drawing.Image)(resources.GetObject("Limpiar2Button.Image")));
+            this.Limpiar2Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Limpiar2Button.Location = new System.Drawing.Point(167, 59);
+            this.Limpiar2Button.Name = "Limpiar2Button";
+            this.Limpiar2Button.Size = new System.Drawing.Size(75, 34);
+            this.Limpiar2Button.TabIndex = 23;
+            this.Limpiar2Button.Text = "Limpiar Pantalla";
+            this.Limpiar2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Limpiar2Button.UseVisualStyleBackColor = true;
+            // 
+            // BorrarButton
+            // 
+            this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
+            this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BorrarButton.Location = new System.Drawing.Point(167, 19);
+            this.BorrarButton.Name = "BorrarButton";
+            this.BorrarButton.Size = new System.Drawing.Size(75, 34);
+            this.BorrarButton.TabIndex = 22;
+            this.BorrarButton.Text = "Borrar Partida";
+            this.BorrarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BorrarButton.UseVisualStyleBackColor = true;
+            // 
             // GuardarButton
             // 
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
@@ -206,7 +258,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.TandaTextBox);
             this.groupBox3.Controls.Add(this.HoraTextBox);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.TicketGridView);
@@ -223,6 +275,23 @@
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Jugada";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Tanda:";
+            // 
+            // TandaTextBox
+            // 
+            this.TandaTextBox.Location = new System.Drawing.Point(59, 15);
+            this.TandaTextBox.Name = "TandaTextBox";
+            this.TandaTextBox.Size = new System.Drawing.Size(54, 20);
+            this.TandaTextBox.TabIndex = 20;
             // 
             // HoraTextBox
             // 
@@ -241,75 +310,6 @@
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "Fecha:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(59, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 20);
-            this.textBox1.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Tanda:";
-            // 
-            // Loteria
-            // 
-            this.Loteria.HeaderText = "Loteria";
-            this.Loteria.Name = "Loteria";
-            // 
-            // Tanda
-            // 
-            this.Tanda.HeaderText = "Tanda";
-            this.Tanda.Name = "Tanda";
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Jugada
-            // 
-            this.Jugada.HeaderText = "Jugada";
-            this.Jugada.Name = "Jugada";
-            // 
-            // Monto
-            // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            // 
-            // BorrarButton
-            // 
-            this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
-            this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BorrarButton.Location = new System.Drawing.Point(167, 19);
-            this.BorrarButton.Name = "BorrarButton";
-            this.BorrarButton.Size = new System.Drawing.Size(75, 34);
-            this.BorrarButton.TabIndex = 22;
-            this.BorrarButton.Text = "Borrar Partida";
-            this.BorrarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BorrarButton.UseVisualStyleBackColor = true;
-            // 
-            // Limpiar2Button
-            // 
-            this.Limpiar2Button.Image = ((System.Drawing.Image)(resources.GetObject("Limpiar2Button.Image")));
-            this.Limpiar2Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Limpiar2Button.Location = new System.Drawing.Point(167, 59);
-            this.Limpiar2Button.Name = "Limpiar2Button";
-            this.Limpiar2Button.Size = new System.Drawing.Size(75, 34);
-            this.Limpiar2Button.TabIndex = 23;
-            this.Limpiar2Button.Text = "Limpiar Pantalla";
-            this.Limpiar2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Limpiar2Button.UseVisualStyleBackColor = true;
             // 
             // rTicket
             // 
@@ -352,7 +352,7 @@
         private System.Windows.Forms.TextBox HoraTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TandaTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Loteria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tanda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;

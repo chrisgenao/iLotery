@@ -31,16 +31,28 @@ namespace BLL
             this.Nivel = 0;
             this.Fecha = DateTime.Now;
             
+            
         }
 
         public Boolean Insertar()
         {
             this.IdUsuario = 0;
 
-            this.IdUsuario = (int)Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra,Mail,Nivel,Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE()) Select @@Identity");
+            this.IdUsuario = (int)Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra, Mail, Nivel, Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE()) Select @@Identity");
 
             return this.IdUsuario > 0;
 
+        }
+
+        public Boolean Modificar()
+        {
+            Boolean paso = false;
+
+            paso = Conexion.EjecutarDB("Update Gastos set Nombres = '" + this.Nombre + "', Usuario ='" + this.Usuario +
+                "', Contra = '" + this.Contra + ", Mail = '" + this.Mail + "', Nivel = " + this.Nivel + " where IdUsuario =" + this.IdUsuario);
+
+
+            return paso;//End Modificar
         }
 
         public Boolean Eliminar(Int32 IdBuscado)
@@ -72,7 +84,7 @@ namespace BLL
              bool Encontro = false;
              DataTable dt = new DataTable();
 
-             dt = this.Listar("Usuario, Contra", "Usuario = '" + UBuscado + "' and Contra = '" + PwBuscada + "'");
+             dt = this.Listar("Usuario, Contra, Nivel", "Usuario = '" + UBuscado + "' and Contra = '" + PwBuscada + "'");
 
              if (dt.Rows.Count == 1)
              {
@@ -80,6 +92,25 @@ namespace BLL
 
                  this.Usuario = (string)dt.Rows[0]["Usuario"];
                  this.Contra = (string)dt.Rows[0]["Contra"];
+                 this.Nivel = (Int32)dt.Rows[0]["Nivel"];
+             }
+
+             return Encontro;
+         }
+         
+         public Boolean BuscarNivel()
+         {
+             bool Encontro = false;
+             DataTable dt = new DataTable();
+
+             dt = this.Listar("Usuario Nivel", "Usuario = '" + this.Usuario + "'");
+
+             if (dt.Rows.Count == 1)
+             {
+                 Encontro = true;
+
+                 this.Usuario = (string)dt.Rows[0]["Usuario"];
+                 this.Nivel = (int)dt.Rows[0]["Nivel"];
              }
 
              return Encontro;

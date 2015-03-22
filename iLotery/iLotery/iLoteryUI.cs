@@ -25,6 +25,8 @@ namespace iLotery
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //todo: Comprobar el nivel del usuario.
+
             if (UsuarioTextBox.Text.Trim().Length == 0)
             {
                 errorProvider1.SetError(UsuarioTextBox, "Debe Introducir un Usuario.");
@@ -45,10 +47,10 @@ namespace iLotery
 
                 if (UsuarioTextBox.Text == Usuario.Usuario && PasswordTextBox.Text == Usuario.Contra)
                 {
-                      Window.iLotery il = new Window.iLotery();
+                    Window.iLotery il = new Window.iLotery();
                     MessageBox.Show("\tBienvenido a iLotery v1.0");
-                   il.Show();
-                      this.Hide();
+                    il.Show();
+                    this.Hide();
                 }
                 else
                 {

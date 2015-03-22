@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using BLL;
+
 namespace iLotery.Window
 {
     public partial class iLotery : Form
@@ -17,6 +18,8 @@ namespace iLotery.Window
         {
             InitializeComponent();
         }
+
+        
 
         private void iLotery_Load(object sender, EventArgs e)
         {
@@ -48,6 +51,28 @@ namespace iLotery.Window
         {
             Registros.rTicket rTicket = new Registros.rTicket();
             rTicket.Show();
+        }
+
+        private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           //Todo: comprobacion de que nivel es
+            //Usuarios Usuario = new Usuarios();
+            //
+            //if (Usuario.Nivel == 1)
+            //{
+            //    MessageBox.Show("Funciono");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No Funciono");
+            //}
+
+        }
+
+        private void ticketToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultas.cTicket cTicket = new Consultas.cTicket();
+            cTicket.Show();
         }
     }
 }

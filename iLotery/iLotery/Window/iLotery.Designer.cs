@@ -144,6 +144,7 @@
             this.ticketToolStripMenuItem1.Name = "ticketToolStripMenuItem1";
             this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ticketToolStripMenuItem1.Text = "Ticket";
+            this.ticketToolStripMenuItem1.Click += new System.EventHandler(this.ticketToolStripMenuItem1_Click);
             // 
             // toolStripSeparator3
             // 
@@ -156,6 +157,7 @@
             this.usuarioToolStripMenuItem1.Name = "usuarioToolStripMenuItem1";
             this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.usuarioToolStripMenuItem1.Text = "Usuario";
+            this.usuarioToolStripMenuItem1.Click += new System.EventHandler(this.usuarioToolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 

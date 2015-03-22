@@ -34,7 +34,7 @@ namespace BLL
         {
             this.IdTicket = 0;
 
-            this.IdTicket = (int)Conexion.ObtenerValorDb("insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ",) Select @@Identity");
+            this.IdTicket = (int)Conexion.ObtenerValorDb("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ",) Select @@Identity");
 
             return this.IdTicket > 0;
 

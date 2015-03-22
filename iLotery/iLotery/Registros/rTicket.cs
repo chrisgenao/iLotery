@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using System.Data.SqlClient;
 
 namespace iLotery.Registros
 {
@@ -17,7 +19,6 @@ namespace iLotery.Registros
         {
             InitializeComponent();
         }
-
         DataRow dr;
         DataTable dt = new DataTable();
 
@@ -34,13 +35,16 @@ namespace iLotery.Registros
             {
                 TicketGridView.Rows.Add();
                 TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[0].Value = LoteriaCheckList.SelectedItem.ToString();
-                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[1].Value = textBox1.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[1].Value = TandaTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[2].Value = HoraTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[3].Value = JugadaTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 2].Cells[4].Value = MontoTextBox.Text;
             }
 
             Sum();
+            TandaTextBox.Clear();
+            JugadaTextBox.Clear();
+            MontoTextBox.Clear();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -89,11 +93,14 @@ namespace iLotery.Registros
             Boolean paso = false;
             Tickets Ticket = new Tickets();
 
-            Ticket.IdTicket = Utilitarios.ToInt(IDTextBox.Text);
-            Ticket.Concepto = ConceptoTextBox.Text;
-            Ticket.Monto = Convert.ToSingle(MontoTextBox.Text);
-            Ticket.IdCuenta = Utilitarios.ToInt(BuscarPorcomboBox.SelectedValue.ToString());
-            Ticket.IdSubClas = Utilitarios.ToInt(BuscarPor2comboBox.SelectedValue.ToString());
+            //Ticket.IdTicket = 0; Utilitarios.ToInt(IDTextBox.Text);
+            //Ticket.Loteria = ConceptoTextBox.Text;
+            //Ticket.Tanda = Convert.ToSingle(MontoTextBox.Text);
+            //Ticket.Fecha = Utilitarios.ToInt(BuscarPorcomboBox.SelectedValue.ToString());
+            //Ticket.Jugada = Utilitarios.ToInt(BuscarPor2comboBox.SelectedValue.ToString());
+            //Ticket.Monto = 0;
+
+           
         }
         private void Sum()
 {
