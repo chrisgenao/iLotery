@@ -18,7 +18,10 @@ namespace iLotery.Registros
 
         public rUsuario()
         {
+            
             InitializeComponent();
+            PWTextBox.MaxLength = 10;
+            PWTextBox.PasswordChar = '*';
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -27,6 +30,8 @@ namespace iLotery.Registros
 
             Boolean paso = false;
 
+            if (!Utilitarios.ValidarTextBoxVacio(UsuarioTextBox, errorProvider3, "Debe introducir alguna descripción"))
+                return;
 
             if (UsuarioTextBox.Text.Trim().Length == 0)
             {
@@ -43,26 +48,38 @@ namespace iLotery.Registros
             }
             if (UsuarioTextBox.Text.Trim().Length == 0)
             {
-                errorProvider1.SetError(UsuarioTextBox, "Debe Introducir un Nombre.");
+                errorProvider3.SetError(UsuarioTextBox, "Debe Introducir un Usuario.");
                 UsuarioTextBox.Focus();
                 return;
             }
 
             if (PWTextBox.Text.Trim().Length == 0)
             {
-                if (PWTextBox.Text.Trim().Length > 10)
-                {
-                    errorProvider2.SetError(PWTextBox, "Debe Introducir una Contraseña y/o No puede exceder los 10 caracteres.");
+
+                    errorProvider4.SetError(PWTextBox, "Debe Introducir una Contraseña y/o No puede exceder los 10 caracteres.");
                     PWTextBox.Focus();
                     return;
-                }
             }
+
+            if (MailTextBox.Text.Trim().Length == 0)
+            {
+                errorProvider5.SetError(MailTextBox, "Debe Introducir un Correo.");
+                MailTextBox.Focus();
+                return;
+            }
+
+            if (NivelComboBox.SelectedValue == "")
+            {
+                errorProvider6.SetError(NivelComboBox, "Debe Introducir un Nivel.");
+                return;
+            }
+
             Usuario.IdUsuario = Utilitarios.ToInt(IDTextBox.Text);
-            Usuario.Nombre = NombreTextBox.Text + ApellidoTextBox.Text;
+            Usuario.Nombre = NombreTextBox.Text +" "+ ApellidoTextBox.Text;
             Usuario.Usuario = UsuarioTextBox.Text;
             Usuario.Contra = PWTextBox.Text;
             Usuario.Mail = MailTextBox.Text;
-            Usuario.Nivel = Utilitarios.ToInt(NivelComboBox.SelectedText);
+            Usuario.Nivel = Utilitarios.ToInt(NivelComboBox.SelectedIndex.ToString());
 
 
             if (Usuario.IdUsuario > 0)
@@ -77,14 +94,20 @@ namespace iLotery.Registros
             }
 
             if (paso)
-                MessageBox.Show("Registro Guardado");
+                MessageBox.Show("Usuario Guardado.");
             else
-                MessageBox.Show("Por Favor Complete los Campo");
+                MessageBox.Show("Error Guardando el Usuario.");
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void rUsuario_Load(object sender, EventArgs e)
+        {
+            NivelComboBox.ValueMember = "0";
+            NivelComboBox.DisplayMember = "0";
         }
     }
 }

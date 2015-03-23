@@ -38,7 +38,7 @@ namespace BLL
         {
             this.IdUsuario = 0;
 
-            this.IdUsuario = (int)Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra, Mail, Nivel, Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE()) Select @@Identity");
+            this.IdUsuario = (int)Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra, Mail, Nivel, Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE())");
 
             return this.IdUsuario > 0;
 

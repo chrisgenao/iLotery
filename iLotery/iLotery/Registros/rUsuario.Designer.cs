@@ -52,8 +52,8 @@
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
             this.NivelComboBox = new System.Windows.Forms.ComboBox();
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -235,10 +235,6 @@
             // 
             this.errorProvider5.ContainerControl = this;
             // 
-            // errorProvider6
-            // 
-            this.errorProvider6.ContainerControl = this;
-            // 
             // NivelComboBox
             // 
             this.NivelComboBox.FormattingEnabled = true;
@@ -249,6 +245,10 @@
             this.NivelComboBox.Name = "NivelComboBox";
             this.NivelComboBox.Size = new System.Drawing.Size(39, 21);
             this.NivelComboBox.TabIndex = 27;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
             // 
             // rUsuario
             // 
@@ -275,6 +275,7 @@
             this.Controls.Add(this.IDTextBox);
             this.Name = "rUsuario";
             this.Text = "Registro de Usuarios";
+            this.Load += new System.EventHandler(this.rUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
@@ -310,7 +311,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
-        private System.Windows.Forms.ErrorProvider errorProvider6;
         private System.Windows.Forms.ComboBox NivelComboBox;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
     }
 }

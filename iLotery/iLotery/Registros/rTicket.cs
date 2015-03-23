@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 using System.Data.SqlClient;
 
 namespace iLotery.Registros
@@ -19,7 +18,7 @@ namespace iLotery.Registros
         {
             InitializeComponent();
         }
-        DataRow dr;
+       // DataRow dr;
         DataTable dt = new DataTable();
 
         private void rTicket_Load(object sender, EventArgs e)
@@ -90,7 +89,7 @@ namespace iLotery.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Boolean paso = false;
+            //Boolean paso = false;
             Tickets Ticket = new Tickets();
 
             //Ticket.IdTicket = 0; Utilitarios.ToInt(IDTextBox.Text);
