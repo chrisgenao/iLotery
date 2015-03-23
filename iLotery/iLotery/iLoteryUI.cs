@@ -47,9 +47,9 @@ namespace iLotery
 
                 if (UsuarioTextBox.Text == Usuario.Usuario && PasswordTextBox.Text == Usuario.Contra)
                 {
-                    Window.iLotery il = new Window.iLotery();
+                    Window.iLotery iLotery = new Window.iLotery();
                     MessageBox.Show("\tBienvenido a iLotery v1.0");
-                    il.Show();
+                    iLotery.Show();
                     this.Hide();
                 }
                 else

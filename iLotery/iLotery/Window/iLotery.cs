@@ -71,8 +71,13 @@ namespace iLotery.Window
 
         private void ticketToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Consultas.cTicket cTicket = new Consultas.cTicket();
-            cTicket.Show();
-        }
-    }
-}
+
+            
+            
+            
+            //Consultas.cTicket cTicket = new Consultas.cTicket();
+            //cTicket.Show();
+        }   
+    }       
+}           
+            

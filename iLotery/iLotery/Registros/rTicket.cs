@@ -89,16 +89,29 @@ namespace iLotery.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            //Boolean paso = false;
+            Boolean paso = false;
             Tickets Ticket = new Tickets();
 
-            //Ticket.IdTicket = 0; Utilitarios.ToInt(IDTextBox.Text);
-            //Ticket.Loteria = ConceptoTextBox.Text;
-            //Ticket.Tanda = Convert.ToSingle(MontoTextBox.Text);
-            //Ticket.Fecha = Utilitarios.ToInt(BuscarPorcomboBox.SelectedValue.ToString());
-            //Ticket.Jugada = Utilitarios.ToInt(BuscarPor2comboBox.SelectedValue.ToString());
-            //Ticket.Monto = 0;
-
+           // foreach (DataGridViewRow DataGrid in TicketGridView.Rows)
+           // {
+           //     Ticket.Loteria = DataGrid.["Loteria"].ToString();
+           //     Ticket.Tanda = DataGrid.["Tanda"].ToString();
+           //     Ticket.Jugada = DataGrid.["Jugada"].ToString();
+           //     Ticket.Monto = (float)DataGrid.["Monto"];
+           //
+           //     if (paso)
+           //     {
+           //         Ticket.Insertar();
+           //     }
+           //     if (paso)
+           //     {
+           //         MessageBox.Show("Ha funcionado");
+           //     }
+           //     else
+           //     {
+           //         MessageBox.Show("Estamos Trabajando");
+           //     }
+           // }            
            
         }
         private void Sum()
