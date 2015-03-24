@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cTickets.Designer.cs">
+      <DependentUpon>cTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="iLoteryUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Window\iLotery.Designer.cs">
       <DependentUpon>iLotery.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultas\cTickets.resx">
+      <DependentUpon>cTickets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="iLoteryUI.resx">
       <DependentUpon>iLoteryUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,9 +152,7 @@
       <DependentUpon>iLoteryDb.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Consultas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
