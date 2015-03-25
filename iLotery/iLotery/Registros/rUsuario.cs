@@ -22,6 +22,7 @@ namespace iLotery.Registros
             InitializeComponent();
             PWTextBox.MaxLength = 10;
             PWTextBox.PasswordChar = '*';
+            NivelComboBox.SelectedIndex = 0;
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace iLotery.Registros
             Usuario.Usuario = UsuarioTextBox.Text;
             Usuario.Contra = PWTextBox.Text;
             Usuario.Mail = MailTextBox.Text;
-            Usuario.Nivel = Utilitarios.ToInt(NivelComboBox.SelectedIndex.ToString());
+            Usuario.Nivel = Utilitarios.ToInt(NivelComboBox.SelectedItem.ToString());
 
 
             if (Usuario.IdUsuario > 0)

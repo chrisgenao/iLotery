@@ -32,11 +32,12 @@ namespace BLL
         }
                 public Boolean Insertar()
         {
-            this.IdTicket = 0;
+            //this.IdTicket = 0;
 
-            this.IdTicket = (int)Conexion.ObtenerValorDb("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ",) Select @@Identity");
+            //this.IdTicket = (int)Conexion.ObtenerValorDb("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ")");
 
-            return this.IdTicket > 0;
+           // return this.IdTicket > 0;
+          return  Conexion.EjecutarDB("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ")");
 
         }
 

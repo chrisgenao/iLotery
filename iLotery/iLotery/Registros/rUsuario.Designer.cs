@@ -64,6 +64,8 @@
             // 
             // IDTextBox
             // 
+            this.IDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IDTextBox.Location = new System.Drawing.Point(98, 12);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.Size = new System.Drawing.Size(58, 20);
@@ -71,6 +73,8 @@
             // 
             // NombreTextBox
             // 
+            this.NombreTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NombreTextBox.Location = new System.Drawing.Point(98, 38);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(142, 20);
@@ -78,6 +82,8 @@
             // 
             // ApellidoTextBox
             // 
+            this.ApellidoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ApellidoTextBox.Location = new System.Drawing.Point(98, 64);
             this.ApellidoTextBox.Name = "ApellidoTextBox";
             this.ApellidoTextBox.Size = new System.Drawing.Size(142, 20);
@@ -85,6 +91,8 @@
             // 
             // UsuarioTextBox
             // 
+            this.UsuarioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuarioTextBox.Location = new System.Drawing.Point(98, 90);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
@@ -92,6 +100,8 @@
             // 
             // PWTextBox
             // 
+            this.PWTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PWTextBox.Location = new System.Drawing.Point(98, 116);
             this.PWTextBox.Name = "PWTextBox";
             this.PWTextBox.Size = new System.Drawing.Size(100, 20);
@@ -99,6 +109,8 @@
             // 
             // MailTextBox
             // 
+            this.MailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MailTextBox.Location = new System.Drawing.Point(98, 142);
             this.MailTextBox.Name = "MailTextBox";
             this.MailTextBox.Size = new System.Drawing.Size(174, 20);
@@ -207,6 +219,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(162, 7);
             this.button1.Name = "button1";
@@ -237,6 +250,9 @@
             // 
             // NivelComboBox
             // 
+            this.NivelComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NivelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NivelComboBox.FormattingEnabled = true;
             this.NivelComboBox.Items.AddRange(new object[] {
             "0",
@@ -273,7 +289,10 @@
             this.Controls.Add(this.ApellidoTextBox);
             this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.IDTextBox);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rUsuario";
+            this.ShowIcon = false;
             this.Text = "Registro de Usuarios";
             this.Load += new System.EventHandler(this.rUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

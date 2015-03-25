@@ -20,6 +20,7 @@ namespace BLL
         public string Mail { get; set; }
         public int Nivel { get; set; }
         public DateTime Fecha { get; set; }
+        int x;
 
         public Usuarios()
         {
@@ -30,6 +31,7 @@ namespace BLL
             this.Mail = string.Empty;
             this.Nivel = 0;
             this.Fecha = DateTime.Now;
+            this.x = this.Nivel;
             
             
         }
@@ -92,7 +94,7 @@ namespace BLL
 
                  this.Usuario = (string)dt.Rows[0]["Usuario"];
                  this.Contra = (string)dt.Rows[0]["Contra"];
-                 this.Nivel = (Int32)dt.Rows[0]["Nivel"];
+                 this.Nivel = (int)dt.Rows[0]["Nivel"];
              }
 
              return Encontro;

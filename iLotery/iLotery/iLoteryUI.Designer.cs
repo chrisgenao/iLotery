@@ -46,13 +46,18 @@
             // 
             // UsuarioTextBox
             // 
+            this.UsuarioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuarioTextBox.Location = new System.Drawing.Point(157, 67);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.UsuarioTextBox.TabIndex = 0;
+            this.UsuarioTextBox.TextChanged += new System.EventHandler(this.UsuarioTextBox_TextChanged);
             // 
             // PasswordTextBox
             // 
+            this.PasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PasswordTextBox.Location = new System.Drawing.Point(157, 93);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
@@ -60,6 +65,7 @@
             // 
             // AceptarButton
             // 
+            this.AceptarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.AceptarButton.Image = ((System.Drawing.Image)(resources.GetObject("AceptarButton.Image")));
             this.AceptarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AceptarButton.Location = new System.Drawing.Point(107, 171);
@@ -73,6 +79,7 @@
             // 
             // CancelarButton
             // 
+            this.CancelarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.CancelarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelarButton.Image = ((System.Drawing.Image)(resources.GetObject("CancelarButton.Image")));
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,6 +120,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -134,6 +143,7 @@
             this.Controls.Add(this.AceptarButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UsuarioTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";

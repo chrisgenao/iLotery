@@ -23,7 +23,8 @@ namespace iLotery.Window
 
         private void iLotery_Load(object sender, EventArgs e)
         {
-            
+            Usuarios Usuario = new Usuarios();
+            int x = 0;
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,12 +40,13 @@ namespace iLotery.Window
 
         private void cerrarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-
+           
         }
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Programa Diseñado por Christopher Genao.\n\t Contacto: 829-880-1457.");
+            Window.AboutBox AboutB = new Window.AboutBox();
+            AboutB.Show();
         }
 
         private void ticketToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,11 +74,8 @@ namespace iLotery.Window
         private void ticketToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            
-            
-            
-            //Consultas.cTicket cTicket = new Consultas.cTicket();
-            //cTicket.Show();
+         Consultas.cTickets cTicket = new Consultas.cTickets();
+         cTicket.Show();
         }   
     }       
 }           

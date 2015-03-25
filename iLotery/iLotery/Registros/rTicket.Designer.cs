@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rTicket));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LoteriaCheckList = new System.Windows.Forms.CheckedListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LoteriaComboBox = new System.Windows.Forms.ComboBox();
             this.ImprimirButton = new System.Windows.Forms.Button();
             this.TicketGridView = new System.Windows.Forms.DataGridView();
             this.Loteria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,27 +64,40 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.LoteriaCheckList);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.LoteriaComboBox);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 38);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(248, 126);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Loteria";
             // 
-            // LoteriaCheckList
+            // label6
             // 
-            this.LoteriaCheckList.FormattingEnabled = true;
-            this.LoteriaCheckList.Items.AddRange(new object[] {
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Loteria:";
+            // 
+            // LoteriaComboBox
+            // 
+            this.LoteriaComboBox.AllowDrop = true;
+            this.LoteriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LoteriaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoteriaComboBox.FormattingEnabled = true;
+            this.LoteriaComboBox.Items.AddRange(new object[] {
             "Real",
             "Nacional",
             "Loteka",
             "Leidsa"});
-            this.LoteriaCheckList.Location = new System.Drawing.Point(6, 19);
-            this.LoteriaCheckList.Name = "LoteriaCheckList";
-            this.LoteriaCheckList.Size = new System.Drawing.Size(227, 89);
-            this.LoteriaCheckList.TabIndex = 10;
+            this.LoteriaComboBox.Location = new System.Drawing.Point(121, 21);
+            this.LoteriaComboBox.Name = "LoteriaComboBox";
+            this.LoteriaComboBox.Size = new System.Drawing.Size(121, 24);
+            this.LoteriaComboBox.TabIndex = 0;
+            this.LoteriaComboBox.SelectedIndexChanged += new System.EventHandler(this.LoteriaComboBox_SelectedIndexChanged);
             // 
             // ImprimirButton
             // 
@@ -100,6 +114,7 @@
             // 
             // TicketGridView
             // 
+            this.TicketGridView.AllowUserToAddRows = false;
             this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TicketGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Loteria,
@@ -109,6 +124,7 @@
             this.Monto});
             this.TicketGridView.Location = new System.Drawing.Point(6, 45);
             this.TicketGridView.Name = "TicketGridView";
+            this.TicketGridView.ReadOnly = true;
             this.TicketGridView.Size = new System.Drawing.Size(595, 386);
             this.TicketGridView.TabIndex = 10;
             this.TicketGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TicketGridView_CellContentClick);
@@ -117,32 +133,38 @@
             // 
             this.Loteria.HeaderText = "Loteria";
             this.Loteria.Name = "Loteria";
+            this.Loteria.ReadOnly = true;
             // 
             // Tanda
             // 
             this.Tanda.HeaderText = "Tanda";
             this.Tanda.Name = "Tanda";
+            this.Tanda.ReadOnly = true;
             // 
             // Fecha
             // 
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             // 
             // Jugada
             // 
             this.Jugada.HeaderText = "Jugada";
             this.Jugada.Name = "Jugada";
+            this.Jugada.ReadOnly = true;
             // 
             // Monto
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle2;
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
             // 
             // JugadaTextBox
             // 
+            this.JugadaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JugadaTextBox.Location = new System.Drawing.Point(216, 15);
             this.JugadaTextBox.Name = "JugadaTextBox";
             this.JugadaTextBox.Size = new System.Drawing.Size(100, 20);
@@ -151,6 +173,7 @@
             // 
             // MontoTextBox
             // 
+            this.MontoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MontoTextBox.Location = new System.Drawing.Point(404, 15);
             this.MontoTextBox.Name = "MontoTextBox";
             this.MontoTextBox.Size = new System.Drawing.Size(100, 20);
@@ -179,6 +202,7 @@
             // 
             // TotalTextBox
             // 
+            this.TotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalTextBox.Location = new System.Drawing.Point(501, 457);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.ReadOnly = true;
@@ -197,6 +221,7 @@
             // 
             // AgregarTextBox
             // 
+            this.AgregarTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgregarTextBox.Location = new System.Drawing.Point(510, 12);
             this.AgregarTextBox.Name = "AgregarTextBox";
             this.AgregarTextBox.Size = new System.Drawing.Size(75, 23);
@@ -217,6 +242,7 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Controladores";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // Limpiar2Button
             // 
@@ -269,6 +295,7 @@
             this.groupBox3.Controls.Add(this.JugadaTextBox);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.MontoTextBox);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(316, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(607, 483);
@@ -288,6 +315,7 @@
             // 
             // TandaTextBox
             // 
+            this.TandaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TandaTextBox.Location = new System.Drawing.Point(59, 15);
             this.TandaTextBox.Name = "TandaTextBox";
             this.TandaTextBox.Size = new System.Drawing.Size(54, 20);
@@ -295,6 +323,7 @@
             // 
             // HoraTextBox
             // 
+            this.HoraTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoraTextBox.Location = new System.Drawing.Point(52, 453);
             this.HoraTextBox.Name = "HoraTextBox";
             this.HoraTextBox.ReadOnly = true;
@@ -325,6 +354,7 @@
             this.Text = "Registro de Ticket";
             this.Load += new System.EventHandler(this.rTicket_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -337,7 +367,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button ImprimirButton;
-        private System.Windows.Forms.CheckedListBox LoteriaCheckList;
         private System.Windows.Forms.DataGridView TicketGridView;
         private System.Windows.Forms.TextBox JugadaTextBox;
         private System.Windows.Forms.TextBox MontoTextBox;
@@ -353,12 +382,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TandaTextBox;
+        private System.Windows.Forms.Button Limpiar2Button;
+        private System.Windows.Forms.Button BorrarButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox LoteriaComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Loteria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tanda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jugada;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.Button Limpiar2Button;
-        private System.Windows.Forms.Button BorrarButton;
     }
 }
