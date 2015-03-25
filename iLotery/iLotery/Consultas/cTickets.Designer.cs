@@ -82,6 +82,7 @@
             this.FiltroTextBox.Name = "FiltroTextBox";
             this.FiltroTextBox.Size = new System.Drawing.Size(335, 20);
             this.FiltroTextBox.TabIndex = 3;
+            this.FiltroTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FiltroTextBox_KeyPress);
             // 
             // BuscarPorComboBox
             // 

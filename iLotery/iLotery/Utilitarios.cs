@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace iLotery{
-    
+namespace iLotery
+{
+
     public static class Utilitarios
     {
 
@@ -34,5 +35,4 @@ namespace iLotery{
         }
 
     }
-
 }

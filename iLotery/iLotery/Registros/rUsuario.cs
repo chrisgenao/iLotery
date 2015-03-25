@@ -111,5 +111,66 @@ namespace iLotery.Registros
             NivelComboBox.ValueMember = "0";
             NivelComboBox.DisplayMember = "0";
         }
+
+        private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        private void ApellidoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void UsuarioTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PWTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void MailTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

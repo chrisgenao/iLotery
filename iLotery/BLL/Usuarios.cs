@@ -97,6 +97,7 @@ namespace BLL
                  this.Nivel = (int)dt.Rows[0]["Nivel"];
              }
 
+             
              return Encontro;
          }
          

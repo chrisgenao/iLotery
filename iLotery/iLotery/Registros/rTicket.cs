@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using TicketReport;
 
 namespace iLotery.Registros
 {
@@ -64,8 +65,8 @@ namespace iLotery.Registros
             TicketGridView.Rows.Clear();
             JugadaTextBox.Clear();
             MontoTextBox.Clear();
-           // TicketReport.TicketsReport TR = new TicketReport.TicketsReport();
-           // TR.Show();
+           TicketReport.Form1 TR = new TicketReport.Form1();
+            TR.Show();
         }
 
 
@@ -120,6 +121,18 @@ namespace iLotery.Registros
         private void LoteriaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void MontoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar==8)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

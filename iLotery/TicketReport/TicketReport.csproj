@@ -129,11 +129,5 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\iLotery\iLoteryUI.csproj">
-      <Project>{23b692ae-f12a-412f-92e2-66e68a874226}</Project>
-      <Name>iLoteryUI</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

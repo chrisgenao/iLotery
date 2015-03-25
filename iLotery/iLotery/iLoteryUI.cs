@@ -23,38 +23,19 @@ namespace iLotery
 
         }
 
-        private void UsuarioTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //todo: Comprobar el nivel del usuario.
 
-            Utilitarios.ValidarTextBoxVacio(UsuarioTextBox,errorProvider2, "Error, Por favor Ingresa un Usuario");
+            Utilitarios.ValidarTextBoxVacio(UsuarioTextBox, errorProvider2, "Error, Por favor Ingresa un Usuario");
             if (UsuarioTextBox.Text.Trim().Length == 0)
             {
                 errorProvider1.SetError(UsuarioTextBox, "Debe Introducir un Usuario.");
                 UsuarioTextBox.Focus();
                 return;
             }
-            
+
             if (PasswordTextBox.Text.Trim().Length == 0)
             {
                 errorProvider2.SetError(PasswordTextBox, "Debe Introducir una Contraseña.");
@@ -94,6 +75,30 @@ namespace iLotery
         private void UsuarioTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void UsuarioTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == 8 || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == 8 || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

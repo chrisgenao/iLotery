@@ -117,6 +117,18 @@ namespace iLotery.Consultas
 
         }
 
+        private void FiltroTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
         
         }
     }

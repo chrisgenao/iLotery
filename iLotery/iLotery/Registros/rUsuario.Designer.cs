@@ -54,6 +54,8 @@
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.NivelComboBox = new System.Windows.Forms.ComboBox();
             this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -79,6 +81,7 @@
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(142, 20);
             this.NombreTextBox.TabIndex = 1;
+            this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
             // 
             // ApellidoTextBox
             // 
@@ -88,6 +91,7 @@
             this.ApellidoTextBox.Name = "ApellidoTextBox";
             this.ApellidoTextBox.Size = new System.Drawing.Size(142, 20);
             this.ApellidoTextBox.TabIndex = 2;
+            this.ApellidoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidoTextBox_KeyPress);
             // 
             // UsuarioTextBox
             // 
@@ -97,6 +101,7 @@
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.UsuarioTextBox.TabIndex = 3;
+            this.UsuarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioTextBox_KeyPress);
             // 
             // PWTextBox
             // 
@@ -106,6 +111,7 @@
             this.PWTextBox.Name = "PWTextBox";
             this.PWTextBox.Size = new System.Drawing.Size(100, 20);
             this.PWTextBox.TabIndex = 4;
+            this.PWTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PWTextBox_KeyPress);
             // 
             // MailTextBox
             // 
@@ -116,6 +122,7 @@
             this.MailTextBox.Size = new System.Drawing.Size(174, 20);
             this.MailTextBox.TabIndex = 5;
             this.MailTextBox.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.MailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MailTextBox_KeyPress);
             // 
             // label1
             // 
@@ -184,7 +191,7 @@
             // 
             this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
             this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BorrarButton.Location = new System.Drawing.Point(185, 215);
+            this.BorrarButton.Location = new System.Drawing.Point(185, 268);
             this.BorrarButton.Name = "BorrarButton";
             this.BorrarButton.Size = new System.Drawing.Size(75, 34);
             this.BorrarButton.TabIndex = 25;
@@ -196,7 +203,7 @@
             // 
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GuardarButton.Location = new System.Drawing.Point(105, 215);
+            this.GuardarButton.Location = new System.Drawing.Point(105, 268);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 34);
             this.GuardarButton.TabIndex = 24;
@@ -209,7 +216,7 @@
             // 
             this.ImprimirButton.Image = ((System.Drawing.Image)(resources.GetObject("ImprimirButton.Image")));
             this.ImprimirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ImprimirButton.Location = new System.Drawing.Point(25, 215);
+            this.ImprimirButton.Location = new System.Drawing.Point(25, 268);
             this.ImprimirButton.Name = "ImprimirButton";
             this.ImprimirButton.Size = new System.Drawing.Size(75, 34);
             this.ImprimirButton.TabIndex = 23;
@@ -266,11 +273,28 @@
             // 
             this.errorProvider6.ContainerControl = this;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 194);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox1.Size = new System.Drawing.Size(269, 68);
+            this.richTextBox1.TabIndex = 28;
+            this.richTextBox1.Text = "- El Usuario debe ser Solo Letras y Numeros.\n- La Contraseña debe Ser Solo Letras" +
+    " y Numeros.\n- El Correo debe tener @.\n- Nivel 0: Empleado || Nivel 1: Servidor.";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // rUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 261);
+            this.ClientSize = new System.Drawing.Size(293, 306);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.NivelComboBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BorrarButton);
@@ -293,6 +317,7 @@
             this.MinimizeBox = false;
             this.Name = "rUsuario";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Usuarios";
             this.Load += new System.EventHandler(this.rUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -332,5 +357,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider5;
         private System.Windows.Forms.ComboBox NivelComboBox;
         private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rTicket));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LoteriaComboBox = new System.Windows.Forms.ComboBox();
@@ -155,9 +155,9 @@
             // 
             // Monto
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
@@ -179,6 +179,7 @@
             this.MontoTextBox.Size = new System.Drawing.Size(100, 20);
             this.MontoTextBox.TabIndex = 12;
             this.MontoTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.MontoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MontoTextBox_KeyPress);
             // 
             // label1
             // 
