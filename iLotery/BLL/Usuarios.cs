@@ -38,11 +38,20 @@ namespace BLL
 
         public Boolean Insertar()
         {
+            bool paso = false;
+
             this.IdUsuario = 0;
 
-            this.IdUsuario = (int)Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra, Mail, Nivel, Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE())");
+            this.IdUsuario = Convert.ToInt32(Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra, Mail, Nivel, Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE()) Select @@IDENTITY"));
 
-            return this.IdUsuario > 0;
+            paso = this.IdUsuario > 0;
+
+            if (paso)
+            {
+
+            }
+
+            return paso;
 
         }
 

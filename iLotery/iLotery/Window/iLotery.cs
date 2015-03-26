@@ -18,6 +18,7 @@ namespace iLotery.Window
         public iLotery()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         
@@ -40,7 +41,7 @@ namespace iLotery.Window
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,18 +69,8 @@ namespace iLotery.Window
 
         private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           //Todo: comprobacion de que nivel es
-            //Usuarios Usuario = new Usuarios();
-            //
-            //if (Usuario.Nivel == 1)
-            //{
-            //    MessageBox.Show("Funciono");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No Funciono");
-            //}
-
+            Consultas.cUsuarios cUsuario = new Consultas.cUsuarios();
+            cUsuario.Show();
         }
 
         private void ticketToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -87,6 +78,12 @@ namespace iLotery.Window
 
          Consultas.cTickets cTicket = new Consultas.cTickets();
          cTicket.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            this.label1.Text = dt.ToString();
         }   
     }       
 }           
