@@ -20,7 +20,7 @@ namespace BLL
         public string Mail { get; set; }
         public int Nivel { get; set; }
         public DateTime Fecha { get; set; }
-
+        int x;
 
         public Usuarios()
         {
@@ -31,26 +31,18 @@ namespace BLL
             this.Mail = string.Empty;
             this.Nivel = 0;
             this.Fecha = DateTime.Now;
+            this.x = this.Nivel;
             
             
         }
 
         public Boolean Insertar()
         {
-            bool paso = false;
-
             this.IdUsuario = 0;
 
-            this.IdUsuario = Convert.ToInt32(Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra, Mail, Nivel, Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE()) Select @@IDENTITY"));
+            this.IdUsuario = (int)Conexion.ObtenerValorDb("insert into Usuarios (Nombres, Usuario, Contra, Mail, Nivel, Fecha) values ('"+this.Nombre+"', '"+this.Usuario+"', '"+this.Contra+"','"+this.Mail+"',"+this.Nivel+",GETDATE())");
 
-            paso = this.IdUsuario > 0;
-
-            if (paso)
-            {
-
-            }
-            
-            return paso;
+            return this.IdUsuario > 0;
 
         }
 
@@ -89,24 +81,6 @@ namespace BLL
             return Encontro;
         }
 
-         public Boolean BuscarUsuario_2(string UsuarioBuscado)
-         {
-             bool Encontro = false;
-             DataTable dt = new DataTable();
-
-             dt = this.Listar("Usuario,Nivel", "Usuario= '" + UsuarioBuscado+"'");
-
-             if (dt.Rows.Count == 1)
-             {
-                 Encontro = true;
-
-                 this.Usuario = (string)dt.Rows[0]["Usuario"];
-                 this.Nivel = (int)dt.Rows[0]["Nivel"];
-             }
-
-             return Encontro;
-         }
-
          public Boolean BuscarUsuario(string UBuscado, string PwBuscada)
          {
              bool Encontro = false;
@@ -123,8 +97,8 @@ namespace BLL
                  this.Nivel = (int)dt.Rows[0]["Nivel"];
              }
 
-           
-            return Encontro;
+             
+             return Encontro;
          }
          
          public Boolean BuscarNivel()
@@ -149,8 +123,6 @@ namespace BLL
         {
             return Conexion.BuscarDb("Select " + campos + " from Usuarios where " + Filtro);
         }
-
-     
     }
     }
 

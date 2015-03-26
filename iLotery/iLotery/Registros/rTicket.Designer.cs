@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rTicket));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LoteriaComboBox = new System.Windows.Forms.ComboBox();
@@ -57,7 +56,6 @@
             this.TandaTextBox = new System.Windows.Forms.TextBox();
             this.HoraTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -157,9 +155,9 @@
             // 
             // Monto
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
@@ -206,7 +204,7 @@
             // TotalTextBox
             // 
             this.TotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalTextBox.Location = new System.Drawing.Point(501, 453);
+            this.TotalTextBox.Location = new System.Drawing.Point(501, 457);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.ReadOnly = true;
             this.TotalTextBox.Size = new System.Drawing.Size(100, 20);
@@ -216,7 +214,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(455, 456);
+            this.label3.Location = new System.Drawing.Point(455, 460);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 16;
@@ -330,7 +328,7 @@
             this.HoraTextBox.Location = new System.Drawing.Point(52, 453);
             this.HoraTextBox.Name = "HoraTextBox";
             this.HoraTextBox.ReadOnly = true;
-            this.HoraTextBox.Size = new System.Drawing.Size(116, 20);
+            this.HoraTextBox.Size = new System.Drawing.Size(100, 20);
             this.HoraTextBox.TabIndex = 19;
             // 
             // label4
@@ -342,10 +340,6 @@
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "Fecha:";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // rTicket
             // 
@@ -398,6 +392,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jugada;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.Timer timer1;
     }
 }

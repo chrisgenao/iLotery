@@ -14,9 +14,7 @@ namespace iLotery
 {
     public partial class Login : Form
     {
-
         private Usuarios Usuario = new Usuarios();
-
         public Login()
         {
             InitializeComponent();
@@ -28,6 +26,7 @@ namespace iLotery
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //todo: Comprobar el nivel del usuario.
 
             Utilitarios.ValidarTextBoxVacio(UsuarioTextBox, errorProvider2, "Error, Por favor Ingresa un Usuario");
             if (UsuarioTextBox.Text.Trim().Length == 0)
@@ -48,12 +47,10 @@ namespace iLotery
             {
                 Usuario.BuscarUsuario(UsuarioTextBox.Text, PasswordTextBox.Text);
 
-
                 if (UsuarioTextBox.Text == Usuario.Usuario && PasswordTextBox.Text == Usuario.Contra)
                 {
                     Window.iLotery iLotery = new Window.iLotery();
-                    iLotery.x = Usuario.Usuario;
-                    MessageBox.Show("\tBienvenido a iLotery, " +iLotery.x);
+                    MessageBox.Show("\tBienvenido a iLotery v1.0");
                     iLotery.Show();
                     this.Hide();
                 }
