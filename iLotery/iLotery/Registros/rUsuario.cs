@@ -15,7 +15,7 @@ namespace iLotery.Registros
     public partial class rUsuario : Form
     {
         private Usuarios Usuario = new Usuarios();
-
+        //Todo: Validar Texto Correo.
         public rUsuario()
         {
             
@@ -69,12 +69,6 @@ namespace iLotery.Registros
                 return;
             }
 
-          //Todo: Cambiar a Index 
-          //  if (NivelComboBox.SelectedValue == "")
-          //  {
-          //      errorProvider6.SetError(NivelComboBox, "Debe Introducir un Nivel.");
-          //      return;
-          //  }
 
             Usuario.IdUsuario = Utilitarios.ToInt(IDTextBox.Text);
             Usuario.Nombre = NombreTextBox.Text +" "+ ApellidoTextBox.Text;

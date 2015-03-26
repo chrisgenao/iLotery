@@ -13,6 +13,7 @@ namespace iLotery.Consultas
 {
     public partial class cUsuarios : Form
     {
+        //todo: Terminar cUsuarios
         public cUsuarios()
         {
             InitializeComponent();

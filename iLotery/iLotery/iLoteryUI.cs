@@ -14,6 +14,10 @@ namespace iLotery
 {
     public partial class Login : Form
     {
+
+        //Todo: Terminar CrystalReport
+        //todo: Enlazar Nueva Base de Datos
+        //todo:Completar TicketReport con DataGridView
         private Usuarios Usuario = new Usuarios();
         public Login()
         {
@@ -26,7 +30,7 @@ namespace iLotery
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //todo: Comprobar el nivel del usuario.
+
 
             Utilitarios.ValidarTextBoxVacio(UsuarioTextBox, errorProvider2, "Error, Por favor Ingresa un Usuario");
             if (UsuarioTextBox.Text.Trim().Length == 0)

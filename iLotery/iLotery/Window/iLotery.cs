@@ -34,7 +34,7 @@ namespace iLotery.Window
                 toolStripSeparator1.Visible = false;
                 usuarioToolStripMenuItem1.Visible = false;
                 toolStripSeparator3.Visible = false;
-
+                imprimirToolStripMenuItem.Visible = false;
                 
             }
         }
