@@ -51,6 +51,7 @@ namespace iLotery
                 {
                     Window.iLotery iLotery = new Window.iLotery();
                     MessageBox.Show("\tBienvenido a iLotery v1.0");
+                    iLotery.x = Usuario.Usuario;
                     iLotery.Show();
                     this.Hide();
                 }

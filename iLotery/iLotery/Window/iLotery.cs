@@ -14,6 +14,7 @@ namespace iLotery.Window
 {
     public partial class iLotery : Form
     {
+        public string x { get; set; }
         public iLotery()
         {
             InitializeComponent();
@@ -24,7 +25,17 @@ namespace iLotery.Window
         private void iLotery_Load(object sender, EventArgs e)
         {
             Usuarios Usuario = new Usuarios();
-            int x = 0;
+            Usuario.BuscarUsuario_2(x);
+
+            if (Usuario.Nivel == 0)
+            {
+                usuarioToolStripMenuItem.Visible = false;
+                toolStripSeparator1.Visible = false;
+                usuarioToolStripMenuItem1.Visible = false;
+                toolStripSeparator3.Visible = false;
+
+                
+            }
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
