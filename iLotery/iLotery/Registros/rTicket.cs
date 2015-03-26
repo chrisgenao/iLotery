@@ -21,13 +21,12 @@ namespace iLotery.Registros
         }
        // DataRow dr;
         DataTable dt = new DataTable();
-
+        DateTime h = DateTime.Now;
         private void rTicket_Load(object sender, EventArgs e)
         {
-            DateTime h;
-            h = DateTime.Now;
-            HoraTextBox.Text = h.ToString();
             LoteriaComboBox.SelectedIndex = 0;
+            HoraTextBox.Text = h.ToString();
+            timer1.Start();
         }
 
         private void button4_Click(object sender, EventArgs e)

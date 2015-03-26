@@ -96,16 +96,16 @@
       <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilitarios.cs" />
-    <Compile Include="Window\AboutBox.cs">
+    <Compile Include="Windows\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\AboutBox.Designer.cs">
+    <Compile Include="Windows\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Window\iLotery.cs">
+    <Compile Include="Windows\iLotery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\iLotery.Designer.cs">
+    <Compile Include="Windows\iLotery.Designer.cs">
       <DependentUpon>iLotery.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Consultas\cTickets.resx">
@@ -129,10 +129,10 @@
     <EmbeddedResource Include="Registros\rUsuario.resx">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\AboutBox.resx">
+    <EmbeddedResource Include="Windows\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\iLotery.resx">
+    <EmbeddedResource Include="Windows\iLotery.resx">
       <DependentUpon>iLotery.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
