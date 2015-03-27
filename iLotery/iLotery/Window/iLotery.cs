@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using BLL;
+using iLotery;
 
 namespace iLotery.Window
 {
@@ -84,6 +85,13 @@ namespace iLotery.Window
         {
             DateTime dt = DateTime.Now;
             this.label1.Text = dt.ToString();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            //iL
+                
         }   
     }       
 }           

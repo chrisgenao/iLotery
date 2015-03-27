@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using TicketReport;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace iLotery.Registros
 {
@@ -32,6 +33,20 @@ namespace iLotery.Registros
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (MontoTextBox.Text.Trim().Length == 0)
+            {
+                Utilitarios.ValidarTextBoxVacio(MontoTextBox, errorProvider1, "Debe Agregar un Monto.");
+            }
+            if (TandaTextBox.Text.Trim().Length == 0)
+            {
+                Utilitarios.ValidarTextBoxVacio(TandaTextBox, errorProvider2, "Debe Agregar una Tanda.");
+            }
+            if (JugadaTextBox.Text.Trim().Length == 0)
+            {
+                Utilitarios.ValidarTextBoxVacio(JugadaTextBox, errorProvider3, "Debe Agregar una Jugada.");
+            }
+            else
+            {
                 TicketGridView.Rows.Add();
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[0].Value = LoteriaComboBox.SelectedItem.ToString();
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[1].Value = TandaTextBox.Text;
@@ -39,12 +54,15 @@ namespace iLotery.Registros
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[3].Value = JugadaTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[4].Value = MontoTextBox.Text;
 
-            Sum();
-            TandaTextBox.Clear();
-            JugadaTextBox.Clear();
-            MontoTextBox.Clear();
+                Sum();
+                TandaTextBox.Clear();
+                JugadaTextBox.Clear();
+                MontoTextBox.Clear();
+                errorProvider3.Clear();
+                errorProvider1.Clear();
+                errorProvider2.Clear();
+            }
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -62,15 +80,34 @@ namespace iLotery.Registros
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TicketGridView.Rows.Clear();
-            JugadaTextBox.Clear();
-            MontoTextBox.Clear();
-           TicketReport.Form1 TR = new TicketReport.Form1();
-            TR.Show();
+
+            //todo: imprima tickets.
+
+           // DataSet ds = new DataSet();
+           // int filas = TicketGridView.Rows.Count;
+           // for (int i = 0; i <= filas - 2; i++ )
+           // {
+           //     ds.Tables[0].Rows.Add
+           //         (new object[] {TicketGridView[0, i].Value.ToString(),
+           //                        TicketGridView[1, i].Value.ToString(),
+           //                        TicketGridView[3, i].Value.ToString(),
+           //                        TicketGridView[4, i].Value.ToString()                  
+           //         });
+           // }
+           // ds.Tables.Add(dt);
+           // ds.WriteXmlSchema("ImprimirTicket.xml");
+           // ReportDocument oRe = new ReportDocument();
+           // Imprimir.iTickets iT = new Imprimir.iTickets();
+           // oRe.SetDataSource(tds);
+           // iT.crystalReportViewer1.ReportSource = oRe;
+           // iT.crystalReportViewer1.Refresh();
+           // iT.Show();
+           // TicketGridView.Rows.Clear();
+           // JugadaTextBox.Clear();
+           // MontoTextBox.Clear();
         }
 
-
-
+        
         private void TicketGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -78,6 +115,9 @@ namespace iLotery.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+
+            //ExportarDataGridViewExcel(TicketGridView);
+
             Boolean paso = false;
             Tickets Ticket = new Tickets();
             int x = 1;
@@ -132,6 +172,52 @@ namespace iLotery.Registros
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //Metodos:
+        public void ExportarDataGridViewExcel(DataGridView grd)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                int x = grd.Rows.Count;
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        foreach (DataGridViewRow DataGrid in grd.Rows)
+                        {
+
+                            hoja_trabajo.Cells[i + 1, j + 1] = TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[0].Value;
+                            hoja_trabajo.Cells[i + 1, j + 1] = TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[1].Value;
+                            hoja_trabajo.Cells[i + 1, j + 1] = TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[3].Value;
+                            hoja_trabajo.Cells[i + 1, j + 1] = TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[4].Value;
+                            x--;
+                        }
+                    }
+                }
+
+
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
             }
         }
     }

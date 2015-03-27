@@ -18,7 +18,7 @@ namespace iLotery.Registros
         //Todo: Validar Texto Correo.
         public rUsuario()
         {
-            
+
             InitializeComponent();
             PWTextBox.MaxLength = 10;
             PWTextBox.PasswordChar = '*';
@@ -57,9 +57,9 @@ namespace iLotery.Registros
             if (PWTextBox.Text.Trim().Length == 0)
             {
 
-                    errorProvider4.SetError(PWTextBox, "Debe Introducir una Contraseña y/o No puede exceder los 10 caracteres.");
-                    PWTextBox.Focus();
-                    return;
+                errorProvider4.SetError(PWTextBox, "Debe Introducir una Contraseña y/o No puede exceder los 10 caracteres.");
+                PWTextBox.Focus();
+                return;
             }
 
             if (MailTextBox.Text.Trim().Length == 0)
@@ -71,7 +71,7 @@ namespace iLotery.Registros
 
 
             Usuario.IdUsuario = Utilitarios.ToInt(IDTextBox.Text);
-            Usuario.Nombre = NombreTextBox.Text +" "+ ApellidoTextBox.Text;
+            Usuario.Nombre = NombreTextBox.Text + " " + ApellidoTextBox.Text;
             Usuario.Usuario = UsuarioTextBox.Text;
             Usuario.Contra = PWTextBox.Text;
             Usuario.Mail = MailTextBox.Text;
@@ -164,6 +164,39 @@ namespace iLotery.Registros
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+
+            result = DialogResult.Ignore;
+
+            if (Utilitarios.ToInt(IDTextBox.Text) == 0)
+            {
+                Consultas.cUsuarios cUsuario = new Consultas.cUsuarios();
+
+                result = cUsuario.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    IDTextBox.Text = cUsuario.DatoEncontrado.ToString();
+                }
+                else
+                {
+                    IDTextBox.Clear();
+                }
+
+                if (Usuario.Buscar(Utilitarios.ToInt(IDTextBox.Text)))
+                {
+
+                    IDTextBox.Text = Usuario.IdUsuario.ToString();
+                    NombreTextBox.Text = Usuario.Nombre.ToString();
+                    UsuarioTextBox.Text = Usuario.Usuario.ToString();
+                    MailTextBox.Text = Usuario.Mail.ToString();
+                    NivelComboBox.SelectedIndex = Convert.ToInt32(Usuario.Nivel.ToString());
+                }
             }
         }
     }

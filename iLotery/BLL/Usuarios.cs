@@ -59,8 +59,8 @@ namespace BLL
         {
             Boolean paso = false;
 
-            paso = Conexion.EjecutarDB("Update Gastos set Nombres = '" + this.Nombre + "', Usuario ='" + this.Usuario +
-                "', Contra = '" + this.Contra + ", Mail = '" + this.Mail + "', Nivel = " + this.Nivel + " where IdUsuario =" + this.IdUsuario);
+            paso = Conexion.EjecutarDB("Update Usuarios set Nombres = '" + this.Nombre + "', Usuario ='" + this.Usuario +
+                "', Contra = '" + this.Contra + "', Mail = '" + this.Mail + "', Nivel = " + this.Nivel + " where IdUsuario =" + this.IdUsuario);
 
 
             return paso;//End Modificar
