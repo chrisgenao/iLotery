@@ -92,6 +92,17 @@ namespace iLotery.Window
             //this.Close();
             //iL
                 
+        }
+
+        private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TicketReport.Form1 Frm = new TicketReport.Form1();
+            Frm.Show();
+        }
+
+        private void separator2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }   
     }       
 }           
