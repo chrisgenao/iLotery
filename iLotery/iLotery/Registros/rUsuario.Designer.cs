@@ -81,6 +81,7 @@
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(142, 20);
             this.NombreTextBox.TabIndex = 1;
+            this.NombreTextBox.TextChanged += new System.EventHandler(this.NombreTextBox_TextChanged);
             this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
             // 
             // ApellidoTextBox
@@ -198,6 +199,7 @@
             this.BorrarButton.Text = "Borrar";
             this.BorrarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BorrarButton.UseVisualStyleBackColor = true;
+            this.BorrarButton.Click += new System.EventHandler(this.BorrarButton_Click);
             // 
             // GuardarButton
             // 
@@ -223,6 +225,7 @@
             this.ImprimirButton.Text = "Limpiar";
             this.ImprimirButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ImprimirButton.UseVisualStyleBackColor = true;
+            this.ImprimirButton.Click += new System.EventHandler(this.ImprimirButton_Click);
             // 
             // button1
             // 

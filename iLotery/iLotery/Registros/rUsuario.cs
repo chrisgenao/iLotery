@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace iLotery.Registros
 {
@@ -157,7 +158,7 @@ namespace iLotery.Registros
 
         private void MailTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar))
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8 || char.IsLetter(e.KeyChar) || e.KeyChar == 45 || e.KeyChar == 46 || e.KeyChar == '@')
             {
                 e.Handled = false;
             }
@@ -198,6 +199,33 @@ namespace iLotery.Registros
                     NivelComboBox.SelectedIndex = Convert.ToInt32(Usuario.Nivel.ToString());
                 }
             }
+        }
+
+        private void BorrarButton_Click(object sender, EventArgs e)
+        {
+            if (IDTextBox.Text.Trim().Length == 0)
+            {
+                errorProvider1.SetError(IDTextBox, "Debe ingresar un ID");
+                IDTextBox.Focus();
+                return;
+            }
+            if (Usuario.Eliminar(Utilitarios.ToInt(IDTextBox.Text)))
+                MessageBox.Show("Usuario Borrado");
+        }
+
+        private void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            IDTextBox.Clear();
+            NombreTextBox.Clear();
+            ApellidoTextBox.Clear();
+            UsuarioTextBox.Clear();
+            PWTextBox.Clear();
+            MailTextBox.Clear();
+        }
+
+        private void NombreTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

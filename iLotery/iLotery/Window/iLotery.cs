@@ -36,6 +36,10 @@ namespace iLotery.Window
                 usuarioToolStripMenuItem1.Visible = false;
                 toolStripSeparator3.Visible = false;
                 imprimirToolStripMenuItem.Visible = false;
+                ganadoresToolStripMenuItem.Visible = false;
+                toolStripSeparator2.Visible = false;
+                loteriaToolStripMenuItem.Visible = false;
+                toolStripSeparator8.Visible = false;
                 
             }
         }
@@ -48,7 +52,7 @@ namespace iLotery.Window
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Registros.rUsuario rUsuario = new Registros.rUsuario();
-            rUsuario.Show();
+            rUsuario.ShowDialog();
         }
 
         private void cerrarToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -59,26 +63,26 @@ namespace iLotery.Window
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Window.AboutBox AboutB = new Window.AboutBox();
-            AboutB.Show();
+            AboutB.ShowDialog();
         }
 
         private void ticketToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Registros.rTicket rTicket = new Registros.rTicket();
-            rTicket.Show();
+            rTicket.ShowDialog();
         }
 
         private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Consultas.cUsuarios cUsuario = new Consultas.cUsuarios();
-            cUsuario.Show();
+            cUsuario.ShowDialog();
         }
 
         private void ticketToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
          Consultas.cTickets cTicket = new Consultas.cTickets();
-         cTicket.Show();
+         cTicket.ShowDialog();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -97,12 +101,25 @@ namespace iLotery.Window
         private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TicketReport.Form1 Frm = new TicketReport.Form1();
-            Frm.Show();
+            Frm.ShowDialog();
         }
 
         private void separator2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void loteriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rLoteria rLoteria = new Registros.rLoteria();
+            rLoteria.ShowDialog();
+        }
+
+        private void ganadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rGanadores Ganador = new Registros.rGanadores();
+            Ganador.ShowDialog();
+            
         }   
     }       
 }           

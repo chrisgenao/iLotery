@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rTicket));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LoteriaComboBox = new System.Windows.Forms.ComboBox();
@@ -49,12 +49,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.AgregarTextBox = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Limpiar2Button = new System.Windows.Forms.Button();
             this.BorrarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.TandaComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TandaTextBox = new System.Windows.Forms.TextBox();
             this.HoraTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -83,7 +82,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 24);
+            this.label6.Location = new System.Drawing.Point(21, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 1;
@@ -96,11 +95,9 @@
             this.LoteriaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoteriaComboBox.FormattingEnabled = true;
             this.LoteriaComboBox.Items.AddRange(new object[] {
-            "Real",
-            "Nacional",
-            "Loteka",
-            "Leidsa"});
-            this.LoteriaComboBox.Location = new System.Drawing.Point(121, 21);
+            "IdLoteria",
+            "Nombre"});
+            this.LoteriaComboBox.Location = new System.Drawing.Point(121, 47);
             this.LoteriaComboBox.Name = "LoteriaComboBox";
             this.LoteriaComboBox.Size = new System.Drawing.Size(121, 24);
             this.LoteriaComboBox.TabIndex = 0;
@@ -162,9 +159,9 @@
             // 
             // Monto
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
@@ -177,6 +174,7 @@
             this.JugadaTextBox.Size = new System.Drawing.Size(100, 20);
             this.JugadaTextBox.TabIndex = 11;
             this.JugadaTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.JugadaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JugadaTextBox_KeyPress);
             // 
             // MontoTextBox
             // 
@@ -240,7 +238,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.Limpiar2Button);
             this.groupBox2.Controls.Add(this.BorrarButton);
             this.groupBox2.Controls.Add(this.GuardarButton);
             this.groupBox2.Controls.Add(this.ImprimirButton);
@@ -251,18 +248,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Controladores";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // Limpiar2Button
-            // 
-            this.Limpiar2Button.Image = ((System.Drawing.Image)(resources.GetObject("Limpiar2Button.Image")));
-            this.Limpiar2Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Limpiar2Button.Location = new System.Drawing.Point(167, 59);
-            this.Limpiar2Button.Name = "Limpiar2Button";
-            this.Limpiar2Button.Size = new System.Drawing.Size(75, 34);
-            this.Limpiar2Button.TabIndex = 23;
-            this.Limpiar2Button.Text = "Limpiar Pantalla";
-            this.Limpiar2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Limpiar2Button.UseVisualStyleBackColor = true;
             // 
             // BorrarButton
             // 
@@ -291,8 +276,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.TandaComboBox);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.TandaTextBox);
             this.groupBox3.Controls.Add(this.HoraTextBox);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.TicketGridView);
@@ -311,6 +296,19 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Jugada";
             // 
+            // TandaComboBox
+            // 
+            this.TandaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TandaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TandaComboBox.FormattingEnabled = true;
+            this.TandaComboBox.Items.AddRange(new object[] {
+            "Tarde",
+            "Noche"});
+            this.TandaComboBox.Location = new System.Drawing.Point(59, 15);
+            this.TandaComboBox.Name = "TandaComboBox";
+            this.TandaComboBox.Size = new System.Drawing.Size(51, 21);
+            this.TandaComboBox.TabIndex = 22;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -320,14 +318,6 @@
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 21;
             this.label5.Text = "Tanda:";
-            // 
-            // TandaTextBox
-            // 
-            this.TandaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TandaTextBox.Location = new System.Drawing.Point(59, 15);
-            this.TandaTextBox.Name = "TandaTextBox";
-            this.TandaTextBox.Size = new System.Drawing.Size(54, 20);
-            this.TandaTextBox.TabIndex = 20;
             // 
             // HoraTextBox
             // 
@@ -403,9 +393,6 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.TextBox HoraTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TandaTextBox;
-        private System.Windows.Forms.Button Limpiar2Button;
         private System.Windows.Forms.Button BorrarButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox LoteriaComboBox;
@@ -417,5 +404,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ComboBox TandaComboBox;
+        private System.Windows.Forms.Label label5;
     }
 }

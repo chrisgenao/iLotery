@@ -25,10 +25,14 @@ namespace iLotery.Registros
 
         private void rTicket_Load(object sender, EventArgs e)
         {
+            Loterias Loteria = new Loterias();
             DateTime h;
             h = DateTime.Now;
             HoraTextBox.Text = h.ToString();
-            LoteriaComboBox.SelectedIndex = 0;
+            TandaComboBox.SelectedIndex = 0;
+            LoteriaComboBox.DataSource = Loteria.Listar("Loteria", "1=1");
+            LoteriaComboBox.ValueMember = "Loteria";
+            LoteriaComboBox.DisplayMember = "Loteria";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -37,10 +41,6 @@ namespace iLotery.Registros
             {
                 Utilitarios.ValidarTextBoxVacio(MontoTextBox, errorProvider1, "Debe Agregar un Monto.");
             }
-            if (TandaTextBox.Text.Trim().Length == 0)
-            {
-                Utilitarios.ValidarTextBoxVacio(TandaTextBox, errorProvider2, "Debe Agregar una Tanda.");
-            }
             if (JugadaTextBox.Text.Trim().Length == 0)
             {
                 Utilitarios.ValidarTextBoxVacio(JugadaTextBox, errorProvider3, "Debe Agregar una Jugada.");
@@ -48,14 +48,14 @@ namespace iLotery.Registros
             else
             {
                 TicketGridView.Rows.Add();
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[0].Value = LoteriaComboBox.SelectedItem.ToString();
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[1].Value = TandaTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[0].Value = LoteriaComboBox.SelectedValue.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[1].Value = TandaComboBox.SelectedItem.ToString();
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[2].Value = HoraTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[3].Value = JugadaTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[4].Value = MontoTextBox.Text;
 
                 Sum();
-                TandaTextBox.Clear();
+                TandaComboBox.SelectedIndex = 0;
                 JugadaTextBox.Clear();
                 MontoTextBox.Clear();
                 errorProvider3.Clear();
@@ -218,6 +218,18 @@ namespace iLotery.Registros
                     Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
                 libros_trabajo.Close(true);
                 aplicacion.Quit();
+            }
+        }
+
+        private void JugadaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8 || char.IsNumber(e.KeyChar) || e.KeyChar == 45)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

@@ -105,6 +105,18 @@
     <Compile Include="Registros\rCuadre.Designer.cs">
       <DependentUpon>rCuadre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rGanadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\rGanadores.Designer.cs">
+      <DependentUpon>rGanadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rLoteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\rLoteria.Designer.cs">
+      <DependentUpon>rLoteria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\rTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +165,12 @@
     </Compile>
     <EmbeddedResource Include="Registros\rCuadre.resx">
       <DependentUpon>rCuadre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\rGanadores.resx">
+      <DependentUpon>rGanadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\rLoteria.resx">
+      <DependentUpon>rLoteria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\rTicket.resx">
       <DependentUpon>rTicket.cs</DependentUpon>
