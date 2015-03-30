@@ -110,5 +110,24 @@ namespace iLotery.Consultas
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void BuscarPorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

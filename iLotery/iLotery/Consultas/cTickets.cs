@@ -20,7 +20,7 @@ namespace iLotery.Consultas
         
         private void cTickets_Load(object sender, EventArgs e)
         {
-            BuscarPorComboBox.SelectedIndex = 0;
+            BuscarPorComboBox2.SelectedIndex = 0;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -33,17 +33,17 @@ namespace iLotery.Consultas
             DataTable dt = new DataTable();
             string filtro = "1=1";
             
-            switch (BuscarPorComboBox.SelectedIndex)
+            switch (BuscarPorComboBox2.SelectedIndex)
             {
 
                 case 0:
-                    if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 10){
-                            filtro = "IdTicket >=" + FiltroTextBox.Text;
+                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10){
+                            filtro = "IdTicket >=" + FiltroTextBox2.Text;
                             dt = Ticket.Listar("IdTicket,Loteria,Tanda,Fecha,Jugada,Monto", filtro);
-                            DataGridView.DataSource = dt;
+                            DataGridView2.DataSource = dt;
 
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
+                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
+                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
                        }
                     else 
                         MessageBox.Show("Por Favor Llene la Casilla.");
@@ -53,54 +53,54 @@ namespace iLotery.Consultas
                     //Tanda
                     //Jugada
                 case 1:
-                    if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 10)
+                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10)
                     {
-                        filtro = "Loteria like '%" + FiltroTextBox.Text+ "%'";
+                        filtro = "Loteria like '%" + FiltroTextBox2.Text+ "%'";
                         dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                        DataGridView.DataSource = dt;
+                        DataGridView2.DataSource = dt;
 
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
+                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
+                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
                     }
                         else
                         MessageBox.Show("Por Favor Llene la Casilla2");
                     break;
                 case 2:
-                    if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 10)
+                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10)
                     {
-                        filtro = "Tanda like '%" + FiltroTextBox.Text + "%'";
+                        filtro = "Tanda like '%" + FiltroTextBox2.Text + "%'";
                         dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                        DataGridView.DataSource = dt;
+                        DataGridView2.DataSource = dt;
 
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
+                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
+                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
                     }
                         else
                         MessageBox.Show("Por Favor Llene la Casilla3");
                     break;
                 case 3:
-                    if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 80)
-                        if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 10)
+                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 80)
+                        if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10)
                         {
-                            filtro = "Jugada like '%" + FiltroTextBox.Text + "%'";
+                            filtro = "Jugada like '%" + FiltroTextBox2.Text + "%'";
                             dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                            DataGridView.DataSource = dt;
+                            DataGridView2.DataSource = dt;
 
-                            CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                            TotalTextBox.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
+                            CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
+                            TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
                         }
                     else
                         MessageBox.Show("Por Favor Llene la Casilla4");
                     break;
                 case 4:
-                    if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 80)
+                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 80)
                     {
-                        filtro = "Monto>=" + FiltroTextBox.Text;
+                        filtro = "Monto>=" + FiltroTextBox2.Text;
                         dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                        DataGridView.DataSource = dt;
+                        DataGridView2.DataSource = dt;
 
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
+                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
+                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
                     }
                    else
                         MessageBox.Show("Por Favor Llene la Casilla5");
@@ -127,6 +127,11 @@ namespace iLotery.Consultas
             {
                 e.Handled = true;
             }
+        }
+
+        private void BuscarPorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         

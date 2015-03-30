@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cGanadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cGanadores.Designer.cs">
+      <DependentUpon>cGanadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cTickets.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <Compile Include="Window\iLotery.Designer.cs">
       <DependentUpon>iLotery.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultas\cGanadores.resx">
+      <DependentUpon>cGanadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cTickets.resx">
       <DependentUpon>cTickets.cs</DependentUpon>
     </EmbeddedResource>

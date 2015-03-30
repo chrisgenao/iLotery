@@ -120,6 +120,12 @@ namespace iLotery.Window
             Registros.rGanadores Ganador = new Registros.rGanadores();
             Ganador.ShowDialog();
             
+        }
+
+        private void ganadoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultas.cGanadores cGanador = new Consultas.cGanadores();
+            cGanador.ShowDialog();
         }   
     }       
 }           

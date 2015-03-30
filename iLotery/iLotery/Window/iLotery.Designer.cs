@@ -59,6 +59,8 @@
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.ganadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,6 +182,8 @@
             this.toolStripSeparator3,
             this.usuarioToolStripMenuItem1,
             this.toolStripSeparator4,
+            this.ganadoresToolStripMenuItem1,
+            this.toolStripSeparator9,
             this.cuadreToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
@@ -289,6 +293,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
+            // ganadoresToolStripMenuItem1
+            // 
+            this.ganadoresToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ganadoresToolStripMenuItem1.Image")));
+            this.ganadoresToolStripMenuItem1.Name = "ganadoresToolStripMenuItem1";
+            this.ganadoresToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ganadoresToolStripMenuItem1.Text = "Ganadores";
+            this.ganadoresToolStripMenuItem1.Click += new System.EventHandler(this.ganadoresToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(149, 6);
+            // 
             // iLotery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +359,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem loteriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem ganadoresToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
     }
 }
