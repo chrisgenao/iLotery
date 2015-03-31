@@ -50,92 +50,67 @@ namespace iLotery.Consultas
             {
 
                 case 0:
-                    if (BuscarPorTextBox.Text.Length > 0 && BuscarPorTextBox.Text.Length < 10)
-                    {
                         filtro = "IdGanador >=" + BuscarPorTextBox.Text;
                         dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
                         DataGridView.DataSource = dt;
 
                         CantidadTextBox.Text = DataGridView.RowCount.ToString();
                         TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla.");
                     break;
 
-                //Loteria
-                //Tanda
-                //Jugada
                 case 1:
-                    if (BuscarPorTextBox.Text.Length > 0 && BuscarPorTextBox.Text.Length < 10)
-                    {
                         filtro = "Nombre like '%" + BuscarPorTextBox.Text + "%'";
                         dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
                         DataGridView.DataSource = dt;
 
                         CantidadTextBox.Text = DataGridView.RowCount.ToString();
                         TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla2");
+                    
                     break;
                 case 2:
-                    if (BuscarPorTextBox.Text.Length > 0 && BuscarPorTextBox.Text.Length < 10)
-                    {
+                    
                         filtro = "Apellido like '%" + BuscarPorTextBox.Text + "%'";
                         dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
                         DataGridView.DataSource = dt;
 
                         CantidadTextBox.Text = DataGridView.RowCount.ToString();
                         TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla3");
                     break;
                 case 3:
-                        if (BuscarPorTextBox.Text.Length > 0 && BuscarPorTextBox.Text.Length < 10)
-                        {
                             filtro = "LoteriaG like '%" + BuscarPorTextBox.Text + "%'";
                             dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
                             DataGridView.DataSource = dt;
 
                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
                             TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                        }
-                        else
-                            MessageBox.Show("Por Favor Llene la Casilla4");
                     break;
                 case 4:
-                    if (BuscarPorTextBox.Text.Length > 0 && BuscarPorTextBox.Text.Length < 10)
-                    {
                         filtro = "JugadaG like '%" + BuscarPorTextBox.Text + "%'";
                         dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
                         DataGridView.DataSource = dt;
 
                         CantidadTextBox.Text = DataGridView.RowCount.ToString();
                         TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla4");
-                    break;
+                    
+                        break;
                 case 5:
-                    if (BuscarPorTextBox.Text.Length > 0 && BuscarPorTextBox.Text.Length < 80)
-                    {
                         filtro = "Monto>=" + BuscarPorTextBox.Text;
                         dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
                         DataGridView.DataSource = dt;
 
                         CantidadTextBox.Text = DataGridView.RowCount.ToString();
                         TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla5");
                     break;
 
                 default:
                     break;
 
             }
+        }
+
+        private void BuscarPorTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

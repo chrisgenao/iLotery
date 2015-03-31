@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TicketReport {
+namespace UsuarioReport {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace TicketReport {
         
         public override string FullResourceName {
             get {
-                return "TicketReport.CrystalReport1.rpt";
+                return "UsuarioReport.CrystalReport1.rpt";
             }
             set {
                 // Do nothing

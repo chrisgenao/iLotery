@@ -40,27 +40,25 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.loteriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.separator2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.usuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.cuadreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loteriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.ganadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.cuadreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.ganadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.ticketsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,8 +87,6 @@
             this.toolStripSeparator2,
             this.loteriaToolStripMenuItem,
             this.toolStripSeparator8,
-            this.separator2ToolStripMenuItem,
-            this.toolStripSeparator7,
             this.cerrarToolStripMenuItem});
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
@@ -152,20 +148,6 @@
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(169, 6);
             // 
-            // separator2ToolStripMenuItem
-            // 
-            this.separator2ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("separator2ToolStripMenuItem.Image")));
-            this.separator2ToolStripMenuItem.Name = "separator2ToolStripMenuItem";
-            this.separator2ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.separator2ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.separator2ToolStripMenuItem.Text = "Cuadre";
-            this.separator2ToolStripMenuItem.Click += new System.EventHandler(this.separator2ToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(169, 6);
-            // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cerrarToolStripMenuItem.Image")));
@@ -182,9 +164,9 @@
             this.toolStripSeparator3,
             this.usuarioToolStripMenuItem1,
             this.toolStripSeparator4,
-            this.ganadoresToolStripMenuItem1,
-            this.toolStripSeparator9,
-            this.cuadreToolStripMenuItem});
+            this.loteriasToolStripMenuItem,
+            this.toolStripSeparator10,
+            this.ganadoresToolStripMenuItem1});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.consultaToolStripMenuItem.Text = "Consulta";
@@ -193,34 +175,48 @@
             // 
             this.ticketToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ticketToolStripMenuItem1.Image")));
             this.ticketToolStripMenuItem1.Name = "ticketToolStripMenuItem1";
-            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.ticketToolStripMenuItem1.Text = "Ticket";
             this.ticketToolStripMenuItem1.Click += new System.EventHandler(this.ticketToolStripMenuItem1_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(127, 6);
             // 
             // usuarioToolStripMenuItem1
             // 
             this.usuarioToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("usuarioToolStripMenuItem1.Image")));
             this.usuarioToolStripMenuItem1.Name = "usuarioToolStripMenuItem1";
-            this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.usuarioToolStripMenuItem1.Text = "Usuario";
             this.usuarioToolStripMenuItem1.Click += new System.EventHandler(this.usuarioToolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(127, 6);
             // 
-            // cuadreToolStripMenuItem
+            // loteriasToolStripMenuItem
             // 
-            this.cuadreToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cuadreToolStripMenuItem.Image")));
-            this.cuadreToolStripMenuItem.Name = "cuadreToolStripMenuItem";
-            this.cuadreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cuadreToolStripMenuItem.Text = "Cuadre";
+            this.loteriasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loteriasToolStripMenuItem.Image")));
+            this.loteriasToolStripMenuItem.Name = "loteriasToolStripMenuItem";
+            this.loteriasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.loteriasToolStripMenuItem.Text = "Loterias";
+            this.loteriasToolStripMenuItem.Click += new System.EventHandler(this.loteriasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(127, 6);
+            // 
+            // ganadoresToolStripMenuItem1
+            // 
+            this.ganadoresToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ganadoresToolStripMenuItem1.Image")));
+            this.ganadoresToolStripMenuItem1.Name = "ganadoresToolStripMenuItem1";
+            this.ganadoresToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.ganadoresToolStripMenuItem1.Text = "Ganadores";
+            this.ganadoresToolStripMenuItem1.Click += new System.EventHandler(this.ganadoresToolStripMenuItem1_Click);
             // 
             // imprimirToolStripMenuItem
             // 
@@ -229,7 +225,7 @@
             this.toolStripSeparator6,
             this.usuariosToolStripMenuItem,
             this.toolStripSeparator5,
-            this.cuadreToolStripMenuItem1});
+            this.ticketsToolStripMenuItem1});
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
             this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.imprimirToolStripMenuItem.Text = "Resumen";
@@ -253,18 +249,12 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
-            // 
-            // cuadreToolStripMenuItem1
-            // 
-            this.cuadreToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("cuadreToolStripMenuItem1.Image")));
-            this.cuadreToolStripMenuItem1.Name = "cuadreToolStripMenuItem1";
-            this.cuadreToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.cuadreToolStripMenuItem1.Text = "Cuadre";
             // 
             // ayudaToolStripMenuItem
             // 
@@ -293,18 +283,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
-            // ganadoresToolStripMenuItem1
+            // ticketsToolStripMenuItem1
             // 
-            this.ganadoresToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ganadoresToolStripMenuItem1.Image")));
-            this.ganadoresToolStripMenuItem1.Name = "ganadoresToolStripMenuItem1";
-            this.ganadoresToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.ganadoresToolStripMenuItem1.Text = "Ganadores";
-            this.ganadoresToolStripMenuItem1.Click += new System.EventHandler(this.ganadoresToolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(149, 6);
+            this.ticketsToolStripMenuItem1.Name = "ticketsToolStripMenuItem1";
+            this.ticketsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ticketsToolStripMenuItem1.Text = "Tickets";
+            this.ticketsToolStripMenuItem1.Click += new System.EventHandler(this.ticketsToolStripMenuItem1_Click);
             // 
             // iLotery
             // 
@@ -337,13 +321,11 @@
         private System.Windows.Forms.ToolStripSeparator serparator1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem separator2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem cuadreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
@@ -352,14 +334,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem cuadreToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem desconectarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ganadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem loteriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem ganadoresToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripMenuItem loteriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripMenuItem ticketsToolStripMenuItem1;
     }
 }

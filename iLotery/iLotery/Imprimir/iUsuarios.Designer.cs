@@ -1,6 +1,6 @@
 ﻿namespace iLotery.Imprimir
 {
-   public partial class iTickets
+    partial class iUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -39,29 +39,28 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = "C:\\Users\\Christopher\\Source\\Repos\\iLotery2\\iLotery\\TicketReport\\CrystalReport1.rp" +
-    "t";
-            this.crystalReportViewer1.ShowLogo = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(680, 385);
+            this.crystalReportViewer1.ReportSource = "C:\\Users\\Christopher\\Source\\Repos\\iLotery2\\iLotery\\UsuarioReport\\CrystalReport1.r" +
+    "pt";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(547, 407);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // iTickets
+            // iUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 385);
+            this.ClientSize = new System.Drawing.Size(547, 407);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "iTickets";
-            this.Text = "iTickets";
-            this.Load += new System.EventHandler(this.iTickets_Load);
+            this.Name = "iUsuarios";
+            this.ShowIcon = false;
+            this.Text = "Imprimir Usuarios";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

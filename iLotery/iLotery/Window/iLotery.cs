@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using BLL;
-using iLotery;
 
 namespace iLotery.Window
 {
@@ -100,8 +99,8 @@ namespace iLotery.Window
 
         private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TicketReport.Form1 Frm = new TicketReport.Form1();
-            Frm.ShowDialog();
+            Imprimir.iTickets iTicket = new Imprimir.iTickets();
+            iTicket.ShowDialog();
         }
 
         private void separator2ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +125,24 @@ namespace iLotery.Window
         {
             Consultas.cGanadores cGanador = new Consultas.cGanadores();
             cGanador.ShowDialog();
+        }
+
+        private void loteriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.cLoterias cLoteria = new Consultas.cLoterias();
+            cLoteria.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Imprimir.iUsuarios iUsuario = new Imprimir.iUsuarios();
+            iUsuario.ShowDialog();
+        }
+
+        private void ticketsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Imprimir.iLoterias iLoteria = new Imprimir.iLoterias();
+            iLoteria.ShowDialog();
         }   
     }       
 }           

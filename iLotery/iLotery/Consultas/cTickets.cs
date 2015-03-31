@@ -37,73 +37,49 @@ namespace iLotery.Consultas
             {
 
                 case 0:
-                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10){
                             filtro = "IdTicket >=" + FiltroTextBox2.Text;
                             dt = Ticket.Listar("IdTicket,Loteria,Tanda,Fecha,Jugada,Monto", filtro);
                             DataGridView2.DataSource = dt;
 
                         CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
                         TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                       }
-                    else 
-                        MessageBox.Show("Por Favor Llene la Casilla.");
-                        break;
+                       break;
 
                     //Loteria
                     //Tanda
                     //Jugada
                 case 1:
-                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10)
-                    {
                         filtro = "Loteria like '%" + FiltroTextBox2.Text+ "%'";
                         dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
                         DataGridView2.DataSource = dt;
 
                         CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
                         TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                    }
-                        else
-                        MessageBox.Show("Por Favor Llene la Casilla2");
-                    break;
+                        break;
                 case 2:
-                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10)
-                    {
-                        filtro = "Tanda like '%" + FiltroTextBox2.Text + "%'";
+                    filtro = "Tanda like '%" + FiltroTextBox2.Text + "%'";
                         dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
                         DataGridView2.DataSource = dt;
 
                         CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
                         TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                    }
-                        else
-                        MessageBox.Show("Por Favor Llene la Casilla3");
                     break;
+                
                 case 3:
-                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 80)
-                        if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 10)
-                        {
                             filtro = "Jugada like '%" + FiltroTextBox2.Text + "%'";
                             dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
                             DataGridView2.DataSource = dt;
 
                             CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
                             TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                        }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla4");
                     break;
                 case 4:
-                    if (FiltroTextBox2.Text.Length > 0 && FiltroTextBox2.Text.Length < 80)
-                    {
                         filtro = "Monto>=" + FiltroTextBox2.Text;
                         dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
                         DataGridView2.DataSource = dt;
 
                         CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
                         TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                    }
-                   else
-                        MessageBox.Show("Por Favor Llene la Casilla5");
                     break;
 
                 default:

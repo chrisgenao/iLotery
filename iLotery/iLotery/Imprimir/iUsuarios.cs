@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace iLotery.Registros
+namespace iLotery.Imprimir
 {
-    public partial class rCuadre : Form
+    public partial class iUsuarios : Form
     {
-        public rCuadre()
+        public iUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

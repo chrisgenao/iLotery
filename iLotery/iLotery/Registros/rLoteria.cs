@@ -59,17 +59,25 @@ namespace iLotery.Registros
             {
                 //Editando
                 paso = Loteria.Modificar();
+                IDTextBox.Clear();
+                NombreTextBox.Clear();
             }
             else
             {
                 //Insertando
                 paso = Loteria.Insertar();
+                IDTextBox.Clear();
+                NombreTextBox.Clear();
             }
 
             if (paso)
+            {
                 MessageBox.Show("Lotearia Guardada.");
+            }
             else
+            {
                 MessageBox.Show("Error Guardando la Loteria.");
+            }
         }
 
         private void IDTextBox_TextChanged(object sender, EventArgs e)

@@ -170,6 +170,7 @@
             // 
             this.JugadaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JugadaTextBox.Location = new System.Drawing.Point(202, 15);
+            this.JugadaTextBox.MaxLength = 10;
             this.JugadaTextBox.Name = "JugadaTextBox";
             this.JugadaTextBox.Size = new System.Drawing.Size(100, 20);
             this.JugadaTextBox.TabIndex = 11;
@@ -180,6 +181,7 @@
             // 
             this.MontoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MontoTextBox.Location = new System.Drawing.Point(378, 15);
+            this.MontoTextBox.MaxLength = 10;
             this.MontoTextBox.Name = "MontoTextBox";
             this.MontoTextBox.Size = new System.Drawing.Size(100, 20);
             this.MontoTextBox.TabIndex = 12;

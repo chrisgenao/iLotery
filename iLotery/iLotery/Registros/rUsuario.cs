@@ -227,5 +227,10 @@ namespace iLotery.Registros
         {
 
         }
+
+        private void PWTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

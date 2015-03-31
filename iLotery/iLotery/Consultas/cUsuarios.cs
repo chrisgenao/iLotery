@@ -42,41 +42,20 @@ namespace iLotery.Consultas
             {
 
                 case 0:
-                    if (BuscarPorTextbox.Text.Length > 0 && BuscarPorTextbox.Text.Length < 10)
-                    {
+                    
                         BuscarUsuario(BuscarPorTextbox.Text);
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla.");
                     break;
 
-                //Loteria
-                //Tanda
-                //Jugada
                 case 1:
-                    if (BuscarPorTextbox.Text.Length > 0 && BuscarPorTextbox.Text.Length < 10)
-                    {
+                    
                         BuscarUsuario(BuscarPorTextbox.Text);
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla2");
-                    break;
+                    
+                        break;
                 case 2:
-                    if (BuscarPorTextbox.Text.Length > 0 && BuscarPorTextbox.Text.Length < 10)
-                    {
                         BuscarUsuario(BuscarPorTextbox.Text);
-                    }
-                    else
-                        MessageBox.Show("Por Favor Llene la Casilla3");
                     break;
                 case 3:
-                    if (BuscarPorTextbox.Text.Length > 0 && BuscarPorTextbox.Text.Length < 80)
-                    {
                         BuscarUsuario(BuscarPorTextbox.Text);
-
-                        }
-                        else
-                            MessageBox.Show("Por Favor Llene la Casilla4");
                     break;
                 
                 default:

@@ -9,7 +9,7 @@ using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Windows.Forms;
 
-namespace TicketReport
+namespace UsuarioReport
 {
     public partial class Form1 : Form
     {
