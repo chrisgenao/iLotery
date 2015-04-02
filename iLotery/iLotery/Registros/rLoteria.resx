@@ -159,6 +159,16 @@
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="BuscarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAEHSURBVDhPldK9SgNBFIbhaKVgI2gsvBTR3IQg4kUEUoqoiGJpYVq1T1AQvIqkioiNV2DpH4hC
+        4vsOszKr2YH94CnOmcMMOzuNP2liHwM8R0McwLVstvGOSQXXdjA1mxjDwWtsYDFaRx+uObOFUpbwAgcO
+        bVRkD868ovQ5R3DhLlT53MLZk1DFjGCzFap81uDsQ6hi3mBzIVT5zMHZT8zYMHU2mIcX+YXfDe5R9xMe
+        QxVzCps3ocqnB2dLf2sFxW/s2KhIG858Y9lGmmkPye/10tKHVLjCLErxKX8gHUx5clpf4t8mqzjDE7xp
+        B72wXfhiL2KvcI5a8URPLjbwWdeOm3TBY2oc/wCO9VklSll8SgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="errorProvider2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>147, 17</value>
   </metadata>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UsuarioReport {
+namespace LoteriasReport {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace UsuarioReport {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class LoteriasReport : ReportClass {
         
-        public CrystalReport1() {
+        public LoteriasReport() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "LoteriasReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace UsuarioReport {
         
         public override string FullResourceName {
             get {
-                return "UsuarioReport.CrystalReport1.rpt";
+                return "LoteriasReport.LoteriasReport.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace UsuarioReport {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedLoteriasReport : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedLoteriasReport() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace UsuarioReport {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            LoteriasReport rpt = new LoteriasReport();
             rpt.Site = this.Site;
             return rpt;
         }

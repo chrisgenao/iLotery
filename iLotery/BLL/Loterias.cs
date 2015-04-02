@@ -16,12 +16,14 @@ namespace BLL
         public int IdLoteria { get; set; }
         public string Loteria { get; set; }
         public string Tanda { get; set; }
+        public string Tanda2 { get; set; }
 
         public Loterias()
         {
             this.IdLoteria = 0;
             this.Loteria = String.Empty;
             this.Tanda = String.Empty;
+            this.Tanda2 = String.Empty;
         }
 
         public Boolean Insertar()
@@ -30,7 +32,7 @@ namespace BLL
 
             this.IdLoteria = 0;
 
-            this.IdLoteria = Convert.ToInt32(Conexion.ObtenerValorDb("insert into Loterias (Loteria, Tanda) values ('" + this.Loteria + "', '" + this.Tanda + "') Select @@IDENTITY"));
+            this.IdLoteria = Convert.ToInt32(Conexion.ObtenerValorDb("insert into Loterias (Loteria, Tanda, Tanda2) values ('" + this.Loteria + "', '" + this.Tanda + "', '"+this.Tanda2+"') Select @@IDENTITY"));
 
             paso = this.IdLoteria > 0;
 
@@ -47,7 +49,7 @@ namespace BLL
             Boolean paso = false;
 
             paso = Conexion.EjecutarDB("Update Loterias set Loteria = '" + this.Loteria + "', Tanda ='" + this.Tanda +
-                "' where IdLoteria =" + this.IdLoteria);
+                "', Tanda2 = '"+this.Tanda2+"' where IdLoteria = " + this.IdLoteria);
 
 
             return paso;//End Modificar
@@ -56,6 +58,37 @@ namespace BLL
         public Boolean Eliminar(Int32 IdBuscado)
         {
             return Conexion.EjecutarDB("Delete from Loterias where IdLoteria=" + IdBuscado);
+        }
+
+        public Boolean Buscar(Int32 IdBuscado)
+        {
+            bool Encontro = false;
+            DataTable dt = new DataTable();
+
+            dt = this.Listar("Loteria,Tanda, Tanda2", "IdLoteria=" + IdBuscado);
+
+            if (dt.Rows.Count > 0)
+            {
+                if ((string)dt.Rows[0]["Tanda2"] == null)
+                {//ejemplo
+                    Encontro = true;
+
+                    this.IdLoteria = IdBuscado;
+                    this.Loteria = (string)dt.Rows[0]["Loteria"];
+                    this.Tanda = (string)dt.Rows[0]["Tanda"];
+                    
+                }
+                else if ((string)dt.Rows[0]["Tanda2"] != null)
+                {
+                    Encontro = true;
+
+                    this.IdLoteria = IdBuscado;
+                    this.Loteria = (string)dt.Rows[0]["Loteria"];
+                    this.Tanda = (string)dt.Rows[0]["Tanda"];
+                    this.Tanda2 = (string)dt.Rows[0]["Tanda2"];
+                }
+            }
+            return Encontro;
         }
 
         public DataTable Listar(string campos = "*", string Filtro = "1=1")

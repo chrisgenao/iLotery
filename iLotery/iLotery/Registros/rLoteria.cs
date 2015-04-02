@@ -22,7 +22,7 @@ namespace iLotery.Registros
 
         private void rLoteria_Load(object sender, EventArgs e)
         {
-            TandaComboBox.SelectedIndex = 0;
+
         }
 
         private void BorrarButton_Click(object sender, EventArgs e)
@@ -49,10 +49,27 @@ namespace iLotery.Registros
                 return;
             }
 
-
-            Loteria.IdLoteria = Utilitarios.ToInt(IDTextBox.Text);
-            Loteria.Loteria = NombreTextBox.Text;
-            Loteria.Tanda = TandaComboBox.SelectedItem.ToString();
+            if (TardeCheckBox.Checked == true && NocheCheckBox.Checked == false)
+            {
+                Loteria.IdLoteria = Utilitarios.ToInt(IDTextBox.Text);
+                Loteria.Loteria = NombreTextBox.Text;
+                Loteria.Tanda = TardeCheckBox.Text.ToString();
+                Loteria.Tanda2 = null;
+            }
+            else if (TardeCheckBox.Checked == false && NocheCheckBox.Checked == true)
+            {
+                Loteria.IdLoteria = Utilitarios.ToInt(IDTextBox.Text);
+                Loteria.Loteria = NombreTextBox.Text;
+                Loteria.Tanda = NocheCheckBox.Text.ToString();
+                Loteria.Tanda2 = null;
+            }
+            else if (TardeCheckBox.Checked == true && NocheCheckBox.Checked == true)
+            {
+                Loteria.IdLoteria = Utilitarios.ToInt(IDTextBox.Text);
+                Loteria.Loteria = NombreTextBox.Text;
+                Loteria.Tanda = TardeCheckBox.Text.ToString();
+                Loteria.Tanda2 = NocheCheckBox.Text.ToString();
+            }
 
 
             if (Loteria.IdLoteria > 0)
@@ -113,6 +130,54 @@ namespace iLotery.Registros
         {
             IDTextBox.Clear();
             NombreTextBox.Clear();
+        }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+
+            result = DialogResult.Ignore;
+
+            if (Utilitarios.ToInt(IDTextBox.Text) == 0)
+            {
+                Consultas.cLoterias cLoteria = new Consultas.cLoterias();
+
+                result = cLoteria.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    IDTextBox.Text = cLoteria.DatoEncontrado.ToString();
+                }
+                else
+                {
+                    IDTextBox.Clear();
+                }
+
+                if (Loteria.Buscar(Utilitarios.ToInt(IDTextBox.Text)))
+                {
+
+                    if (Loteria.Tanda != null && Loteria.Tanda2 == null)
+                    {
+                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+                        NombreTextBox.Text = Loteria.Loteria.ToString();
+                        TardeCheckBox.Checked = true;
+                    }
+                    else if (Loteria.Tanda == null && Loteria.Tanda2 != null)
+                    {
+                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+                        NombreTextBox.Text = Loteria.Loteria.ToString();
+                        NocheCheckBox.Checked = true;
+                    }
+                    else if (Loteria.Tanda != null && Loteria.Tanda2 != null)
+                    {
+                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+                        NombreTextBox.Text = Loteria.Loteria.ToString();
+                        TardeCheckBox.Checked = true;
+                        NocheCheckBox.Checked = true;
+                    }
+
+                }
+            }
         }
     }
 }

@@ -36,11 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TandaComboBox = new System.Windows.Forms.ComboBox();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TardeCheckBox = new System.Windows.Forms.CheckBox();
+            this.NocheCheckBox = new System.Windows.Forms.CheckBox();
+            this.BuscarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
@@ -108,25 +110,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 85);
+            this.label3.Location = new System.Drawing.Point(22, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 31;
             this.label3.Text = "Tanda:";
-            // 
-            // TandaComboBox
-            // 
-            this.TandaComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TandaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TandaComboBox.FormattingEnabled = true;
-            this.TandaComboBox.Items.AddRange(new object[] {
-            "Tarde",
-            "Noche"});
-            this.TandaComboBox.Location = new System.Drawing.Point(75, 82);
-            this.TandaComboBox.Name = "TandaComboBox";
-            this.TandaComboBox.Size = new System.Drawing.Size(58, 21);
-            this.TandaComboBox.TabIndex = 32;
             // 
             // NombreTextBox
             // 
@@ -159,14 +147,46 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // TardeCheckBox
+            // 
+            this.TardeCheckBox.AutoSize = true;
+            this.TardeCheckBox.Location = new System.Drawing.Point(75, 82);
+            this.TardeCheckBox.Name = "TardeCheckBox";
+            this.TardeCheckBox.Size = new System.Drawing.Size(54, 17);
+            this.TardeCheckBox.TabIndex = 35;
+            this.TardeCheckBox.Text = "Tarde";
+            this.TardeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // NocheCheckBox
+            // 
+            this.NocheCheckBox.AutoSize = true;
+            this.NocheCheckBox.Location = new System.Drawing.Point(135, 82);
+            this.NocheCheckBox.Name = "NocheCheckBox";
+            this.NocheCheckBox.Size = new System.Drawing.Size(58, 17);
+            this.NocheCheckBox.TabIndex = 36;
+            this.NocheCheckBox.Text = "Noche";
+            this.NocheCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // BuscarButton
+            // 
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.Location = new System.Drawing.Point(135, 26);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(28, 26);
+            this.BuscarButton.TabIndex = 37;
+            this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
+            // 
             // rLoteria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 167);
+            this.Controls.Add(this.BuscarButton);
+            this.Controls.Add(this.NocheCheckBox);
+            this.Controls.Add(this.TardeCheckBox);
             this.Controls.Add(this.IDTextBox);
             this.Controls.Add(this.NombreTextBox);
-            this.Controls.Add(this.TandaComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -194,10 +214,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox TandaComboBox;
         private System.Windows.Forms.TextBox NombreTextBox;
         private System.Windows.Forms.TextBox IDTextBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.CheckBox NocheCheckBox;
+        private System.Windows.Forms.CheckBox TardeCheckBox;
     }
 }

@@ -13,6 +13,13 @@ namespace iLotery.Consultas
 {
     public partial class cLoterias : Form
     {
+        private int datoEncontrado;
+
+        public int DatoEncontrado
+        {
+            get { return datoEncontrado; }
+        }
+        
         public cLoterias()
         {
             InitializeComponent();
@@ -50,46 +57,78 @@ namespace iLotery.Consultas
                 {
 
                     case 0:
-                        if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 10)
-                        {
-                            filtro = "IdLoteria >=" + FiltroTextBox.Text;
-                            dt = Loteria.Listar("IdLoteria, Loteria, Tanda", filtro);
+                        if (FiltroTextBox.Text.Trim().Length == 0)
+                         {
+                             FiltroTextBox.Text = filtro;
+                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
+                             DataGridView.DataSource = dt;
+
+                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
+                         }
+                         else
+                         {
+                            filtro = "IdLoteria =" + FiltroTextBox.Text;
+                            dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
                             DataGridView.DataSource = dt;
 
                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
                         }
-                        else
-                            MessageBox.Show("Por Favor Llene la Casilla.");
                         break;
 
                     case 1:
-                        if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 10)
-                        {
+                        if (FiltroTextBox.Text.Trim().Length == 0)
+                         {
+                             FiltroTextBox.Text = filtro; 
+                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
+                             DataGridView.DataSource = dt;
+
+                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
+                         }
+                         else
+                         {
                             filtro = "Loteria like '%" + FiltroTextBox.Text + "%'";
-                            dt = Loteria.Listar("IdLoteria, Loteria, Tanda", filtro);
+                            dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
                             DataGridView.DataSource = dt;
 
                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
                         }
-                        else
-                            MessageBox.Show("Por Favor Llene la Casilla2");
                         break;
+                    
                     case 2:
-                        if (FiltroTextBox.Text.Length > 0 && FiltroTextBox.Text.Length < 10)
-                        {
-                            filtro = "Tanda like '%" + FiltroTextBox.Text + "%'";
-                            dt = Loteria.Listar("IdLoteria, Loteria, Tanda", filtro);
-                            DataGridView.DataSource = dt;
+                         if (FiltroTextBox.Text.Trim().Length == 0)
+                         {
+                             FiltroTextBox.Text = filtro;
+                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
+                             DataGridView.DataSource = dt;
 
-                            CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        }
-                        else
-                            MessageBox.Show("Por Favor Llene la Casilla3");
-                        break;
+                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
+                         }
+                         else
+                         {
+
+                             filtro = "Tanda like '%" + FiltroTextBox.Text + "%'";
+                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
+                             DataGridView.DataSource = dt;
+
+                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
+                         }
+                             break;
                     default:
                         break;
 
                 }
             }
+
+        private void AceptarButton_Click(object sender, EventArgs e)
+        {
+            int index;
+
+            index = DataGridView.CurrentRow.Index;
+
+            datoEncontrado = (int)DataGridView.CurrentRow.Cells["IdLoteria"].Value;
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
         }
     }
