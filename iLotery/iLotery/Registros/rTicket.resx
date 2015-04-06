@@ -148,19 +148,13 @@
   <metadata name="Jugada.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Monto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Primer_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Loteria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Segundo_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Tanda.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Jugada.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Tercer_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Monto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -168,34 +162,32 @@
   </metadata>
   <data name="BorrarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAsRAAALEQF/ZF+RAAACqElEQVRIS62UzW8SQRiH50wi
-        Qikb6AfQpBRoba1Y2loo2gr0I7RpbONFEw96MPHm0aP/g1+J/4BeetO29IOallgsiUJIGxNjYkyMaXeX
-        3SgcX+dd2VCXgd2qb/IEsjvv85vJzgzR1hNCelPDgQP62159pFuPCOlcG+49fEyIr/qIXSjPLyUq8sO7
-        kEuGS0ZCnhHiyiWjMvbkF+PlhiEo/7AwWZEe3AGV3NRY0xBFPh2RT/bk5yfqQxR5crwi3b8FWt5Njois
-        EEUeG5VZPfnZaC1EkU+NVaR7N6AR2cjQHyHPCXHnLodk1liVfCL8OyTV3XVQun0d9MiOBpUQlO+HgzJr
-        jJZVr6eIK2jfCw2USjevgR7ZoX5xf3hQZr3Tkr04IDwlxKksWQk531cSl+bgVCzOgbAwA8L8NAhzCRCS
-        FPq7N9Bbk6ulhPQFRDE5Aw2ZpYL4BAhXIsCHR4C/FKoj4+6ol6uFIW99PlGIx6ioSuwq8OMROA4NwfGF
-        waZk2pwC/UZtVR27lJBur8iHo3AcDMFR4Bwc+ft02eU4fblaGJJp4YQjTw8YIWO1G5dj4VbcPWuXvnd0
-        gxF2za0CTqra3rzwhO5Q+TfaeBp2jISg/I3FLn3t9MLfsG1pEoLybSr/Qgf+C2lWCN7nKP/s8sL/IG21
-        1+4ulG9ZOOmTqwf02LTYeYT1TsumGrJsMh98dPeAHhtWO48nFFmn25I1Rsuy6UyB4JW6ZXP8PHT7oBFU
-        qMiVJdPC/ykrJ7DGqqRbHD/oCrxKA/3A/k0aUvT4QMsqnS3rbsGDtUYPI6uHumpytTBk3eYoFzx+UFmh
-        s2x2QvHdSgsnnuzZsDnr5WphyFqro/y+yw+v6OyMHH8c89rGidiTaiZXi+6qwAuTuWhErhbulpcmc6Fe
-        Tsgv0AlBgqdSzVcAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAqhJREFUSEutlM1vEkEYh+dMIkIpG+gH0KQUaG2tWNpaKNoK9CO0aWzjRRMPejDx
+        5tGj/4Nfif+AXnrTtvSDmpZYLIlCSBsTY2JMjGl3l90oHF/nXdlQl4Hdqm/yBLI77/Obyc4M0dYTQnpT
+        w4ED+ttefaRbjwjpXBvuPXxMiK/6iF0ozy8lKvLDu5BLhktGQp4R4solozL25Bfj5YYhKP+wMFmRHtwB
+        ldzUWNMQRT4dkU/25Ocn6kMUeXK8It2/BVreTY6IrBBFHhuVWT352WgtRJFPjVWkezegEdnI0B8hzwlx
+        5y6HZNZYlXwi/Dsk1d11ULp9HfTIjgaVEJTvh4Mya4yWVa+niCto3wsNlEo3r4Ee2aF+cX94UGa905K9
+        OCA8JcSpLFkJOd9XEpfm4FQszoGwMAPC/DQIcwkQkhT6uzfQW5OrpYT0BUQxOQMNmaWC+AQIVyLAh0eA
+        vxSqI+PuqJerhSFvfT5RiMeoqErsKvDjETgODcHxhcGmZNqcAv1GbVUdu5SQbq/Ih6NwHAzBUeAcHPn7
+        dNnlOH25WhiSaeGEI08PGCFjtRuXY+FW3D1rl753dIMRds2tAk6q2t688ITuUPk32ngadoyEoPyNxS59
+        7fTC37BtaRKC8m0q/0IH/gtpVgje5yj/7PLC/yBttdfuLpRvWTjpk6sH9Ni02HmE9U7LphqybDIffHT3
+        gB4bVjuPJxRZp9uSNUbLsulMgeCVumVz/Dx0+6ARVKjIlSXTwv8pKyewxqqkWxw/6Aq8SgP9wP5NGlL0
+        +EDLKp0t627Bg7VGDyOrh7pqcrUwZN3mKBc8flBZobNsdkLx3UoLJ57s2bA56+VqYchaq6P8vssPr+js
+        jBx/HPPaxonYk2omV4vuqsALk7loRK4W7paXJnOhXk7IL9AJQYKnUs1XAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="BuscarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAsQAAALEAGtI711AAABt0lEQVRIS91UPUvDUBTtqj9G
-        /FjVX+TsJupQxUVBX4MKTknqohYEQUiiJmkSwRS0tFasiB3aDhWr6FKXZ25zm77KS9pgXXrgDEnePSe5
-        99wkRheqbk973FMMp6zo1jdQM61HzXB2L7PZSTwWH6euO67qzoFmOjSKYG7b9hiWDQYQ13TL5AnyqJiO
-        Hsvk95vn8gVaqdZp463Z5kutTt27Qo8JtAzLo3FhXs+whaWnZ/r6/sElPGPPDjQT6GmnIJcvcoVZunfF
-        wEA1LQFlwgFp6RRAW3iiLCteuzrnFd15QJlw+DH0C6DfPFGWjWYzMPCC0UKZcPy/QdwWVWuBgWo4JZQJ
-        BztkiCJPlOXNLRNXwyYoEw7lypoKCjxGxfS+3BtT7wsmUCYaqmnvs4UQRUgL9BsIbel5c4/icYauEbKA
-        EtGAtYf1ZwWieHJ2Tlc3t+iGILSILM+iTDT8n113HmEUjzJt8eT2DiWSTFOi9CmIh3Mo0x+w/rChsEQQ
-        QyCkBQYKPU8Soq2nBF9cTvuMa9IPKVleCcS7/CKSNI9H/g6uiZRexMfDAWviDXsJbw8XYEKk9DJejgwS
-        iR9X9kZklWiWPAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAbdJREFUSEvdVD1Lw1AU7ao/RvxY1V/k7CbqUMVFQV+DCk5J6qIWBEFIoiZpEsEU
+        tLRWrIgd2g4Vq+hSl2duc5u+ykvaYF164AxJ3j0nuffcJEYXqm5Pe9xTDKes6NY3UDOtR81wdi+z2Uk8
+        Fh+nrjuu6s6BZjo0imBu2/YYlg0GENd0y+QJ8qiYjh7L5Peb5/IFWqnWaeOt2eZLrU7du0KPCbQMy6Nx
+        YV7PsIWlp2f6+v7BJTxjzw40E+hppyCXL3KFWbp3xcBANS0BZcIBaekUQFt4oiwrXrs65xXdeUCZcPgx
+        9Aug3zxRlo1mMzDwgtFCmXD8v0HcFlVrgYFqOCWUCQc7ZIgiT5TlzS0TV8MmKBMO5cqaCgo8RsX0vtwb
+        U+8LJlAmGqpp77OFEEVIC/QbCG3peXOP4nGGrhGygBLRgLWH9WcFonhydk5XN7fohiC0iCzPokw0/J9d
+        dx5hFI8ybfHk9g4lkkxTovQpiIdzKNMfsP6wobBEEEMgpAUGCj1PEqKtpwRfXE77jGvSDylZXgnEu/wi
+        kjSPR/4OromUXsTHwwFr4g17CW8PF2BCpPQyXo4MEokfV/ZGZJVoljwAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="GuardarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -227,10 +219,37 @@
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>84</value>
+  </metadata>
   <metadata name="errorProvider2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>147, 17</value>
   </metadata>
   <metadata name="errorProvider3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>277, 17</value>
+  </metadata>
+  <metadata name="Loteria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tanda.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Jugada.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Primer_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Segundo_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tercer_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Monto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

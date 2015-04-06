@@ -18,6 +18,9 @@ namespace BLL
         public string Tanda { get; set; }
         public DateTime Fecha { get; set; }
         public string Jugada { get; set; }
+        public int Primer_Numero { get; set; }
+        public int Segundo_Numero { get; set; }
+        public int Tercer_Numero { get; set; }
         public float Monto { get; set; }
 
 
@@ -28,6 +31,9 @@ namespace BLL
             this.Tanda = string.Empty;
             this.Fecha = DateTime.Now;
             this.Jugada = string.Empty;
+            this.Primer_Numero = 0;
+            this.Segundo_Numero = 0;
+            this.Tercer_Numero = 0;
             this.Monto = 0;
         }
                 public Boolean Insertar()
@@ -37,7 +43,7 @@ namespace BLL
             //this.IdTicket = (int)Conexion.ObtenerValorDb("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ")");
 
            // return this.IdTicket > 0;
-          return  Conexion.EjecutarDB("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ")");
+          return  Conexion.EjecutarDB("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Primer_Numero, Segundo_Numero, Tercer_Numero, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "', "+this.Primer_Numero+", "+this.Segundo_Numero+", "+this.Tercer_Numero+", "+ this.Monto + ")");
 
         }
 
@@ -62,6 +68,9 @@ namespace BLL
                 this.Tanda = (string)dt.Rows[0]["Tanda"];
                 this.Fecha = (DateTime)dt.Rows[0]["Fecha"];
                 this.Jugada = (string)dt.Rows[0]["Jugada"];
+                this.Primer_Numero = (int)dt.Rows[0]["Primer_Numero"];
+                this.Segundo_Numero = (int)dt.Rows[0]["Segundo_Numero"];
+                this.Tercer_Numero = (int)dt.Rows[0]["Tercer_Numero"];
                 this.Monto = (float)dt.Rows[0]["Monto"];
             }
 

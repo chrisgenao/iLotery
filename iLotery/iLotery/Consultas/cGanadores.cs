@@ -119,7 +119,7 @@ namespace iLotery.Consultas
                     filtro = "Monto =" + BuscarPorComboBox.Text;
                 }
 
-            dt = Ganador.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
+            dt = Ganador.Listar("IdGanador, Fecha, Loteria, Tanda, Primer_Lugar, Segundo_Lugar, Tercer_Lugar", filtro);
             DataGridView.DataSource = dt;
             CantidadTextBox.Text = DataGridView.RowCount.ToString();
         }

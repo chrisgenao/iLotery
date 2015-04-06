@@ -30,7 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.BuscarPorTextbox = new System.Windows.Forms.TextBox();
+            this.BuscarPorTextBox = new System.Windows.Forms.TextBox();
             this.BuscarPorComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.BuscarButton);
-            this.groupBox1.Controls.Add(this.BuscarPorTextbox);
+            this.groupBox1.Controls.Add(this.BuscarPorTextBox);
             this.groupBox1.Controls.Add(this.BuscarPorComboBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -75,14 +75,14 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // BuscarPorTextbox
+            // BuscarPorTextBox
             // 
-            this.BuscarPorTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.BuscarPorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BuscarPorTextbox.Location = new System.Drawing.Point(220, 21);
-            this.BuscarPorTextbox.Name = "BuscarPorTextbox";
-            this.BuscarPorTextbox.Size = new System.Drawing.Size(363, 20);
-            this.BuscarPorTextbox.TabIndex = 3;
+            this.BuscarPorTextBox.Location = new System.Drawing.Point(220, 21);
+            this.BuscarPorTextBox.Name = "BuscarPorTextBox";
+            this.BuscarPorTextBox.Size = new System.Drawing.Size(363, 20);
+            this.BuscarPorTextBox.TabIndex = 3;
             // 
             // BuscarPorComboBox
             // 
@@ -229,7 +229,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BuscarButton;
-        private System.Windows.Forms.TextBox BuscarPorTextbox;
+        private System.Windows.Forms.TextBox BuscarPorTextBox;
         private System.Windows.Forms.ComboBox BuscarPorComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

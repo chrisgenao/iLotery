@@ -79,7 +79,7 @@
             this.NombreTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NombreTextBox.Location = new System.Drawing.Point(98, 38);
-            this.NombreTextBox.MaxLength = 50;
+            this.NombreTextBox.MaxLength = 12;
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(142, 20);
             this.NombreTextBox.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.ApellidoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ApellidoTextBox.Location = new System.Drawing.Point(98, 64);
-            this.ApellidoTextBox.MaxLength = 50;
+            this.ApellidoTextBox.MaxLength = 12;
             this.ApellidoTextBox.Name = "ApellidoTextBox";
             this.ApellidoTextBox.Size = new System.Drawing.Size(142, 20);
             this.ApellidoTextBox.TabIndex = 2;
@@ -102,7 +102,7 @@
             this.UsuarioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuarioTextBox.Location = new System.Drawing.Point(98, 90);
-            this.UsuarioTextBox.MaxLength = 15;
+            this.UsuarioTextBox.MaxLength = 10;
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.UsuarioTextBox.TabIndex = 3;
@@ -113,6 +113,7 @@
             this.PWTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PWTextBox.Location = new System.Drawing.Point(98, 116);
+            this.PWTextBox.MaxLength = 15;
             this.PWTextBox.Name = "PWTextBox";
             this.PWTextBox.Size = new System.Drawing.Size(100, 20);
             this.PWTextBox.TabIndex = 4;
@@ -124,7 +125,7 @@
             this.MailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MailTextBox.Location = new System.Drawing.Point(98, 142);
-            this.MailTextBox.MaxLength = 50;
+            this.MailTextBox.MaxLength = 30;
             this.MailTextBox.Name = "MailTextBox";
             this.MailTextBox.Size = new System.Drawing.Size(174, 20);
             this.MailTextBox.TabIndex = 5;

@@ -56,7 +56,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(603, 68);
+            this.groupBox1.Size = new System.Drawing.Size(607, 68);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
@@ -72,8 +72,7 @@
             "Tanda",
             "Primer_Lugar",
             "Segundo_Lugar",
-            "Tercer_Lugar",
-            "Monto"});
+            "Tercer_Lugar"});
             this.BuscarPorComboBox.Location = new System.Drawing.Point(74, 28);
             this.BuscarPorComboBox.Name = "BuscarPorComboBox";
             this.BuscarPorComboBox.Size = new System.Drawing.Size(121, 21);
@@ -82,7 +81,7 @@
             // BuscarButton
             // 
             this.BuscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BuscarButton.Location = new System.Drawing.Point(522, 24);
+            this.BuscarButton.Location = new System.Drawing.Point(526, 24);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(75, 23);
             this.BuscarButton.TabIndex = 4;
@@ -96,7 +95,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BuscarPorTextBox.Location = new System.Drawing.Point(220, 26);
             this.BuscarPorTextBox.Name = "BuscarPorTextBox";
-            this.BuscarPorTextBox.Size = new System.Drawing.Size(296, 20);
+            this.BuscarPorTextBox.Size = new System.Drawing.Size(300, 20);
             this.BuscarPorTextBox.TabIndex = 3;
             this.BuscarPorTextBox.TextChanged += new System.EventHandler(this.BuscarPorTextBox_TextChanged);
             this.BuscarPorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarPorTextBox_KeyPress);
@@ -127,7 +126,7 @@
             this.groupBox2.Controls.Add(this.DataGridView);
             this.groupBox2.Location = new System.Drawing.Point(12, 86);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(603, 221);
+            this.groupBox2.Size = new System.Drawing.Size(607, 221);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -143,7 +142,7 @@
             this.DataGridView.Location = new System.Drawing.Point(6, 19);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.ReadOnly = true;
-            this.DataGridView.Size = new System.Drawing.Size(591, 196);
+            this.DataGridView.Size = new System.Drawing.Size(595, 196);
             this.DataGridView.TabIndex = 0;
             // 
             // groupBox3
@@ -154,7 +153,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(12, 313);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(603, 58);
+            this.groupBox3.Size = new System.Drawing.Size(607, 58);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
@@ -179,12 +178,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 383);
+            this.ClientSize = new System.Drawing.Size(631, 383);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "cGanadores";
-            this.Text = "Registro de Ganadores";
+            this.Text = "Consulta de Ganadores";
             this.Load += new System.EventHandler(this.cGanadores_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

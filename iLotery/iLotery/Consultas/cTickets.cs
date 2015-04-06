@@ -20,7 +20,7 @@ namespace iLotery.Consultas
         
         private void cTickets_Load(object sender, EventArgs e)
         {
-            BuscarPorComboBox2.SelectedIndex = 0;
+            BuscarPorComboBox.SelectedIndex = 0;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -32,61 +32,83 @@ namespace iLotery.Consultas
             Tickets Ticket = new Tickets();
             DataTable dt = new DataTable();
             string filtro = "1=1";
-            
-            switch (BuscarPorComboBox2.SelectedIndex)
+
+            if (BuscarPorComboBox.SelectedIndex == 0) //IdTicket
             {
-
-                case 0:
-                            filtro = "IdTicket >=" + FiltroTextBox2.Text;
-                            dt = Ticket.Listar("IdTicket,Loteria,Tanda,Fecha,Jugada,Monto", filtro);
-                            DataGridView2.DataSource = dt;
-
-                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
-                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                       break;
-
-                    //Loteria
-                    //Tanda
-                    //Jugada
-                case 1:
-                        filtro = "Loteria like '%" + FiltroTextBox2.Text+ "%'";
-                        dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                        DataGridView2.DataSource = dt;
-
-                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
-                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                        break;
-                case 2:
-                    filtro = "Tanda like '%" + FiltroTextBox2.Text + "%'";
-                        dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                        DataGridView2.DataSource = dt;
-
-                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
-                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                    break;
-                
-                case 3:
-                            filtro = "Jugada like '%" + FiltroTextBox2.Text + "%'";
-                            dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                            DataGridView2.DataSource = dt;
-
-                            CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
-                            TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                    break;
-                case 4:
-                        filtro = "Monto>=" + FiltroTextBox2.Text;
-                        dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Monto", filtro);
-                        DataGridView2.DataSource = dt;
-
-                        CantidadTextBox2.Text = DataGridView2.RowCount.ToString();
-                        TotalTextBox2.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
-                    break;
-
-                default:
-                    break;
-
-                 }
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+                    filtro = "IdTicket = " + BuscarPorTextBox.Text;
+                }
             }
+
+            else if (BuscarPorComboBox.SelectedIndex == 1) //Loteria
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Loteria like '%" + BuscarPorTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 2) // Tanda
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Tanda like '%" + BuscarPorTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 3) //Jugada
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Jugada like '%" + BuscarPorTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 4) //Primer_Lugar
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Primer_Numero = " + BuscarPorTextBox.Text;
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 5) //Segundo_Lugar
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Segundo_Numero =" + BuscarPorTextBox.Text;
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 6) //Tercer_Lugar
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Tercer_Numero =" + BuscarPorTextBox.Text;
+                }
+            dt = Ticket.Listar("IdTicket, Loteria, Tanda, Fecha, Jugada, Primer_Numero, Segundo_Numero, Tercer_Numero, Monto", filtro);
+            TicketGridView.DataSource = dt;
+            CantidadTextBox.Text = TicketGridView.RowCount.ToString();
+        }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {

@@ -29,10 +29,11 @@ namespace iLotery.Registros
             DateTime h;
             h = DateTime.Now;
             HoraTextBox.Text = h.ToString();
+            comboBox1.SelectedIndex = 0;
+            TandaComboBox.SelectedIndex = 0;
             LoteriaComboBox.DataSource = Loteria.Listar("Loteria", "1=1");
             LoteriaComboBox.ValueMember = "Loteria";
             LoteriaComboBox.DisplayMember = "Loteria";
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -41,28 +42,83 @@ namespace iLotery.Registros
             {
                 Utilitarios.ValidarTextBoxVacio(MontoTextBox, errorProvider1, "Debe Agregar un Monto.");
             }
-            if (JugadaTextBox.Text.Trim().Length == 0)
+            if (PNTextBox.Text.Trim().Length == 0)
             {
-                Utilitarios.ValidarTextBoxVacio(JugadaTextBox, errorProvider3, "Debe Agregar una Jugada.");
+                Utilitarios.ValidarTextBoxVacio(PNTextBox, errorProvider3, "Debe Agregar una Jugada.");
             }
-            else
+            if (SNTextBox.ReadOnly == false)
+            {
+                if (SNTextBox.Text.Trim().Length == 0)
+                {
+
+                    Utilitarios.ValidarTextBoxVacio(SNTextBox, errorProvider3, "Debe Agregar una Jugada.");
+                }
+            }
+            if (TNTextBox.ReadOnly == false)
+            {
+                if (TNTextBox.Text.Trim().Length == 0)
+                {
+                    Utilitarios.ValidarTextBoxVacio(TNTextBox, errorProvider1, "Debe Agregar una Jugada.");
+                }
+            }
+            if (PNTextBox.Text.Trim().Length != 0 && SNTextBox.ReadOnly == true && TNTextBox.ReadOnly == true)
             {
                 TicketGridView.Rows.Add();
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[0].Value = LoteriaComboBox.SelectedValue.ToString();
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[1].Value = TandaComboBox.SelectedItem.ToString();
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[2].Value = HoraTextBox.Text;
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[3].Value = JugadaTextBox.Text;
-                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[4].Value = MontoTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[2].Value = DateTime.Now.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[3].Value = comboBox1.SelectedItem.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[4].Value = PNTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[7].Value = MontoTextBox.Text;
 
                 Sum();
                 TandaComboBox.SelectedIndex = 0;
-                JugadaTextBox.Clear();
+                PNTextBox.Clear();
                 MontoTextBox.Clear();
                 errorProvider3.Clear();
                 errorProvider1.Clear();
                 errorProvider2.Clear();
             }
-        }
+            else if (PNTextBox.Text.Trim().Length != 0 && SNTextBox.ReadOnly == false && TNTextBox.ReadOnly == true && SNTextBox.Text.Trim().Length != 0)
+            {
+                TicketGridView.Rows.Add();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[0].Value = LoteriaComboBox.SelectedValue.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[1].Value = TandaComboBox.SelectedItem.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[2].Value = DateTime.Now.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[3].Value = comboBox1.SelectedItem.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[4].Value = PNTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[5].Value = SNTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[7].Value = MontoTextBox.Text;
+                
+                Sum();
+                TandaComboBox.SelectedIndex = 0;
+                PNTextBox.Clear();
+                MontoTextBox.Clear();
+                errorProvider3.Clear();
+                errorProvider1.Clear();
+                errorProvider2.Clear();   
+            }
+            else if (PNTextBox.Text.Trim().Length != 0 && SNTextBox.ReadOnly == false && TNTextBox.ReadOnly == false && SNTextBox.Text.Trim().Length != 0 && TNTextBox.Text.Trim().Length != 0)
+            {
+                TicketGridView.Rows.Add();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[0].Value = LoteriaComboBox.SelectedValue.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[1].Value = TandaComboBox.SelectedItem.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[2].Value = DateTime.Now.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[3].Value = comboBox1.SelectedItem.ToString();
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[4].Value = PNTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[5].Value = SNTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[6].Value = TNTextBox.Text;
+                TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[7].Value = MontoTextBox.Text;
+
+                Sum();
+                TandaComboBox.SelectedIndex = 0;
+                PNTextBox.Clear();
+                MontoTextBox.Clear();
+                errorProvider3.Clear();
+                errorProvider1.Clear();
+                errorProvider2.Clear();
+            }
+        }//7
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -127,7 +183,10 @@ namespace iLotery.Registros
                 Ticket.Loteria = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[0].Value;
                 Ticket.Tanda = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[1].Value;
                 Ticket.Jugada = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[3].Value;
-                Ticket.Monto = Convert.ToSingle(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[4].Value);
+                Ticket.Primer_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[4].Value);
+                Ticket.Segundo_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[5].Value);
+                Ticket.Tercer_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[6].Value);
+                Ticket.Monto = Convert.ToSingle(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[7].Value);
                 x++;
                 paso = true;
 
@@ -160,23 +219,7 @@ namespace iLotery.Registros
 
         private void LoteriaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Loterias Loteria = new Loterias();
-            DataTable dt = new DataTable();
-                switch (LoteriaComboBox.SelectedIndex)
-                {
-                    case 0:
-                        TandaComboBox.DataSource = Loteria.ListarTandas("Tanda", "1");
-                        TandaComboBox.ValueMember = "Tanda";
-                        TandaComboBox.DisplayMember = "Tanda";
-
-                        break;
-               //     case 1:
-               //         
-               //         TandaComboBox.Se
-               //         TandaComboBox.SelectedIndex = 0;
-               //         break;
-
-                }
+           
         }
 
         private void MontoTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -309,6 +352,24 @@ namespace iLotery.Registros
         private void TandaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                SNTextBox.ReadOnly = true;
+                TNTextBox.ReadOnly = true;
+            }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                TNTextBox.ReadOnly = true;
+            }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                SNTextBox.ReadOnly = false;
+                TNTextBox.ReadOnly = false;
+            }
         }
     }
 }

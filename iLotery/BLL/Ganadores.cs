@@ -14,25 +14,23 @@ namespace BLL
         ConexionDb Conexion = new ConexionDb();
 
         public int IdGanador { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Telefono { get; set; }
-        public string LoteriaGanadora { get; set; }
-        public string JugadaGanadora { get; set; }
         public DateTime Fecha { get; set; }
-        public float Monto { get; set; }
+        public string Loteria { get; set; }
+        public string Tanda { get; set; }
+        public int Primer_Lugar { get; set; }
+        public int Segundo_Lugar { get; set; }
+        public int Tercer_Lugar { get; set; }
 
 
         public Ganadores()
         {
             this.IdGanador = 0;
-            this.Nombre = String.Empty;
-            this.Apellido = String.Empty;
-            this.Telefono = String.Empty;
-            this.LoteriaGanadora = String.Empty;
-            this.JugadaGanadora = String.Empty;
             this.Fecha = DateTime.Now;
-            this.Monto = 0;
+            this.Loteria = String.Empty;
+            this.Tanda = String.Empty;
+            this.Primer_Lugar = 0;
+            this.Segundo_Lugar = 0;
+            this.Tercer_Lugar = 0;
         }
 
         public Boolean Insertar()
@@ -41,8 +39,7 @@ namespace BLL
 
             this.IdGanador = 0;
 
-            this.IdGanador = Convert.ToInt32(Conexion.ObtenerValorDb("insert into Ganadores (Nombre, Apellido, Telefono, LoteriaG, JugadaG, MontoG, Fecha) values ('" + this.Nombre + "', '" + this.Apellido + "', '" + this.Telefono + "', '" + this.LoteriaGanadora + "', '" + this.JugadaGanadora + "', " + this.Monto + ", GETDATE()) Select @@IDENTITY"));
-
+            this.IdGanador = Convert.ToInt32(Conexion.ObtenerValorDb("insert into Ganadores (Fecha, Loteria, Tanda, Primer_Lugar, Segundo_Lugar, Tercer_Lugar) values (GETDATE(), '"+this.Loteria+"', '"+this.Tanda+"', "+this.Primer_Lugar+", "+this.Segundo_Lugar+", "+this.Tercer_Lugar+")"));
             paso = this.IdGanador > 0;
 
             if (paso)
@@ -57,7 +54,7 @@ namespace BLL
         {
             Boolean paso = false;
 
-            paso = Conexion.EjecutarDB("Update Ganadores set Nombre = '" + this.Nombre + "', Apellido ='" + this.Apellido + "', Telefono ='"+this.Telefono+"', LoteriaG='"+this.LoteriaGanadora+"', JugadaG = '"+this.JugadaGanadora+"', Monto = '"+this.Monto+"' where IdGanador =" + this.IdGanador);
+            paso = Conexion.EjecutarDB("Update Ganadores set Loteria = '" + this.Loteria + "', Tanda ='" + this.Tanda + "', Primer_Lugar = "+this.Primer_Lugar+", Segundo_Lugar = "+this.Tercer_Lugar+" where IdGanador =" + this.IdGanador);
 
 
             return paso;//End Modificar

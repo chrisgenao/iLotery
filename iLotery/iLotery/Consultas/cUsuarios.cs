@@ -34,49 +34,79 @@ namespace iLotery.Consultas
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            Usuarios Ticket = new Usuarios();
+            Usuarios Usuario = new Usuarios();
             DataTable dt = new DataTable();
             string filtro = "1=1";
 
-            switch (BuscarPorComboBox.SelectedIndex)
+            if (BuscarPorComboBox.SelectedIndex == 0) //IdUsuario
             {
-
-                case 0:
-                    
-                        BuscarUsuario(BuscarPorTextbox.Text);
-                    break;
-
-                case 1:
-                    
-                        BuscarUsuario(BuscarPorTextbox.Text);
-                    
-                        break;
-                case 2:
-                        BuscarUsuario(BuscarPorTextbox.Text);
-                    break;
-                case 3:
-                        BuscarUsuario(BuscarPorTextbox.Text);
-                    break;
-                
-                default:
-                    break;
-
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+                    filtro = "IdUsuario = " + BuscarPorTextBox.Text;
+                }
             }
+
+
+            else if (BuscarPorComboBox.SelectedIndex == 1) //Nombres
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Nombres like '%" + BuscarPorTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 2) // Usuario
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Usuario like '%" + BuscarPorTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 3) //Mail
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Mail like '%" + BuscarPorTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 4) //Nivel
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Nivel = " + BuscarPorTextBox.Text;
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 5) //Tercer Lugar
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Tercer_Lugar = " + BuscarPorTextBox.Text;
+                }
+
+                dt = Usuario.Listar("IdUsuario, Nombres, Usuario, Contra, Mail, Nivel, Fecha", filtro);
+                UsuarioGridView.DataSource = dt;
+                CantidadTextBox.Text = UsuarioGridView.RowCount.ToString();
         }
-        public void BuscarUsuario(object o)
-        {
-
-            Usuarios Ticket = new Usuarios();
-            DataTable dt = new DataTable();
-            string filtro = "1=1"; 
-            
-            filtro = BuscarPorComboBox.SelectedItem.ToString() +" like '%" + o +"%'";
-            dt = Ticket.Listar("IdUsuario,Nombres,Usuario,Mail,Nivel,Fecha", filtro);
-            UsuarioGridView.DataSource = dt;
-
-            CantidadTextBox.Text = UsuarioGridView.RowCount.ToString();
-
-        }
+        
 
         private void AceptarButton_Click(object sender, EventArgs e)
         {
