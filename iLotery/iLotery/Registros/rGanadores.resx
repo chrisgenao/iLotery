@@ -121,7 +121,7 @@
   <data name="BorrarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABMAAAAYCAYAAAAYl8YPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAdJJREFUSEu9lE0oZlEch68pTA0LNSSTjyxsKGp2KFmKhZWQvY+ysJiGrcXQlA3F
+        EgAACxIB0t1+/AAAAdJJREFUSEu9lE0oZlEch68pTA0LNSSTjyxsKGp2KFmKhZWQvY+ysJiGrcXQlA3F
         bNhIMytKEjuFhVLkYyFmkiibMQsWIwvz+/1/7ts597xEaZ566rl5/d/3nnvuif4nu/DecR0+yQn8+4ju
         oNh0n6PHMPoD0/3TS72C0XtY9gpyTvQGcm0yeQF4/VNpZMMjpZEL95RGHtxQigtYojSuYY4yegu5JjHF
         8ExpVMMDpdiCdUrjHH5QBsOq4L7SaIErSjEP25XGIaxUBsPqoXtbvXBaKSbgJ6WxCWuVwbBmuKQ0vsBh
@@ -147,7 +147,7 @@
   <data name="LimpiarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAXNJREFUSEud1VlKBDEUheFagLoC500JiosQRdH9iKhPDu2A61D0WXQBDg+KoucP
+        EgAACxIB0t1+/AAAAXNJREFUSEud1VlKBDEUheFagLoC500JiosQRdH9iKhPDu2A61D0WXQBDg+KoucP
         lSIVTqeGCx/d3KRuikxVdcSqHMidvMp37aXO7cuyDI4VOZVf+etAn2NZkl6xKZ/iipV8yIYUY0/cw0Ns
         iw3e3D0wxrq0gjkfMy3TvMuiNHEiruODyeXuTQ5HEoKt6HYLxWflMsnlzmROnpJcRM2ws9jneWNEcQa5
         SHJRLH6T5HJsmnBgXGNE8XwQipO7TnLOrYQT6hpT5zJT/8biV+L6pp4lHH3XmKMwg1B8Uue6fMmgASjO
@@ -173,5 +173,44 @@
   </metadata>
   <metadata name="errorProvider6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>667, 17</value>
+  </metadata>
+  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Loteria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tanda.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Primer_Lugar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Segundo_Lugar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tercer_Lugar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cachedCrystalReport11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>797, 17</value>
+  </metadata>
+  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Loteria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tanda.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Primer_Lugar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Segundo_Lugar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tercer_Lugar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

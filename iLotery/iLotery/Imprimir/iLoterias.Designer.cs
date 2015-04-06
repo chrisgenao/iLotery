@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.cachedCrystalReport11 = new LoteriasReport.CachedCrystalReport1();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -60,5 +61,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private LoteriasReport.CachedCrystalReport1 cachedCrystalReport11;
     }
 }

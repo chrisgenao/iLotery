@@ -20,7 +20,7 @@ namespace iLotery.Registros
         {
             InitializeComponent();
         }
-       // DataRow dr;
+        // DataRow dr;
         DataTable dt = new DataTable();
 
         private void rTicket_Load(object sender, EventArgs e)
@@ -29,10 +29,10 @@ namespace iLotery.Registros
             DateTime h;
             h = DateTime.Now;
             HoraTextBox.Text = h.ToString();
-            TandaComboBox.SelectedIndex = 0;
             LoteriaComboBox.DataSource = Loteria.Listar("Loteria", "1=1");
             LoteriaComboBox.ValueMember = "Loteria";
             LoteriaComboBox.DisplayMember = "Loteria";
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -83,31 +83,31 @@ namespace iLotery.Registros
 
             //todo: imprima tickets.
 
-           // DataSet ds = new DataSet();
-           // int filas = TicketGridView.Rows.Count;
-           // for (int i = 0; i <= filas - 2; i++ )
-           // {
-           //     ds.Tables[0].Rows.Add
-           //         (new object[] {TicketGridView[0, i].Value.ToString(),
-           //                        TicketGridView[1, i].Value.ToString(),
-           //                        TicketGridView[3, i].Value.ToString(),
-           //                        TicketGridView[4, i].Value.ToString()                  
-           //         });
-           // }
-           // ds.Tables.Add(dt);
-           // ds.WriteXmlSchema("ImprimirTicket.xml");
-           // ReportDocument oRe = new ReportDocument();
-           // Imprimir.iTickets iT = new Imprimir.iTickets();
-           // oRe.SetDataSource(tds);
-           // iT.crystalReportViewer1.ReportSource = oRe;
-           // iT.crystalReportViewer1.Refresh();
-           // iT.Show();
-           // TicketGridView.Rows.Clear();
-           // JugadaTextBox.Clear();
-           // MontoTextBox.Clear();
+            // DataSet ds = new DataSet();
+            // int filas = TicketGridView.Rows.Count;
+            // for (int i = 0; i <= filas - 2; i++ )
+            // {
+            //     ds.Tables[0].Rows.Add
+            //         (new object[] {TicketGridView[0, i].Value.ToString(),
+            //                        TicketGridView[1, i].Value.ToString(),
+            //                        TicketGridView[3, i].Value.ToString(),
+            //                        TicketGridView[4, i].Value.ToString()                  
+            //         });
+            // }
+            // ds.Tables.Add(dt);
+            // ds.WriteXmlSchema("ImprimirTicket.xml");
+            // ReportDocument oRe = new ReportDocument();
+            // Imprimir.iTickets iT = new Imprimir.iTickets();
+            // oRe.SetDataSource(tds);
+            // iT.crystalReportViewer1.ReportSource = oRe;
+            // iT.crystalReportViewer1.Refresh();
+            // iT.Show();
+            // TicketGridView.Rows.Clear();
+            // JugadaTextBox.Clear();
+            // MontoTextBox.Clear();
         }
 
-        
+
         private void TicketGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -121,37 +121,37 @@ namespace iLotery.Registros
             Boolean paso = false;
             Tickets Ticket = new Tickets();
             int x = 1;
-                foreach (DataGridViewRow DataGrid in TicketGridView.Rows)
-                {
-                    
-                    Ticket.Loteria = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[0].Value;
-                    Ticket.Tanda = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[1].Value;
-                    Ticket.Jugada = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[3].Value;
-                    Ticket.Monto = Convert.ToSingle(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[4].Value);
-                    x++;
-                    paso = true;
+            foreach (DataGridViewRow DataGrid in TicketGridView.Rows)
+            {
 
-                    Ticket.Insertar();
-                }
-            
+                Ticket.Loteria = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[0].Value;
+                Ticket.Tanda = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[1].Value;
+                Ticket.Jugada = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[3].Value;
+                Ticket.Monto = Convert.ToSingle(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[4].Value);
+                x++;
+                paso = true;
 
-               if (paso)
-               {
-                   MessageBox.Show("Ticket Guardado.");
-               }
-               else
-               {
-                   MessageBox.Show("Ha Ocurrido un Error Guardando el Ticket.");
-               }
-           }            
-           
-        
+                Ticket.Insertar();
+            }
+
+
+            if (paso)
+            {
+                MessageBox.Show("Ticket Guardado.");
+            }
+            else
+            {
+                MessageBox.Show("Ha Ocurrido un Error Guardando el Ticket.");
+            }
+        }
+
+
         private void Sum()
-{
+        {
 
-        float xs = TicketGridView.Rows.Cast<DataGridViewRow>().Sum(x => Convert.ToSingle(x.Cells["Monto"].Value));
+            float xs = TicketGridView.Rows.Cast<DataGridViewRow>().Sum(x => Convert.ToSingle(x.Cells["Monto"].Value));
             TotalTextBox.Text = xs.ToString("N2");
-}
+        }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
@@ -160,12 +160,28 @@ namespace iLotery.Registros
 
         private void LoteriaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Loterias Loteria = new Loterias();
+            DataTable dt = new DataTable();
+                switch (LoteriaComboBox.SelectedIndex)
+                {
+                    case 0:
+                        TandaComboBox.DataSource = Loteria.ListarTandas("Tanda", "1");
+                        TandaComboBox.ValueMember = "Tanda";
+                        TandaComboBox.DisplayMember = "Tanda";
 
+                        break;
+               //     case 1:
+               //         
+               //         TandaComboBox.Se
+               //         TandaComboBox.SelectedIndex = 0;
+               //         break;
+
+                }
         }
 
         private void MontoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar==8)
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == 8)
             {
                 e.Handled = false;
             }
@@ -231,6 +247,68 @@ namespace iLotery.Registros
             {
                 e.Handled = true;
             }
+        }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+
+            result = DialogResult.Ignore;
+
+            if (TicketGridView.RowCount == 0)
+            {
+                Consultas.cLoterias cLoteria = new Consultas.cLoterias();
+
+                result = cLoteria.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                //    IDTextBox.Text = cLoteria.DatoEncontrado.ToString();
+                }
+                else
+                {
+                  //  IDTextBox.Clear();
+                }
+
+//                if (Loteria.Buscar(Utilitarios.ToInt(IDTextBox.Text)))
+//                {
+//
+//                    if (Loteria.Tanda != null && Loteria.Tanda2 == null)
+//                    {
+//                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+//                        NombreTextBox.Text = Loteria.Loteria.ToString();
+//                        TardeCheckBox.Checked = true;
+//                    }
+//                    else if (Loteria.Tanda == null && Loteria.Tanda2 != null)
+//                    {
+//                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+//                        NombreTextBox.Text = Loteria.Loteria.ToString();
+//                        NocheCheckBox.Checked = true;
+//                    }
+//                    else if (Loteria.Tanda != null && Loteria.Tanda2 != null)
+//                    {
+//                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+//                        NombreTextBox.Text = Loteria.Loteria.ToString();
+//                        TardeCheckBox.Checked = true;
+//                        NocheCheckBox.Checked = true;
+//                    }
+//
+//                }
+            }
+        }
+
+        private void BorrarButton_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in TicketGridView.SelectedRows)
+            {
+                TicketGridView.Rows.RemoveAt(item.Index);
+            }
+            TicketGridView.Refresh();
+        }
+
+        private void TandaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

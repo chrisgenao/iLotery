@@ -19,7 +19,7 @@ namespace iLotery.Consultas
         {
             get { return datoEncontrado; }
         }
-        
+
         public cLoterias()
         {
             InitializeComponent();
@@ -53,71 +53,53 @@ namespace iLotery.Consultas
             DataTable dt = new DataTable();
             string filtro = "1=1";
 
-                switch (BuscarPorComboBox.SelectedIndex)
+            if (BuscarPorComboBox.SelectedIndex == 0) //IdLoteria
+            {
+                if (FiltroTextBox.Text.Trim().Length == 0)
                 {
-
-                    case 0:
-                        if (FiltroTextBox.Text.Trim().Length == 0)
-                         {
-                             FiltroTextBox.Text = filtro;
-                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
-                             DataGridView.DataSource = dt;
-
-                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                         }
-                         else
-                         {
-                            filtro = "IdLoteria =" + FiltroTextBox.Text;
-                            dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
-                            DataGridView.DataSource = dt;
-
-                            CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        }
-                        break;
-
-                    case 1:
-                        if (FiltroTextBox.Text.Trim().Length == 0)
-                         {
-                             FiltroTextBox.Text = filtro; 
-                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
-                             DataGridView.DataSource = dt;
-
-                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                         }
-                         else
-                         {
-                            filtro = "Loteria like '%" + FiltroTextBox.Text + "%'";
-                            dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
-                            DataGridView.DataSource = dt;
-
-                            CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        }
-                        break;
-                    
-                    case 2:
-                         if (FiltroTextBox.Text.Trim().Length == 0)
-                         {
-                             FiltroTextBox.Text = filtro;
-                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
-                             DataGridView.DataSource = dt;
-
-                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                         }
-                         else
-                         {
-
-                             filtro = "Tanda like '%" + FiltroTextBox.Text + "%'";
-                             dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
-                             DataGridView.DataSource = dt;
-
-                             CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                         }
-                             break;
-                    default:
-                        break;
-
+                    filtro = "1=1";
+                }
+                else
+                {
+                    filtro = "IdLoteria = " + FiltroTextBox.Text;
                 }
             }
+
+            else if (BuscarPorComboBox.SelectedIndex == 1) //Loteria
+                if (FiltroTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Loteria like '%" + FiltroTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 2) // Tanda
+                if (FiltroTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Tanda like '%" + FiltroTextBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 3) //Tanda2
+                if (FiltroTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Tanda2 like '%" + FiltroTextBox.Text + "%'";
+                }
+            
+            dt = Loteria.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
+            DataGridView.DataSource = dt;
+            CantidadTextBox.Text = DataGridView.RowCount.ToString();
+        }
 
         private void AceptarButton_Click(object sender, EventArgs e)
         {
@@ -130,5 +112,5 @@ namespace iLotery.Consultas
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
-        }
     }
+}

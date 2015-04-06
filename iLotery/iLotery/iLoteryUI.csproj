@@ -91,6 +91,12 @@
     <Compile Include="Consultas\cTickets.Designer.cs">
       <DependentUpon>cTickets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\cTickets2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cTickets2.Designer.cs">
+      <DependentUpon>cTickets2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,10 +172,10 @@
     <Compile Include="Window\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Window\iLotery.cs">
+    <Compile Include="iLotery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\iLotery.Designer.cs">
+    <Compile Include="iLotery.Designer.cs">
       <DependentUpon>iLotery.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Consultas\cGanadores.resx">
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cTickets.resx">
       <DependentUpon>cTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\cTickets2.resx">
+      <DependentUpon>cTickets2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cUsuarios.resx">
       <DependentUpon>cUsuarios.cs</DependentUpon>
@@ -228,7 +237,7 @@
     <EmbeddedResource Include="Window\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\iLotery.resx">
+    <EmbeddedResource Include="iLotery.resx">
       <DependentUpon>iLotery.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rTicket));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LoteriaComboBox = new System.Windows.Forms.ComboBox();
@@ -50,6 +50,7 @@
             this.AgregarTextBox = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BorrarButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TandaComboBox = new System.Windows.Forms.ComboBox();
@@ -159,9 +160,9 @@
             // 
             // Monto
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle2;
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
@@ -241,6 +242,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.BorrarButton);
+            this.groupBox2.Controls.Add(this.BuscarButton);
             this.groupBox2.Controls.Add(this.GuardarButton);
             this.groupBox2.Controls.Add(this.ImprimirButton);
             this.groupBox2.Location = new System.Drawing.Point(12, 210);
@@ -255,13 +257,27 @@
             // 
             this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
             this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BorrarButton.Location = new System.Drawing.Point(167, 19);
+            this.BorrarButton.Location = new System.Drawing.Point(167, 59);
             this.BorrarButton.Name = "BorrarButton";
             this.BorrarButton.Size = new System.Drawing.Size(75, 34);
-            this.BorrarButton.TabIndex = 22;
+            this.BorrarButton.TabIndex = 23;
             this.BorrarButton.Text = "Borrar Partida";
             this.BorrarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BorrarButton.UseVisualStyleBackColor = true;
+            this.BorrarButton.Click += new System.EventHandler(this.BorrarButton_Click);
+            // 
+            // BuscarButton
+            // 
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarButton.Location = new System.Drawing.Point(167, 19);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(75, 34);
+            this.BuscarButton.TabIndex = 22;
+            this.BuscarButton.Text = "Buscar Partida";
+            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // GuardarButton
             // 
@@ -304,12 +320,13 @@
             this.TandaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TandaComboBox.FormattingEnabled = true;
             this.TandaComboBox.Items.AddRange(new object[] {
-            "Tarde",
-            "Noche"});
+            "Tanda",
+            "Tanda2"});
             this.TandaComboBox.Location = new System.Drawing.Point(59, 15);
             this.TandaComboBox.Name = "TandaComboBox";
             this.TandaComboBox.Size = new System.Drawing.Size(51, 21);
             this.TandaComboBox.TabIndex = 22;
+            this.TandaComboBox.SelectedIndexChanged += new System.EventHandler(this.TandaComboBox_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -395,7 +412,7 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.TextBox HoraTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button BorrarButton;
+        private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox LoteriaComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Loteria;
@@ -408,5 +425,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ComboBox TandaComboBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button BorrarButton;
     }
 }

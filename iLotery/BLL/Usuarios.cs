@@ -95,12 +95,13 @@ namespace BLL
              bool Encontro = false;
              DataTable dt = new DataTable();
 
-             dt = this.Listar("Usuario, Nivel", "Usuario = '" + NBuscado + "'");
+             dt = this.Listar("Nombres, Usuario, Nivel", "Usuario = '" + NBuscado + "'");
 
              if (dt.Rows.Count == 1)
              {
                  Encontro = true;
 
+                 this.Nombre = (string)dt.Rows[0]["Nombres"];
                  this.Usuario = (string)dt.Rows[0]["Usuario"];
                  this.Nivel = (int)dt.Rows[0]["Nivel"];
              }

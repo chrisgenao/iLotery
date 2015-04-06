@@ -53,10 +53,10 @@ namespace iLotery
 
                 if (UsuarioTextBox.Text == Usuario.Usuario && PasswordTextBox.Text == Usuario.Contra)
                 {
-                    Window.iLotery iLotery = new Window.iLotery();
+                    Window.iLotery iLot = new Window.iLotery();
                     MessageBox.Show("\tBienvenido a iLotery v1.0");
-                    iLotery.x = Usuario.Usuario;
-                    iLotery.Show();
+                    iLot.x = Usuario.Usuario;
+                    iLot.Show();
                     this.Hide();
                 }
                 else

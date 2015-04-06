@@ -168,7 +168,7 @@
   <data name="ganadoresToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAl9JREFUSEvtlU1oE0EYhhe9291VTyIePalgQEVviqJ40IpXxZvoxR9qE09ePKg3
+        DQAACw0B7QfALAAAAl9JREFUSEvtlU1oE0EYhhe9291VTyIePalgQEVviqJ40IpXxZvoxR9qE09ePKg3
         UWltFlHbaPFQvTSJXto1FgztRtIQSwptImIaY/dfQVvwc76Jmcz+0LTF3hx4IJl5v/edb2ZChP+j7dg5
         cQXWkkDAXi0K85a9KvZo3R4vJBBwcaovUDijz0FX6TENR7pLT2BWrwV05z/2erwQT8CB3HXIf5v1FFXN
         eeicvOUpQk4VbkPV0D3aXH0G9hMPXkcDcFe4c785cq+chF0TV+EECRn4rMKrL+9ZcU8lFdB/ICEXph5S
@@ -255,7 +255,7 @@
   <data name="ganadoresToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACw8AAAsPAZL5A6UAAAJfSURBVEhL7ZVNaBNBGIYXvdvdVU8iHj2pYEBFb4qieNCK
+        YQUAAAAJcEhZcwAACw0AAAsNAe0HwCwAAAJfSURBVEhL7ZVNaBNBGIYXvdvdVU8iHj2pYEBFb4qieNCK
         V8Wb6MUfahNPXjyoN1FpbRZR22jxUL00iV7aNRYM7UbSEEsKbSJiGmP3X0Fb8HO+iZnM/tC0xd4ceCCZ
         eb/3nW9mQoT/o+3YOXEF1pJAwF4tCvOWvSr2aN0eLyQQcHGqL1A4o89BV+kxDUe6S09gVq8FdOc/9nq8
         EE/Agdx1yH+b9RRVzXnonLzlKUJOFW5D1dA92lx9BvYTD15HA3BXuHO/OXKvnIRdE1fhBAkZ+KzCqy/v
@@ -309,6 +309,9 @@
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
+  </metadata>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>219, 17</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

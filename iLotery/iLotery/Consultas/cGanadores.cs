@@ -46,66 +46,82 @@ namespace iLotery.Consultas
             DataTable dt = new DataTable();
             string filtro = "1=1";
 
-            switch (BuscarPorComboBox.SelectedIndex)
+            if (BuscarPorComboBox.SelectedIndex == 0) //IdLoteria
             {
-
-                case 0:
-                        filtro = "IdGanador >=" + BuscarPorTextBox.Text;
-                        dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
-                        DataGridView.DataSource = dt;
-
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    break;
-
-                case 1:
-                        filtro = "Nombre like '%" + BuscarPorTextBox.Text + "%'";
-                        dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
-                        DataGridView.DataSource = dt;
-
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    
-                    break;
-                case 2:
-                    
-                        filtro = "Apellido like '%" + BuscarPorTextBox.Text + "%'";
-                        dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
-                        DataGridView.DataSource = dt;
-
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    break;
-                case 3:
-                            filtro = "LoteriaG like '%" + BuscarPorTextBox.Text + "%'";
-                            dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
-                            DataGridView.DataSource = dt;
-
-                            CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                            TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    break;
-                case 4:
-                        filtro = "JugadaG like '%" + BuscarPorTextBox.Text + "%'";
-                        dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
-                        DataGridView.DataSource = dt;
-
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    
-                        break;
-                case 5:
-                        filtro = "Monto>=" + BuscarPorTextBox.Text;
-                        dt = Ganador.Listar("IdGanador,Nombre,Apellido,Telefono,LoteriaG,JugadaG,MontoG,Fecha", filtro);
-                        DataGridView.DataSource = dt;
-
-                        CantidadTextBox.Text = DataGridView.RowCount.ToString();
-                        TotalTextBox.Text = dt.Compute("Sum(MontoG)", "1=1").ToString();
-                    break;
-
-                default:
-                    break;
-
+                if (BuscarPorTextBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+                    filtro = "IdGanador = " + BuscarPorTextBox.Text;
+                }
             }
+
+            else if (BuscarPorComboBox.SelectedIndex == 1) //Loteria
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Loteria like '%" + BuscarPorComboBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 2) // Tanda
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Tanda like '%" + BuscarPorComboBox.Text + "%'";
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 3) //Primer Lugar
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Primer_Lugar = " + BuscarPorComboBox.Text;
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 4) //Segundo Lugar
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Segundo_Lugar = " + BuscarPorComboBox.Text;
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 5) //Tercer Lugar
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Tercer_Lugar = " + BuscarPorComboBox.Text;
+                }
+            else if (BuscarPorComboBox.SelectedIndex == 6) //Monto
+                if (BuscarPorComboBox.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+
+                    filtro = "Monto =" + BuscarPorComboBox.Text;
+                }
+
+            dt = Ganador.Listar("IdLoteria, Loteria, Tanda, Tanda2", filtro);
+            DataGridView.DataSource = dt;
+            CantidadTextBox.Text = DataGridView.RowCount.ToString();
         }
 
         private void BuscarPorTextBox_TextChanged(object sender, EventArgs e)

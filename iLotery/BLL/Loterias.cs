@@ -69,7 +69,7 @@ namespace BLL
 
             if (dt.Rows.Count > 0)
             {
-                if ((string)dt.Rows[0]["Tanda2"] == null)
+                if (string.IsNullOrWhiteSpace(dt.Rows[0]["Tanda2"].ToString())) //Corregir
                 {//ejemplo
                     Encontro = true;
 
@@ -78,8 +78,7 @@ namespace BLL
                     this.Tanda = (string)dt.Rows[0]["Tanda"];
                     
                 }
-                else if ((string)dt.Rows[0]["Tanda2"] != null)
-                {
+                else {
                     Encontro = true;
 
                     this.IdLoteria = IdBuscado;
@@ -91,6 +90,11 @@ namespace BLL
             return Encontro;
         }
 
+        public DataTable ListarTandas(string campos = "*", string Filtro = "1=1")
+        {
+            return Conexion.BuscarDb("Select " + campos + " from Loterias where IdLoteria = " + Filtro);
+        }
+        
         public DataTable Listar(string campos = "*", string Filtro = "1=1")
         {
             return Conexion.BuscarDb("Select " + campos + " from Loterias where " + Filtro);

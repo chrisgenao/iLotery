@@ -49,6 +49,8 @@
             this.loteriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.ganadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.jugadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -59,9 +61,12 @@
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.jugadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.NombreStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.UsuarioStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -179,48 +184,59 @@
             // 
             this.ticketToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ticketToolStripMenuItem1.Image")));
             this.ticketToolStripMenuItem1.Name = "ticketToolStripMenuItem1";
-            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.ticketToolStripMenuItem1.Text = "Ticket";
             this.ticketToolStripMenuItem1.Click += new System.EventHandler(this.ticketToolStripMenuItem1_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(127, 6);
             // 
             // usuarioToolStripMenuItem1
             // 
             this.usuarioToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("usuarioToolStripMenuItem1.Image")));
             this.usuarioToolStripMenuItem1.Name = "usuarioToolStripMenuItem1";
-            this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.usuarioToolStripMenuItem1.Text = "Usuario";
             this.usuarioToolStripMenuItem1.Click += new System.EventHandler(this.usuarioToolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(127, 6);
             // 
             // loteriasToolStripMenuItem
             // 
             this.loteriasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loteriasToolStripMenuItem.Image")));
             this.loteriasToolStripMenuItem.Name = "loteriasToolStripMenuItem";
-            this.loteriasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loteriasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.loteriasToolStripMenuItem.Text = "Loterias";
             this.loteriasToolStripMenuItem.Click += new System.EventHandler(this.loteriasToolStripMenuItem_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(127, 6);
             // 
             // ganadoresToolStripMenuItem1
             // 
             this.ganadoresToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ganadoresToolStripMenuItem1.Image")));
             this.ganadoresToolStripMenuItem1.Name = "ganadoresToolStripMenuItem1";
-            this.ganadoresToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ganadoresToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.ganadoresToolStripMenuItem1.Text = "Ganadores";
             this.ganadoresToolStripMenuItem1.Click += new System.EventHandler(this.ganadoresToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(127, 6);
+            // 
+            // jugadasToolStripMenuItem
+            // 
+            this.jugadasToolStripMenuItem.Name = "jugadasToolStripMenuItem";
+            this.jugadasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.jugadasToolStripMenuItem.Text = "Jugadas";
             // 
             // imprimirToolStripMenuItem
             // 
@@ -279,6 +295,7 @@
             this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
             this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.desconectarToolStripMenuItem.Text = "Desconectar";
+            this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -288,22 +305,43 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(495, 351);
+            this.label1.Location = new System.Drawing.Point(509, 325);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
-            // jugadasToolStripMenuItem
+            // statusStrip1
             // 
-            this.jugadasToolStripMenuItem.Name = "jugadasToolStripMenuItem";
-            this.jugadasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.jugadasToolStripMenuItem.Text = "Jugadas";
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.NombreStatusLabel,
+            this.UsuarioStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 351);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(632, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripSeparator7
+            // toolStripStatusLabel1
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(149, 6);
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(107, 17);
+            this.toolStripStatusLabel1.Text = "Conectado Como:";
+            // 
+            // NombreStatusLabel
+            // 
+            this.NombreStatusLabel.Name = "NombreStatusLabel";
+            this.NombreStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.NombreStatusLabel.Text = "toolStripStatusLabel2";
+            // 
+            // UsuarioStatusLabel
+            // 
+            this.UsuarioStatusLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.UsuarioStatusLabel.Name = "UsuarioStatusLabel";
+            this.UsuarioStatusLabel.Size = new System.Drawing.Size(107, 17);
+            this.UsuarioStatusLabel.Text = "UsuarioStatusLabel";
             // 
             // iLotery
             // 
@@ -312,6 +350,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(632, 373);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -322,6 +361,8 @@
             this.Load += new System.EventHandler(this.iLotery_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +401,9 @@
         private System.Windows.Forms.ToolStripMenuItem ticketsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem jugadasToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel NombreStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel UsuarioStatusLabel;
     }
 }

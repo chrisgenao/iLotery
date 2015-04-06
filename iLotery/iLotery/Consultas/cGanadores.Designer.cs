@@ -38,8 +38,6 @@
             this.DataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.CantidadTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,12 +68,13 @@
             this.BuscarPorComboBox.FormattingEnabled = true;
             this.BuscarPorComboBox.Items.AddRange(new object[] {
             "IdGanador",
-            "Nombre",
-            "Apellido",
-            "Loteria Ganadora",
-            "Jugada Ganadora",
+            "Loteria",
+            "Tanda",
+            "Primer_Lugar",
+            "Segundo_Lugar",
+            "Tercer_Lugar",
             "Monto"});
-            this.BuscarPorComboBox.Location = new System.Drawing.Point(74, 26);
+            this.BuscarPorComboBox.Location = new System.Drawing.Point(74, 28);
             this.BuscarPorComboBox.Name = "BuscarPorComboBox";
             this.BuscarPorComboBox.Size = new System.Drawing.Size(121, 21);
             this.BuscarPorComboBox.TabIndex = 2;
@@ -152,8 +151,6 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.CantidadTextBox);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.TotalTextBox);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(12, 313);
             this.groupBox3.Name = "groupBox3";
@@ -168,23 +165,6 @@
             this.CantidadTextBox.ReadOnly = true;
             this.CantidadTextBox.Size = new System.Drawing.Size(100, 20);
             this.CantidadTextBox.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(456, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Monto:";
-            // 
-            // TotalTextBox
-            // 
-            this.TotalTextBox.Location = new System.Drawing.Point(497, 19);
-            this.TotalTextBox.Name = "TotalTextBox";
-            this.TotalTextBox.ReadOnly = true;
-            this.TotalTextBox.Size = new System.Drawing.Size(100, 20);
-            this.TotalTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -228,8 +208,6 @@
         private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox CantidadTextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TotalTextBox;
         private System.Windows.Forms.Label label3;
     }
 }

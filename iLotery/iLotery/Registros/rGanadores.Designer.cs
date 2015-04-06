@@ -30,20 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rGanadores));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.IDTextBox = new System.Windows.Forms.TextBox();
-            this.NombreTextBox = new System.Windows.Forms.TextBox();
-            this.ApellidoTextBox = new System.Windows.Forms.TextBox();
-            this.JugadaGTextBox = new System.Windows.Forms.TextBox();
-            this.MontoTextBox = new System.Windows.Forms.TextBox();
-            this.TelefonoMTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.LoteriaComboBox = new System.Windows.Forms.ComboBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BorrarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.LimpiarButton = new System.Windows.Forms.Button();
@@ -53,157 +42,44 @@
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GanadoresGridView = new System.Windows.Forms.DataGridView();
+            this.cachedCrystalReport11 = new LoteriasReport.CachedCrystalReport1();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TandaComboBox = new System.Windows.Forms.ComboBox();
+            this.LoteriaComboBox = new System.Windows.Forms.ComboBox();
+            this.PLugarTextBox = new System.Windows.Forms.TextBox();
+            this.TLugarTextBox = new System.Windows.Forms.TextBox();
+            this.SLugarTextBox = new System.Windows.Forms.TextBox();
+            this.AgregarButton = new System.Windows.Forms.Button();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Loteria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Primer_Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Segundo_Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tercer_Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GanadoresGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellido:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Telefono:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Monto:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 155);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Jugada Ganadora:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 129);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Loteria Ganadora:";
-            // 
-            // IDTextBox
-            // 
-            this.IDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDTextBox.Location = new System.Drawing.Point(127, 22);
-            this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(47, 20);
-            this.IDTextBox.TabIndex = 8;
-            this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
-            this.IDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDTextBox_KeyPress);
-            // 
-            // NombreTextBox
-            // 
-            this.NombreTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NombreTextBox.Location = new System.Drawing.Point(127, 48);
-            this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(143, 20);
-            this.NombreTextBox.TabIndex = 9;
-            this.NombreTextBox.TextChanged += new System.EventHandler(this.NombreTextBox_TextChanged);
-            this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
-            // 
-            // ApellidoTextBox
-            // 
-            this.ApellidoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApellidoTextBox.Location = new System.Drawing.Point(127, 74);
-            this.ApellidoTextBox.Name = "ApellidoTextBox";
-            this.ApellidoTextBox.Size = new System.Drawing.Size(143, 20);
-            this.ApellidoTextBox.TabIndex = 10;
-            this.ApellidoTextBox.TextChanged += new System.EventHandler(this.ApellidoTextBox_TextChanged);
-            this.ApellidoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidoTextBox_KeyPress);
-            // 
-            // JugadaGTextBox
-            // 
-            this.JugadaGTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.JugadaGTextBox.Location = new System.Drawing.Point(127, 152);
-            this.JugadaGTextBox.Name = "JugadaGTextBox";
-            this.JugadaGTextBox.Size = new System.Drawing.Size(100, 20);
-            this.JugadaGTextBox.TabIndex = 13;
-            this.JugadaGTextBox.TextChanged += new System.EventHandler(this.JugadaGTextBox_TextChanged);
-            this.JugadaGTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JugadaGTextBox_KeyPress);
-            // 
-            // MontoTextBox
-            // 
-            this.MontoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MontoTextBox.Location = new System.Drawing.Point(127, 178);
-            this.MontoTextBox.Name = "MontoTextBox";
-            this.MontoTextBox.Size = new System.Drawing.Size(70, 20);
-            this.MontoTextBox.TabIndex = 15;
-            this.MontoTextBox.TextChanged += new System.EventHandler(this.MontoTextBox_TextChanged);
-            this.MontoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MontoTextBox_KeyPress);
-            // 
-            // TelefonoMTextBox
-            // 
-            this.TelefonoMTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TelefonoMTextBox.Location = new System.Drawing.Point(127, 100);
-            this.TelefonoMTextBox.Mask = "000-000-0000";
-            this.TelefonoMTextBox.Name = "TelefonoMTextBox";
-            this.TelefonoMTextBox.Size = new System.Drawing.Size(100, 20);
-            this.TelefonoMTextBox.TabIndex = 16;
-            this.TelefonoMTextBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TelefonoMTextBox_MaskInputRejected);
-            // 
-            // LoteriaComboBox
-            // 
-            this.LoteriaComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoteriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LoteriaComboBox.FormattingEnabled = true;
-            this.LoteriaComboBox.Items.AddRange(new object[] {
-            "IdLoteria",
-            "Loteria"});
-            this.LoteriaComboBox.Location = new System.Drawing.Point(127, 126);
-            this.LoteriaComboBox.Name = "LoteriaComboBox";
-            this.LoteriaComboBox.Size = new System.Drawing.Size(121, 21);
-            this.LoteriaComboBox.TabIndex = 17;
-            this.LoteriaComboBox.SelectedIndexChanged += new System.EventHandler(this.LoteriaComboBox_SelectedIndexChanged);
             // 
             // BorrarButton
             // 
             this.BorrarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
             this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BorrarButton.Location = new System.Drawing.Point(195, 265);
+            this.BorrarButton.Location = new System.Drawing.Point(472, 342);
             this.BorrarButton.Name = "BorrarButton";
             this.BorrarButton.Size = new System.Drawing.Size(75, 34);
             this.BorrarButton.TabIndex = 28;
@@ -217,7 +93,7 @@
             this.GuardarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GuardarButton.Location = new System.Drawing.Point(115, 265);
+            this.GuardarButton.Location = new System.Drawing.Point(392, 342);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 34);
             this.GuardarButton.TabIndex = 27;
@@ -231,7 +107,7 @@
             this.LimpiarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LimpiarButton.Image = ((System.Drawing.Image)(resources.GetObject("LimpiarButton.Image")));
             this.LimpiarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.LimpiarButton.Location = new System.Drawing.Point(35, 265);
+            this.LimpiarButton.Location = new System.Drawing.Point(312, 342);
             this.LimpiarButton.Name = "LimpiarButton";
             this.LimpiarButton.Size = new System.Drawing.Size(75, 34);
             this.LimpiarButton.TabIndex = 26;
@@ -264,28 +140,218 @@
             // 
             this.errorProvider6.ContainerControl = this;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.AgregarButton);
+            this.groupBox1.Controls.Add(this.SLugarTextBox);
+            this.groupBox1.Controls.Add(this.TLugarTextBox);
+            this.groupBox1.Controls.Add(this.PLugarTextBox);
+            this.groupBox1.Controls.Add(this.LoteriaComboBox);
+            this.groupBox1.Controls.Add(this.TandaComboBox);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(835, 57);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ingresar # Ganador";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.GanadoresGridView);
+            this.groupBox2.Location = new System.Drawing.Point(12, 76);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(835, 260);
+            this.groupBox2.TabIndex = 30;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // GanadoresGridView
+            // 
+            this.GanadoresGridView.AllowUserToAddRows = false;
+            this.GanadoresGridView.AllowUserToDeleteRows = false;
+            this.GanadoresGridView.AllowUserToOrderColumns = true;
+            this.GanadoresGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GanadoresGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Fecha,
+            this.Loteria,
+            this.Tanda,
+            this.Primer_Lugar,
+            this.Segundo_Lugar,
+            this.Tercer_Lugar});
+            this.GanadoresGridView.Location = new System.Drawing.Point(6, 19);
+            this.GanadoresGridView.Name = "GanadoresGridView";
+            this.GanadoresGridView.ReadOnly = true;
+            this.GanadoresGridView.Size = new System.Drawing.Size(823, 235);
+            this.GanadoresGridView.TabIndex = 0;
+            this.GanadoresGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GanadoresGridView_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Loteria";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(619, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tercer Lugar";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(476, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Segundo Lugar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(336, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Primer Lugar";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(165, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Tanda";
+            // 
+            // TandaComboBox
+            // 
+            this.TandaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TandaComboBox.FormattingEnabled = true;
+            this.TandaComboBox.Items.AddRange(new object[] {
+            "Tarde",
+            "Noche"});
+            this.TandaComboBox.Location = new System.Drawing.Point(209, 21);
+            this.TandaComboBox.Name = "TandaComboBox";
+            this.TandaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TandaComboBox.TabIndex = 5;
+            // 
+            // LoteriaComboBox
+            // 
+            this.LoteriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LoteriaComboBox.FormattingEnabled = true;
+            this.LoteriaComboBox.Items.AddRange(new object[] {
+            "IdLoteria",
+            "Loteria"});
+            this.LoteriaComboBox.Location = new System.Drawing.Point(51, 21);
+            this.LoteriaComboBox.Name = "LoteriaComboBox";
+            this.LoteriaComboBox.Size = new System.Drawing.Size(108, 21);
+            this.LoteriaComboBox.TabIndex = 6;
+            // 
+            // PLugarTextBox
+            // 
+            this.PLugarTextBox.Location = new System.Drawing.Point(408, 21);
+            this.PLugarTextBox.MaxLength = 3;
+            this.PLugarTextBox.Name = "PLugarTextBox";
+            this.PLugarTextBox.Size = new System.Drawing.Size(42, 20);
+            this.PLugarTextBox.TabIndex = 7;
+            this.PLugarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PLugarTextBox_KeyPress);
+            // 
+            // TLugarTextBox
+            // 
+            this.TLugarTextBox.Location = new System.Drawing.Point(693, 21);
+            this.TLugarTextBox.MaxLength = 3;
+            this.TLugarTextBox.Name = "TLugarTextBox";
+            this.TLugarTextBox.Size = new System.Drawing.Size(42, 20);
+            this.TLugarTextBox.TabIndex = 8;
+            this.TLugarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TLugarTextBox_KeyPress);
+            // 
+            // SLugarTextBox
+            // 
+            this.SLugarTextBox.Location = new System.Drawing.Point(562, 21);
+            this.SLugarTextBox.MaxLength = 3;
+            this.SLugarTextBox.Name = "SLugarTextBox";
+            this.SLugarTextBox.Size = new System.Drawing.Size(42, 20);
+            this.SLugarTextBox.TabIndex = 9;
+            this.SLugarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SLugarTextBox_KeyPress);
+            // 
+            // AgregarButton
+            // 
+            this.AgregarButton.Location = new System.Drawing.Point(754, 19);
+            this.AgregarButton.Name = "AgregarButton";
+            this.AgregarButton.Size = new System.Drawing.Size(75, 23);
+            this.AgregarButton.TabIndex = 10;
+            this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.UseVisualStyleBackColor = true;
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Loteria
+            // 
+            this.Loteria.HeaderText = "Loteria";
+            this.Loteria.Name = "Loteria";
+            this.Loteria.ReadOnly = true;
+            // 
+            // Tanda
+            // 
+            this.Tanda.HeaderText = "Tanda";
+            this.Tanda.Name = "Tanda";
+            this.Tanda.ReadOnly = true;
+            // 
+            // Primer_Lugar
+            // 
+            dataGridViewCellStyle19.Format = "N0";
+            dataGridViewCellStyle19.NullValue = null;
+            this.Primer_Lugar.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Primer_Lugar.HeaderText = "Primer Lugar";
+            this.Primer_Lugar.Name = "Primer_Lugar";
+            this.Primer_Lugar.ReadOnly = true;
+            // 
+            // Segundo_Lugar
+            // 
+            dataGridViewCellStyle20.Format = "N0";
+            this.Segundo_Lugar.DefaultCellStyle = dataGridViewCellStyle20;
+            this.Segundo_Lugar.HeaderText = "Segundo Lugar";
+            this.Segundo_Lugar.Name = "Segundo_Lugar";
+            this.Segundo_Lugar.ReadOnly = true;
+            this.Segundo_Lugar.Width = 115;
+            // 
+            // Tercer_Lugar
+            // 
+            dataGridViewCellStyle21.Format = "N0";
+            this.Tercer_Lugar.DefaultCellStyle = dataGridViewCellStyle21;
+            this.Tercer_Lugar.HeaderText = "Tercer Lugar";
+            this.Tercer_Lugar.Name = "Tercer_Lugar";
+            this.Tercer_Lugar.ReadOnly = true;
+            // 
             // rGanadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 311);
+            this.ClientSize = new System.Drawing.Size(853, 388);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BorrarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.LimpiarButton);
-            this.Controls.Add(this.LoteriaComboBox);
-            this.Controls.Add(this.TelefonoMTextBox);
-            this.Controls.Add(this.MontoTextBox);
-            this.Controls.Add(this.JugadaGTextBox);
-            this.Controls.Add(this.ApellidoTextBox);
-            this.Controls.Add(this.NombreTextBox);
-            this.Controls.Add(this.IDTextBox);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -299,27 +365,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GanadoresGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox IDTextBox;
-        private System.Windows.Forms.TextBox NombreTextBox;
-        private System.Windows.Forms.TextBox ApellidoTextBox;
-        private System.Windows.Forms.TextBox JugadaGTextBox;
-        private System.Windows.Forms.TextBox MontoTextBox;
-        private System.Windows.Forms.MaskedTextBox TelefonoMTextBox;
-        private System.Windows.Forms.ComboBox LoteriaComboBox;
         private System.Windows.Forms.Button BorrarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button LimpiarButton;
@@ -329,5 +384,26 @@
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
         private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView GanadoresGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Loteria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tanda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Primer_Lugar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Segundo_Lugar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tercer_Lugar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button AgregarButton;
+        private System.Windows.Forms.TextBox SLugarTextBox;
+        private System.Windows.Forms.TextBox TLugarTextBox;
+        private System.Windows.Forms.TextBox PLugarTextBox;
+        private System.Windows.Forms.ComboBox LoteriaComboBox;
+        private System.Windows.Forms.ComboBox TandaComboBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private LoteriasReport.CachedCrystalReport1 cachedCrystalReport11;
     }
 }

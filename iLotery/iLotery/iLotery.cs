@@ -21,7 +21,7 @@ namespace iLotery.Window
             timer1.Start();
         }
 
-        
+
 
         private void iLotery_Load(object sender, EventArgs e)
         {
@@ -35,12 +35,12 @@ namespace iLotery.Window
                 usuarioToolStripMenuItem1.Visible = false;
                 toolStripSeparator3.Visible = false;
                 imprimirToolStripMenuItem.Visible = false;
-                ganadoresToolStripMenuItem.Visible = false;
-                toolStripSeparator2.Visible = false;
                 loteriaToolStripMenuItem.Visible = false;
                 toolStripSeparator8.Visible = false;
-                
+
             }
+            NombreStatusLabel.Text = Usuario.Nombre.ToString();
+            UsuarioStatusLabel.Text = Usuario.Usuario.ToString();
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,6 +143,14 @@ namespace iLotery.Window
         {
             Imprimir.iLoterias iLoteria = new Imprimir.iLoterias();
             iLoteria.ShowDialog();
+        }
+
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MessageBox.Show("Desconectado Satisfactoriamente");
+            Login Log = new Login();
+            Log.Show();
         }   
     }       
 }           

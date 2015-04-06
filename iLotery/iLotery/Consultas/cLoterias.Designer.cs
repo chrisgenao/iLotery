@@ -38,11 +38,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.CancelarButton = new System.Windows.Forms.Button();
+            this.AceptarButton = new System.Windows.Forms.Button();
             this.CantidadTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.AceptarButton = new System.Windows.Forms.Button();
-            this.CancelarButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
@@ -93,7 +93,8 @@
             this.BuscarPorComboBox.Items.AddRange(new object[] {
             "IdLoteria",
             "Loteria",
-            "Tanda"});
+            "Tanda",
+            "Tanda2"});
             this.BuscarPorComboBox.Location = new System.Drawing.Point(79, 21);
             this.BuscarPorComboBox.Name = "BuscarPorComboBox";
             this.BuscarPorComboBox.Size = new System.Drawing.Size(121, 21);
@@ -158,6 +159,25 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
+            // CancelarButton
+            // 
+            this.CancelarButton.Location = new System.Drawing.Point(544, 23);
+            this.CancelarButton.Name = "CancelarButton";
+            this.CancelarButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelarButton.TabIndex = 3;
+            this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.UseVisualStyleBackColor = true;
+            // 
+            // AceptarButton
+            // 
+            this.AceptarButton.Location = new System.Drawing.Point(463, 23);
+            this.AceptarButton.Name = "AceptarButton";
+            this.AceptarButton.Size = new System.Drawing.Size(75, 23);
+            this.AceptarButton.TabIndex = 2;
+            this.AceptarButton.Text = "Aceptar";
+            this.AceptarButton.UseVisualStyleBackColor = true;
+            this.AceptarButton.Click += new System.EventHandler(this.AceptarButton_Click);
+            // 
             // CantidadTextBox
             // 
             this.CantidadTextBox.Location = new System.Drawing.Point(61, 26);
@@ -178,25 +198,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // AceptarButton
-            // 
-            this.AceptarButton.Location = new System.Drawing.Point(463, 23);
-            this.AceptarButton.Name = "AceptarButton";
-            this.AceptarButton.Size = new System.Drawing.Size(75, 23);
-            this.AceptarButton.TabIndex = 2;
-            this.AceptarButton.Text = "Aceptar";
-            this.AceptarButton.UseVisualStyleBackColor = true;
-            this.AceptarButton.Click += new System.EventHandler(this.AceptarButton_Click);
-            // 
-            // CancelarButton
-            // 
-            this.CancelarButton.Location = new System.Drawing.Point(544, 23);
-            this.CancelarButton.Name = "CancelarButton";
-            this.CancelarButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelarButton.TabIndex = 3;
-            this.CancelarButton.Text = "Cancelar";
-            this.CancelarButton.UseVisualStyleBackColor = true;
             // 
             // cLoterias
             // 
