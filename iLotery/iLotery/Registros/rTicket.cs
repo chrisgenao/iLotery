@@ -282,7 +282,7 @@ namespace iLotery.Registros
 
         private void JugadaTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 8 || char.IsNumber(e.KeyChar) || e.KeyChar == 45)
+            if (e.KeyChar == 8 || char.IsNumber(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -369,6 +369,30 @@ namespace iLotery.Registros
             {
                 SNTextBox.ReadOnly = false;
                 TNTextBox.ReadOnly = false;
+            }
+        }
+
+        private void SNTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8 || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TNTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8 || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

@@ -16,14 +16,14 @@ namespace iLotery.Reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class UsuarioReport : ReportClass {
         
-        public CrystalReport1() {
+        public UsuarioReport() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "UsuarioReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace iLotery.Reportes {
         
         public override string FullResourceName {
             get {
-                return "iLotery.Reportes.CrystalReport1.rpt";
+                return "iLotery.Reportes.UsuarioReport.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace iLotery.Reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedUsuarioReport : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedUsuarioReport() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace iLotery.Reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            UsuarioReport rpt = new UsuarioReport();
             rpt.Site = this.Site;
             return rpt;
         }

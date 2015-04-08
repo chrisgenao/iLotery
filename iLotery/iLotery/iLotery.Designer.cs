@@ -65,6 +65,8 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.NombreStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.UsuarioStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ganadoresToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -234,8 +236,9 @@
             // 
             // jugadasToolStripMenuItem
             // 
+            this.jugadasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("jugadasToolStripMenuItem.Image")));
             this.jugadasToolStripMenuItem.Name = "jugadasToolStripMenuItem";
-            this.jugadasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.jugadasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.jugadasToolStripMenuItem.Text = "Jugadas";
             // 
             // imprimirToolStripMenuItem
@@ -245,7 +248,9 @@
             this.toolStripSeparator6,
             this.usuariosToolStripMenuItem,
             this.toolStripSeparator5,
-            this.ticketsToolStripMenuItem1});
+            this.ticketsToolStripMenuItem1,
+            this.toolStripSeparator9,
+            this.ganadoresToolStripMenuItem2});
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
             this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.imprimirToolStripMenuItem.Text = "Resumen";
@@ -254,33 +259,34 @@
             // 
             this.ticketsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ticketsToolStripMenuItem.Image")));
             this.ticketsToolStripMenuItem.Name = "ticketsToolStripMenuItem";
-            this.ticketsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.ticketsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ticketsToolStripMenuItem.Text = "Tickets";
             this.ticketsToolStripMenuItem.Click += new System.EventHandler(this.ticketsToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(116, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(149, 6);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosToolStripMenuItem.Image")));
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(116, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
             // 
             // ticketsToolStripMenuItem1
             // 
+            this.ticketsToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ticketsToolStripMenuItem1.Image")));
             this.ticketsToolStripMenuItem1.Name = "ticketsToolStripMenuItem1";
-            this.ticketsToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
-            this.ticketsToolStripMenuItem1.Text = "Tickets";
+            this.ticketsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ticketsToolStripMenuItem1.Text = "Loterias";
             this.ticketsToolStripMenuItem1.Click += new System.EventHandler(this.ticketsToolStripMenuItem1_Click);
             // 
             // ayudaToolStripMenuItem
@@ -342,6 +348,19 @@
             this.UsuarioStatusLabel.Name = "UsuarioStatusLabel";
             this.UsuarioStatusLabel.Size = new System.Drawing.Size(107, 17);
             this.UsuarioStatusLabel.Text = "UsuarioStatusLabel";
+            // 
+            // ganadoresToolStripMenuItem2
+            // 
+            this.ganadoresToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("ganadoresToolStripMenuItem2.Image")));
+            this.ganadoresToolStripMenuItem2.Name = "ganadoresToolStripMenuItem2";
+            this.ganadoresToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.ganadoresToolStripMenuItem2.Text = "Ganadores";
+            this.ganadoresToolStripMenuItem2.Click += new System.EventHandler(this.ganadoresToolStripMenuItem2_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(149, 6);
             // 
             // iLotery
             // 
@@ -405,5 +424,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel NombreStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel UsuarioStatusLabel;
+        private System.Windows.Forms.ToolStripMenuItem ganadoresToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
     }
 }

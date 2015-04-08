@@ -109,6 +109,12 @@
     <Compile Include="iLoteryUI.Designer.cs">
       <DependentUpon>iLoteryUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Imprimir\iGanadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imprimir\iGanadores.Designer.cs">
+      <DependentUpon>iGanadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imprimir\iLoterias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,7 +160,13 @@
       <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\CrystalReport1.cs">
-      <DependentUpon>LoteriasReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\UsuarioReport.cs">
+      <DependentUpon>UsuarioReport.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="iLoteryUI.resx">
       <DependentUpon>iLoteryUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Imprimir\iGanadores.resx">
+      <DependentUpon>iGanadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imprimir\iLoterias.resx">
       <DependentUpon>iLoterias.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\rUsuario.resx">
       <DependentUpon>rUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\UsuarioReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UsuarioReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\LoteriasReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -258,10 +281,6 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{85e6c6c7-c7b1-4646-997e-aa47ea8be202}</Project>
       <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsuarioReport\UsuarioReport.csproj">
-      <Project>{2be6c371-e97f-4921-a963-8c1b54ab3be3}</Project>
-      <Name>UsuarioReport</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

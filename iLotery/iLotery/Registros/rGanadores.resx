@@ -118,20 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BorrarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABMAAAAYCAYAAAAYl8YPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAdJJREFUSEu9lE0oZlEch68pTA0LNSSTjyxsKGp2KFmKhZWQvY+ysJiGrcXQlA3F
-        bNhIMytKEjuFhVLkYyFmkiibMQsWIwvz+/1/7ts597xEaZ566rl5/d/3nnvuif4nu/DecR0+yQn8+4ju
-        oNh0n6PHMPoD0/3TS72C0XtY9gpyTvQGcm0yeQF4/VNpZMMjpZEL95RGHtxQigtYojSuYY4yegu5JjHF
-        8ExpVMMDpdiCdUrjHH5QBsOq4L7SaIErSjEP25XGIaxUBsPqoXtbvXBaKSbgJ6WxCWuVwbBmuKQ0vsBh
-        pRiE40pjGTYpg2GdcE5pzMJupeiCC0rjO+xQBsP64KTSWIP8tSka4bbSmII9ymDYEOStxXAb1ShFBbxU
-        GqPwszIY5v4tA97CfLt64B3kK8ENSvjtI8pg2DcY/+oCyGEc6sF3tFxpjztel+Qwrme8jT7CX0of7uIG
-        pffEksPcJ90K0x5Lq5BPlbh7KTnM3YP98IfSZwZyrYi7y5PD3LfjKxxT+nAXx+vkvn/JYe57y/UbUPpw
-        Fy8qvZMhOcw9UbhebUofvv07Svtw3FmQt0Z41rln2yl0T5sU3MW/YeEzLYJ3sBQGcBffvFDeMn85iKJ/
-        oYWRXycreQ4AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="GuardarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAXVJREFUSEu1
@@ -147,7 +133,7 @@
   <data name="LimpiarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAXNJREFUSEud1VlKBDEUheFagLoC500JiosQRdH9iKhPDu2A61D0WXQBDg+KoucP
+        EAAACxABrSO9dQAAAXNJREFUSEud1VlKBDEUheFagLoC500JiosQRdH9iKhPDu2A61D0WXQBDg+KoucP
         lSIVTqeGCx/d3KRuikxVdcSqHMidvMp37aXO7cuyDI4VOZVf+etAn2NZkl6xKZ/iipV8yIYUY0/cw0Ns
         iw3e3D0wxrq0gjkfMy3TvMuiNHEiruODyeXuTQ5HEoKt6HYLxWflMsnlzmROnpJcRM2ws9jneWNEcQa5
         SHJRLH6T5HJsmnBgXGNE8XwQipO7TnLOrYQT6hpT5zJT/8biV+L6pp4lHH3XmKMwg1B8Uue6fMmgASjO
@@ -191,8 +177,5 @@
   </metadata>
   <metadata name="errorProvider6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>667, 17</value>
-  </metadata>
-  <metadata name="cachedCrystalReport11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>797, 17</value>
   </metadata>
 </root>

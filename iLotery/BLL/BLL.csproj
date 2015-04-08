@@ -50,6 +50,7 @@
     <Compile Include="Loterias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tickets.cs" />
+    <Compile Include="TicketsDetalles.cs" />
     <Compile Include="Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>

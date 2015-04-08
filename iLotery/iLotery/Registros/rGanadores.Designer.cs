@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.BorrarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.LimpiarButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -62,7 +61,6 @@
             this.Primer_Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Segundo_Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tercer_Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cachedCrystalReport11 = new LoteriasReport.CachedCrystalReport1();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -74,26 +72,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.GanadoresGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // BorrarButton
-            // 
-            this.BorrarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BorrarButton.Image = ((System.Drawing.Image)(resources.GetObject("BorrarButton.Image")));
-            this.BorrarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BorrarButton.Location = new System.Drawing.Point(481, 342);
-            this.BorrarButton.Name = "BorrarButton";
-            this.BorrarButton.Size = new System.Drawing.Size(75, 34);
-            this.BorrarButton.TabIndex = 28;
-            this.BorrarButton.Text = "Borrar";
-            this.BorrarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BorrarButton.UseVisualStyleBackColor = true;
-            this.BorrarButton.Click += new System.EventHandler(this.BorrarButton_Click);
-            // 
             // GuardarButton
             // 
             this.GuardarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GuardarButton.Location = new System.Drawing.Point(401, 342);
+            this.GuardarButton.Location = new System.Drawing.Point(449, 342);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 34);
             this.GuardarButton.TabIndex = 27;
@@ -107,7 +91,7 @@
             this.LimpiarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LimpiarButton.Image = ((System.Drawing.Image)(resources.GetObject("LimpiarButton.Image")));
             this.LimpiarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.LimpiarButton.Location = new System.Drawing.Point(321, 342);
+            this.LimpiarButton.Location = new System.Drawing.Point(369, 342);
             this.LimpiarButton.Name = "LimpiarButton";
             this.LimpiarButton.Size = new System.Drawing.Size(75, 34);
             this.LimpiarButton.TabIndex = 26;
@@ -287,7 +271,6 @@
             this.groupBox2.Size = new System.Drawing.Size(853, 260);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // GanadoresGridView
@@ -364,7 +347,6 @@
             this.ClientSize = new System.Drawing.Size(871, 388);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.BorrarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.LimpiarButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -390,7 +372,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BorrarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button LimpiarButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
@@ -419,6 +400,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private LoteriasReport.CachedCrystalReport1 cachedCrystalReport11;
+        //private LoteriasReport.CachedCrystalReport1 cachedCrystalReport11;
     }
 }

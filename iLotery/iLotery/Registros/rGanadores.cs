@@ -218,6 +218,31 @@ namespace iLotery.Registros
    //             MessageBox.Show("Ganador Guardado.");
    //         else
    //             MessageBox.Show("Error Guardando el Ganador.");
+            Boolean paso = false;
+            int x = 1;
+            foreach (DataGridViewRow DataGrid in GanadoresGridView.Rows)
+            {
+
+                Ganador.Loteria = (string)GanadoresGridView.Rows[GanadoresGridView.Rows.Count - x].Cells[1].Value;
+                Ganador.Tanda = (string)GanadoresGridView.Rows[GanadoresGridView.Rows.Count - x].Cells[2].Value;
+                Ganador.Primer_Lugar = Convert.ToInt32(GanadoresGridView.Rows[GanadoresGridView.Rows.Count - x].Cells[3].Value);
+                Ganador.Segundo_Lugar = Convert.ToInt32(GanadoresGridView.Rows[GanadoresGridView.Rows.Count - x].Cells[4].Value);
+                Ganador.Tercer_Lugar = Convert.ToInt32(GanadoresGridView.Rows[GanadoresGridView.Rows.Count - x].Cells[5].Value);
+                x++;
+                paso = true;
+
+                Ganador.Insertar();
+            }
+
+
+            if (paso)
+            {
+                MessageBox.Show("Ganador Guardado.");
+            }
+            else
+            {
+                MessageBox.Show("Ha Ocurrido un Error Guardando el Ganador.");
+            }
         }
 
         private void AgregarButton_Click(object sender, EventArgs e)

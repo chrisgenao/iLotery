@@ -151,6 +151,12 @@ namespace iLotery.Window
             MessageBox.Show("Desconectado Satisfactoriamente");
             Login Log = new Login();
             Log.Show();
+        }
+
+        private void ganadoresToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Imprimir.iGanadores iGanador = new Imprimir.iGanadores();
+            iGanador.Show();
         }   
     }       
 }           
