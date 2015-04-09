@@ -34,5 +34,16 @@ namespace iLotery
             return valido;
         }
 
+        public static void DesparecerColumnas(DataGridView Dg)
+        {
+            Dg.Columns["Loteria"].Visible = false;
+            Dg.Columns["Tanda"].Visible = false;
+            Dg.Columns["Fecha"].Visible = false;
+            Dg.Columns["Jugada"].Visible = false;
+            Dg.Columns["Primer_Numero"].Visible = false;
+            Dg.Columns["Segundo_Numero"].Visible = false;
+            Dg.Columns["Tercer_Numero"].Visible = false;
+            Dg.Columns["Monto"].Visible = false;
+        }
     }
 }

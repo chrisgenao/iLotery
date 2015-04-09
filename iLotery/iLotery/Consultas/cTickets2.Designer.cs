@@ -109,6 +109,7 @@
             this.BuscarButton.TabIndex = 0;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // groupBox2
             // 

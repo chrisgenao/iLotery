@@ -121,7 +121,7 @@
   <data name="ImprimirButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAArZJREFUSEullf9LE2Ecx+8vKegvSH8p6Kck+mG7Bf2wnc7qhyJErCwNN9KoCDWK
+        DAAACwwBP0AiyAAAArZJREFUSEullf9LE2Ecx+8vKegvSH8p6Kck+mG7Bf2wnc7qhyJErCwNN9KoCDWK
         6A8otRJKMchoKJZCwpqOSvfFy93u9u22uxubzeYKKmifnud2O7b1uN3YG17sYJ/P+/18u+eoekrYzYcS
         DD0sWk3Loo2WRSv9p4RJEm3md+g/Z9RuOqiVG1fJ2PwqztBFkaGhHnGr6S+qeylZ6QNae30lbOZzccb0
         k2RWD9RTEK2WLs2GLFTkIDU3Q6KTvqbZVQuPnNSAiV65COK925C6eR1kR39DpMHeC5ptSXjN91uW7Uf3
@@ -160,10 +160,34 @@
   <metadata name="Monto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Loteria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tanda.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Jugada.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Primer_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Segundo_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Tercer_Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Monto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="BorrarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAqhJREFUSEutlM1vEkEYh+dMIkIpG+gH0KQUaG2tWNpaKNoK9CO0aWzjRRMPejDx
+        DQAACw0B7QfALAAAAqhJREFUSEutlM1vEkEYh+dMIkIpG+gH0KQUaG2tWNpaKNoK9CO0aWzjRRMPejDx
         5tGj/4Nfif+AXnrTtvSDmpZYLIlCSBsTY2JMjGl3l90oHF/nXdlQl4Hdqm/yBLI77/Obyc4M0dYTQnpT
         w4ED+ttefaRbjwjpXBvuPXxMiK/6iF0ozy8lKvLDu5BLhktGQp4R4solozL25Bfj5YYhKP+wMFmRHtwB
         ldzUWNMQRT4dkU/25Ocn6kMUeXK8It2/BVreTY6IrBBFHhuVWT352WgtRJFPjVWkezegEdnI0B8hzwlx
@@ -180,7 +204,7 @@
   <data name="BuscarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAbdJREFUSEvdVD1Lw1AU7ao/RvxY1V/k7CbqUMVFQV+DCk5J6qIWBEFIoiZpEsEU
+        DAAACwwBP0AiyAAAAbdJREFUSEvdVD1Lw1AU7ao/RvxY1V/k7CbqUMVFQV+DCk5J6qIWBEFIoiZpEsEU
         tLRWrIgd2g4Vq+hSl2duc5u+ykvaYF164AxJ3j0nuffcJEYXqm5Pe9xTDKes6NY3UDOtR81wdi+z2Uk8
         Fh+nrjuu6s6BZjo0imBu2/YYlg0GENd0y+QJ8qiYjh7L5Peb5/IFWqnWaeOt2eZLrU7du0KPCbQMy6Nx
         YV7PsIWlp2f6+v7BJTxjzw40E+hppyCXL3KFWbp3xcBANS0BZcIBaekUQFt4oiwrXrs65xXdeUCZcPgx

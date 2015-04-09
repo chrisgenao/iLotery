@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rTicket));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Jugadas = new System.Windows.Forms.GroupBox();
+            this.SearchButton = new System.Windows.Forms.Button();
+            this.IDTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.TandaComboBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,14 +67,11 @@
             this.BuscarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.HoraTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.IDTextBox = new System.Windows.Forms.TextBox();
-            this.SearchButton = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.Jugadas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -100,12 +100,39 @@
             this.Jugadas.Controls.Add(this.label2);
             this.Jugadas.Controls.Add(this.MontoTextBox);
             this.Jugadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Jugadas.Location = new System.Drawing.Point(12, 38);
+            this.Jugadas.Location = new System.Drawing.Point(12, 40);
             this.Jugadas.Name = "Jugadas";
             this.Jugadas.Size = new System.Drawing.Size(248, 260);
             this.Jugadas.TabIndex = 3;
             this.Jugadas.TabStop = false;
             this.Jugadas.Text = "Jugadas";
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(151, 27);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(54, 23);
+            this.SearchButton.TabIndex = 28;
+            this.SearchButton.Text = "Buscar";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
+            // IDTextBox
+            // 
+            this.IDTextBox.Location = new System.Drawing.Point(105, 29);
+            this.IDTextBox.Name = "IDTextBox";
+            this.IDTextBox.Size = new System.Drawing.Size(40, 20);
+            this.IDTextBox.TabIndex = 27;
+            this.IDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDTextBox_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Buscar Ticket:";
             // 
             // TandaComboBox
             // 
@@ -358,9 +385,9 @@
             // 
             // Monto
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle3;
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
@@ -445,7 +472,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.HoraTextBox);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.TicketGridView);
             this.groupBox3.Controls.Add(this.label3);
@@ -457,15 +484,6 @@
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Jugada";
-            // 
-            // HoraTextBox
-            // 
-            this.HoraTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoraTextBox.Location = new System.Drawing.Point(52, 453);
-            this.HoraTextBox.Name = "HoraTextBox";
-            this.HoraTextBox.ReadOnly = true;
-            this.HoraTextBox.Size = new System.Drawing.Size(100, 20);
-            this.HoraTextBox.TabIndex = 19;
             // 
             // label4
             // 
@@ -489,31 +507,16 @@
             // 
             this.errorProvider3.ContainerControl = this;
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 13);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Buscar Ticket:";
-            // 
-            // IDTextBox
-            // 
-            this.IDTextBox.Location = new System.Drawing.Point(105, 29);
-            this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(40, 20);
-            this.IDTextBox.TabIndex = 27;
-            // 
-            // SearchButton
-            // 
-            this.SearchButton.Location = new System.Drawing.Point(151, 27);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(54, 23);
-            this.SearchButton.TabIndex = 28;
-            this.SearchButton.Text = "Buscar";
-            this.SearchButton.UseVisualStyleBackColor = true;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label11.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label11.Location = new System.Drawing.Point(58, 456);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "label11";
             // 
             // rTicket
             // 
@@ -559,7 +562,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button GuardarButton;
-        private System.Windows.Forms.TextBox HoraTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Label label6;
@@ -587,5 +589,6 @@
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.TextBox IDTextBox;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

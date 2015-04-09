@@ -40,7 +40,7 @@ namespace iLotery.Window
 
             }
             NombreStatusLabel.Text = Usuario.Nombre.ToString();
-            UsuarioStatusLabel.Text = Usuario.Usuario.ToString();
+            UsuarioStatusLabel.Text = "("+Usuario.Usuario.ToString()+")";
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)

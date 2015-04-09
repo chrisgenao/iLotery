@@ -22,13 +22,13 @@ namespace iLotery.Registros
         }
         // DataRow dr;
         DataTable dt = new DataTable();
-        
+
         private void rTicket_Load(object sender, EventArgs e)
         {
             Loterias Loteria = new Loterias();
-            DateTime h;
-            h = DateTime.Now;
-            HoraTextBox.Text = h.ToString();
+            DateTime Fecha;
+            Fecha = DateTime.Now;
+            label11.Text = Fecha.ToString("dd/MM/yyyy");
             comboBox1.SelectedIndex = 0;
             TandaComboBox.SelectedIndex = 0;
             LoteriaComboBox.DataSource = Loteria.Listar("Loteria", "1=1");
@@ -91,14 +91,14 @@ namespace iLotery.Registros
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[4].Value = PNTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[5].Value = SNTextBox.Text;
                 TicketGridView.Rows[TicketGridView.Rows.Count - 1].Cells[7].Value = MontoTextBox.Text;
-                
+
                 Sum();
                 TandaComboBox.SelectedIndex = 0;
                 PNTextBox.Clear();
                 MontoTextBox.Clear();
                 errorProvider3.Clear();
                 errorProvider1.Clear();
-                errorProvider2.Clear();   
+                errorProvider2.Clear();
             }
             else if (PNTextBox.Text.Trim().Length != 0 && SNTextBox.ReadOnly == false && TNTextBox.ReadOnly == false && SNTextBox.Text.Trim().Length != 0 && TNTextBox.Text.Trim().Length != 0)
             {
@@ -173,12 +173,13 @@ namespace iLotery.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             Boolean paso = false;
             Tickets Ticket = new Tickets();
             TicketsDetalles TicketDetalle = new TicketsDetalles();
-            int y = 1;
+            int y = 1;  
+            
             foreach (DataGridViewRow DataGrid in TicketGridView.Rows)
             {
 
@@ -226,7 +227,7 @@ namespace iLotery.Registros
 
         private void LoteriaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void MontoTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -313,37 +314,37 @@ namespace iLotery.Registros
 
                 if (result == DialogResult.OK)
                 {
-                //    IDTextBox.Text = cLoteria.DatoEncontrado.ToString();
+                    //    IDTextBox.Text = cLoteria.DatoEncontrado.ToString();
                 }
                 else
                 {
-                  //  IDTextBox.Clear();
+                    //  IDTextBox.Clear();
                 }
 
-//                if (Loteria.Buscar(Utilitarios.ToInt(IDTextBox.Text)))
-//                {
-//
-//                    if (Loteria.Tanda != null && Loteria.Tanda2 == null)
-//                    {
-//                        IDTextBox.Text = Loteria.IdLoteria.ToString();
-//                        NombreTextBox.Text = Loteria.Loteria.ToString();
-//                        TardeCheckBox.Checked = true;
-//                    }
-//                    else if (Loteria.Tanda == null && Loteria.Tanda2 != null)
-//                    {
-//                        IDTextBox.Text = Loteria.IdLoteria.ToString();
-//                        NombreTextBox.Text = Loteria.Loteria.ToString();
-//                        NocheCheckBox.Checked = true;
-//                    }
-//                    else if (Loteria.Tanda != null && Loteria.Tanda2 != null)
-//                    {
-//                        IDTextBox.Text = Loteria.IdLoteria.ToString();
-//                        NombreTextBox.Text = Loteria.Loteria.ToString();
-//                        TardeCheckBox.Checked = true;
-//                        NocheCheckBox.Checked = true;
-//                    }
-//
-//                }
+                //                if (Loteria.Buscar(Utilitarios.ToInt(IDTextBox.Text)))
+                //                {
+                //
+                //                    if (Loteria.Tanda != null && Loteria.Tanda2 == null)
+                //                    {
+                //                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+                //                        NombreTextBox.Text = Loteria.Loteria.ToString();
+                //                        TardeCheckBox.Checked = true;
+                //                    }
+                //                    else if (Loteria.Tanda == null && Loteria.Tanda2 != null)
+                //                    {
+                //                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+                //                        NombreTextBox.Text = Loteria.Loteria.ToString();
+                //                        NocheCheckBox.Checked = true;
+                //                    }
+                //                    else if (Loteria.Tanda != null && Loteria.Tanda2 != null)
+                //                    {
+                //                        IDTextBox.Text = Loteria.IdLoteria.ToString();
+                //                        NombreTextBox.Text = Loteria.Loteria.ToString();
+                //                        TardeCheckBox.Checked = true;
+                //                        NocheCheckBox.Checked = true;
+                //                    }
+                //
+                //                }
             }
         }
 
@@ -409,14 +410,30 @@ namespace iLotery.Registros
         {
             Tickets Ticket = new Tickets();
             DataTable dt = new DataTable();
-          try
+            try
             {
                 dt = Ticket.ListarTickets("Loteria, Tanda, Fecha, Jugada, Primer_Numero, Segundo_Numero, Tercer_Numero, Monto", IDTextBox.Text);
+                Utilitarios.DesparecerColumnas(TicketGridView);
                 TicketGridView.DataSource = dt;
+                TotalTextBox.Text = dt.Compute("Sum(Monto)", "1=1").ToString();
+                //todo: que funcione bien esto.
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
+        }
+
+        private void IDTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8 || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

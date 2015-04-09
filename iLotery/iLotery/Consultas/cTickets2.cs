@@ -45,5 +45,10 @@ namespace iLotery.Consultas
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
