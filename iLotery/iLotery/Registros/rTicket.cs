@@ -22,7 +22,7 @@ namespace iLotery.Registros
         }
         // DataRow dr;
         DataTable dt = new DataTable();
-
+        
         private void rTicket_Load(object sender, EventArgs e)
         {
             Loterias Loteria = new Loterias();
@@ -74,6 +74,8 @@ namespace iLotery.Registros
                 Sum();
                 TandaComboBox.SelectedIndex = 0;
                 PNTextBox.Clear();
+                SNTextBox.Clear();
+                TNTextBox.Clear();
                 MontoTextBox.Clear();
                 errorProvider3.Clear();
                 errorProvider1.Clear();
@@ -171,26 +173,31 @@ namespace iLotery.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-
-            //ExportarDataGridViewExcel(TicketGridView);
-
+            
+            
             Boolean paso = false;
             Tickets Ticket = new Tickets();
-            int x = 1;
+            TicketsDetalles TicketDetalle = new TicketsDetalles();
+            int y = 1;
             foreach (DataGridViewRow DataGrid in TicketGridView.Rows)
             {
 
-                Ticket.Loteria = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[0].Value;
-                Ticket.Tanda = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[1].Value;
-                Ticket.Jugada = (string)TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[3].Value;
-                Ticket.Primer_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[4].Value);
-                Ticket.Segundo_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[5].Value);
-                Ticket.Tercer_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[6].Value);
-                Ticket.Monto = Convert.ToSingle(TicketGridView.Rows[TicketGridView.Rows.Count - x].Cells[7].Value);
-                x++;
+                Ticket.Loteria = (string)TicketGridView.Rows[TicketGridView.Rows.Count - y].Cells[0].Value;
+                Ticket.Tanda = (string)TicketGridView.Rows[TicketGridView.Rows.Count - y].Cells[1].Value;
+                Ticket.Jugada = (string)TicketGridView.Rows[TicketGridView.Rows.Count - y].Cells[3].Value;
+                Ticket.Primer_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - y].Cells[4].Value);
+                Ticket.Segundo_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - y].Cells[5].Value);
+                Ticket.Tercer_Numero = Convert.ToInt32(TicketGridView.Rows[TicketGridView.Rows.Count - y].Cells[6].Value);
+                Ticket.Monto = Convert.ToSingle(TicketGridView.Rows[TicketGridView.Rows.Count - y].Cells[7].Value);
+                y++;
                 paso = true;
 
-                Ticket.Insertar();
+
+                TicketDetalle.Insertar();
+
+                int x = TicketDetalle.IdTicketDetalle;
+
+                Ticket.Insertar(x);
             }
 
 
@@ -347,6 +354,7 @@ namespace iLotery.Registros
                 TicketGridView.Rows.RemoveAt(item.Index);
             }
             TicketGridView.Refresh();
+            TotalTextBox.Clear();
         }
 
         private void TandaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -358,11 +366,12 @@ namespace iLotery.Registros
         {
             if (comboBox1.SelectedIndex == 0)
             {
-                SNTextBox.ReadOnly = true;
+                SNTextBox.ReadOnly = false;
                 TNTextBox.ReadOnly = true;
             }
             if (comboBox1.SelectedIndex == 1)
             {
+                SNTextBox.ReadOnly = true;
                 TNTextBox.ReadOnly = true;
             }
             if (comboBox1.SelectedIndex == 2)
@@ -393,6 +402,21 @@ namespace iLotery.Registros
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            Tickets Ticket = new Tickets();
+            DataTable dt = new DataTable();
+          try
+            {
+                dt = Ticket.ListarTickets("Loteria, Tanda, Fecha, Jugada, Primer_Numero, Segundo_Numero, Tercer_Numero, Monto", IDTextBox.Text);
+                TicketGridView.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
         }
     }

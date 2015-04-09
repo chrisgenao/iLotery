@@ -14,6 +14,7 @@ namespace BLL
         private ConexionDb Conexion = new ConexionDb();
 
         public int IdTicket { get; set; }
+        public int IdTicketDetalle { get; set; }
         public string Loteria { get; set; }
         public string Tanda { get; set; }
         public DateTime Fecha { get; set; }
@@ -22,11 +23,12 @@ namespace BLL
         public int Segundo_Numero { get; set; }
         public int Tercer_Numero { get; set; }
         public float Monto { get; set; }
-
+        
 
         public Tickets()
         {
             this.IdTicket = 0;
+            this.IdTicketDetalle = 0;
             this.Loteria = string.Empty;
             this.Tanda = string.Empty;
             this.Fecha = DateTime.Now;
@@ -36,14 +38,14 @@ namespace BLL
             this.Tercer_Numero = 0;
             this.Monto = 0;
         }
-                public Boolean Insertar()
+                public Boolean Insertar(int x)
         {
             //this.IdTicket = 0;
 
             //this.IdTicket = (int)Conexion.ObtenerValorDb("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "'," + this.Monto + ")");
 
            // return this.IdTicket > 0;
-          return  Conexion.EjecutarDB("Insert into Tickets (Loteria, Tanda, Fecha, Jugada, Primer_Numero, Segundo_Numero, Tercer_Numero, Monto) values ('" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "', "+this.Primer_Numero+", "+this.Segundo_Numero+", "+this.Tercer_Numero+", "+ this.Monto + ")");
+          return  Conexion.EjecutarDB("Insert into Tickets (IdTicketDetalle, Loteria, Tanda, Fecha, Jugada, Primer_Numero, Segundo_Numero, Tercer_Numero, Monto) values ("+x+", '" + this.Loteria + "', '" + this.Tanda + "', GETDATE(),'" + this.Jugada + "', "+this.Primer_Numero+", "+this.Segundo_Numero+", "+this.Tercer_Numero+", "+ this.Monto + ")");
 
         }
 
@@ -64,6 +66,7 @@ namespace BLL
                 Encontro = true;
 
                 this.IdTicket = IdBuscado;
+                this.IdTicketDetalle = (int)dt.Rows[0]["IdTicketDetalle"];
                 this.Loteria = (string)dt.Rows[0]["Loteria"];
                 this.Tanda = (string)dt.Rows[0]["Tanda"];
                 this.Fecha = (DateTime)dt.Rows[0]["Fecha"];
@@ -97,7 +100,12 @@ namespace BLL
 
         public DataTable Listar(string campos = "*", string Filtro = "1=1")
         {
-            return Conexion.BuscarDb("Select " + campos + " from Tickets where " + Filtro);
+            return Conexion.BuscarDb("Select " + campos + " from Tickets where IdTicket= " + Filtro);
+        }
+
+        public DataTable ListarTickets(string campos = "*", string Filtro = "1=1")
+        {
+            return Conexion.BuscarDb("Select " + campos + " from Tickets where IdTicketDetalle= " + Filtro);
         }
     }
 }
